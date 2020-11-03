@@ -1,0 +1,15 @@
+
+GetSel(0,9);
+Prompt("%!9");
+LetRegNum(7,1);
+LetRegNum(2,0);
+Loop(!'>
+  FindInString("%!9;","{\#^{\\}\{}|{\#^{\\}\}}",1,2,1011,%!2+1);>
+  IfOK(!">
+    ExtractByIndex(4,`%!9;`,%!1,%!1);>
+    IfStr(`%!4`,`{`,`=`,`LetRegNum(7,*%!7+1*);`,`Relax;`);>
+    IfStr(`%!4`,`}`,`=`,`LetRegNum(7,*%!7-1*);`,`Relax;`);>
+    IfStr(`%!7`,`0`,`=`,`Stop;`,`Relax;`);","Stop;">
+  );>
+');
+IfOK("Prompt(`%!7-%!1-%!4`);","Prompt(`No paired delimiter found!`);");

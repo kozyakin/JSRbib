@@ -1,0 +1,54 @@
+33 Patch Control
+
+0
+0
+1
+JSRbib.tex
+13
+2
+0
+
+JSRbib.tex
+TeX:Soft
+420491259 1 -1 1727 -1 1842 120 120 817 504 1 1 422 60 -1 -1 0 0 603 -1 -1 603 2 0 1842 -1 1 9758 -1  0 -1 0
+JSR+matprod.bib
+BibTeX
+1049586 1 9073 19 9073 88 30 30 728 417 1 1 881 340 -1 -1 0 0 1 10 10 1 5 0 88 9073 1 1 15620 2 1 15620 3 1 15620 4 1 15620  0 -1 0
+:\Users\Vitya\Dropbox\Mathematics\Bibliography\kozpub-cp1251.bib
+BibTeX:UNIX:CP1251
+269583346 2 2497 19 2497 41 52 52 881 491 0 1 404 120 -1 -1 0 0 31 0 0 31 1 0 41 2497  0 -1 0
+:\Users\Vitya\Dropbox\Mathematics\Bibliography\kozbib-cp1251.bib
+BibTeX:CP1251
+269485042 0 36 1 0 1 52 52 880 491 0 1 44 0 -1 -1 0 0 31 0 0 31 1 0 1 0  0 -1 0
+amsalpha-e.bst
+BST:UNIX
+269583346 4 1524 30 1524 31 150 150 848 537 0 0 296 260 -1 -1 0 0 73 0 0 73 1 0 31 1524  0 0 0
+amsplain-ey.bst
+BST:UNIX
+269583346 4 1386 29 1386 30 120 120 818 507 0 0 287 260 -1 -1 0 0 73 0 0 73 2 0 30 1386 1 4 313  0 0 0
+amsplain-e.bst
+BST:UNIX
+269583346 4 1370 30 1370 31 120 120 818 507 0 0 296 180 -1 -1 0 0 73 0 0 73 1 0 31 1370  0 0 0
+:\Users\Vitya\Dropbox\Mathematics\Bibliography\kozpub-utf8.bib
+BibTeX:UNIX:UTF-8
+269583346 0 3885 1 3888 1 156 156 984 595 0 1 44 400 -1 -1 0 0 24 0 0 24 1 0 1 3888  0 -1 0
+:\Users\Vitya\Dropbox\Mathematics\Bibliography\kozpubU.bib
+BibTeX:UNIX:UTF-8
+269583346 0 3932 9 3949 1 182 182 1010 621 0 1 44 460 -1 -1 0 0 25 0 0 25 1 0 1 3949  0 -1 0
+:\Users\Vitya\Dropbox\Teaching\LYar\2019-YSK\review\reply.tex
+TeX:UNIX:CP1251
+286371835 0 -1 3515 -1 3516 52 52 798 470 0 1 152 120 -1 -1 0 0 -1 -1 -1 -1 1 0 3516 -1  0 -1 0
+:\Users\Vitya\Dropbox\Mathematics\2018-AlternatingFactors-2\stanford.pgf
+TeX:UNIX:Hard
+269594619 0 0 1 0 1 52 52 881 491 0 1 44 0 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0  0 -1 0
+delim.edt
+ASCII:EDT
+269494138 1 3 1 13 4 60 60 758 443 1 0 96 221 -1 -1 0 0 13 4 4 13 1 0 4 13  0 0 0
+formatpar.edt
+ASCII:EDT
+269494138 1 22 1 33 4 60 60 758 443 1 0 112 462 -1 -1 0 0 13 0 0 13 1 0 4 33  0 0 0
+
+*JSRbib.tex
+>
+*JSR+matprod
+<
