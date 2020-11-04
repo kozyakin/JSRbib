@@ -42,13 +42,17 @@
 
 4. Выполнить команду
 
-make4ht -sc myconfig.cfg jsrbib.tex "html,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
+make4ht -sc myconfig.cfg JSRbib.tex "html,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
 
 (пробел в последней паре кавычек НЕ УДАЛЯТЬ!)
 
 5. Для "вложения" сгенерированного файла .css в .html, запустить дополнительно один или два раза команду
 
-htlatex jsrbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
+htlatex JSRbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
+
+или команду
+
+make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
 
 6. Сделать в полученном .html файле замены
 
@@ -59,7 +63,7 @@ htlatex jsrbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cu
 
 Для этого достаточно запустить bat-файл
 
-tex4ht-postprocessing.bat jsrbib.html
+tex4ht-postprocessing.bat JSRbib.html
 
 ==============================================
 
