@@ -1,4 +1,5 @@
-1 Если в файле **JSRbib.tex** имеется строка
+1. Если в файле **JSRbib.tex** имеется строка
+
 ```
 \usepackage[a-1b,mathxmp]{pdfx}
 ```
@@ -10,7 +11,7 @@
 \fi
 ```
 
-2 При необходимости выполнить сортировку и сжатие цитат ПРИ СОВМЕСТНОМ ИСПОЛЬЗОВАНИИ **authorindex**, вставить следующие команды
+2. При необходимости выполнить сортировку и сжатие цитат ПРИ СОВМЕСТНОМ ИСПОЛЬЗОВАНИИ **authorindex**, вставить следующие команды
 
 ```
 \usepackage[numbers,sort,compress]{natbib}
@@ -39,16 +40,17 @@
 ```
 или поместить в корень директории с файлом **JSRbib.tex** файл конфигурации **natbib.cfg** 
 
-3 Оттранслировать обычным образом файл **JSRbib.tex**
+3. Оттранслировать обычным образом файл **JSRbib.tex**
 
-4 Выполнить команду
+4. Выполнить команду
 
 ```
 make4ht -sc myconfig.cfg JSRbib.tex "html,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
 ```
 (пробел в последней паре кавычек НЕ УДАЛЯТЬ!)
 
-5 Для "вложения" сгенерированного файла .css в .html, запустить дополнительно один или два раза команду
+5. Для "вложения" сгенерированного файла .css в .html, запустить дополнительно один или два раза команду
+
 ```
 htlatex JSRbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
 ```
@@ -57,7 +59,7 @@ htlatex JSRbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cu
 make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
 ```
 
-6 Сделать в полученном .html файле замены
+6. Сделать в полученном .html файле замены
 
 ```
 <\/a>,(\xC2\xA0|\x00\xA0|&#xC2A0;|&#x00A0;)<a -> <\/a>, <a
