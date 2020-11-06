@@ -73,7 +73,7 @@ make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,c
 .figure \&gt; p -> .figure \> p
 ```
 
-After that, in utf-8 encoding, instead of `& # x00A0;` the symbol `No-Breake-Space` will appear in the appropriate places. 
+After that, in utf-8 encoding, instead of `&#x00A0;` the symbol `No-Breake-Space` will appear in the appropriate places. 
 
 ---
 
