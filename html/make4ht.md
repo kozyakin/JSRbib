@@ -13,7 +13,7 @@ then it should be replaced by the strings
 \fi
 ```
 
-2. If necessary to sort and compress cites WHEN USING **authorindex **, insert the following commands
+2. If necessary to sort and compress cites WHEN USING **authorindex**, insert the following commands
 
 ```
 \usepackage[numbers,sort,compress]{natbib}
