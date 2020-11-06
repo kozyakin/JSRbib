@@ -1,10 +1,10 @@
-1. Если в файле **JSRbib.tex** имеется строка
+1. If file **JSRbib.tex** contains the string
 
 ```
 \usepackage[a-1b,mathxmp]{pdfx}
 ```
 
-то ее следует удалить и заменить строками
+then it should be replaced by the strings
 
 ```
 \ifdefined\HCode\relax
@@ -13,7 +13,7 @@
 \fi
 ```
 
-2. При необходимости выполнить сортировку и сжатие цитат ПРИ СОВМЕСТНОМ ИСПОЛЬЗОВАНИИ **authorindex**, вставить следующие команды
+2. If necessary to sort and compress cites WHEN USING **authorindex **, insert the following commands
 
 ```
 \usepackage[numbers,sort,compress]{natbib}
@@ -41,31 +41,31 @@
 \makeatother
 ```
 
-или поместить в корень директории с файлом **JSRbib.tex** файл конфигурации **natbib.cfg** 
+or put in the root directory containing file **JSRbib.tex** the configuration file **natbib.cfg** 
 
-3. Оттранслировать обычным образом файл **JSRbib.tex**
+3. Compile as usual the file **JSRbib.tex**
 
-4. Выполнить команду
+4. Run the command
 
 ```
 make4ht -sc myconfig.cfg JSRbib.tex "html,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
 ```
 
-(пробел в последней паре кавычек **НЕ УДАЛЯТЬ!**)
+(space in the last pair of quotes **DO NOT DELETE!**)
 
-5. Для "вложения" сгенерированного файла .css в .html, запустить дополнительно один или два раза команду
+5. To "embed" the generated .css file in .html, run additionally the following command once or twice
 
 ```
 htlatex JSRbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
 ```
 
-или команду
+or run the command
 
 ```
 make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
 ```
 
-6. Сделать в полученном .html файле замены
+6. Make the following replacements in the resulting .html file
 
 ```
 <\/a>,(\xC2\xA0|\x00\xA0|&#xC2A0;|&#x00A0;)<a -> <\/a>, <a
@@ -73,12 +73,12 @@ make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,c
 .figure \&gt; p -> .figure \> p
 ```
 
-После этого вместо `&#x00A0;` в utf-8 кодировке в соответствующих местах будет стоять символ `No-Breake-Space` 
+After that, instead of `& # x00A0;` in utf-8 encoding, the symbol `No-Breake-Space` will appear in the appropriate places 
 
 ---
 
-#### Замечание
-Процедуры из пунктов 5, 6 можно выполнить, запустив последовательно два bat-файла (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**):
+#### Remark
+The procedures from points 5, 6 can be performed by running the following two bat-files sequentially (in this case, the compiler **Perl** must be installed and in the **PATH** variable on the system):
 
 ```
 my_make4ht.bat JSRbib.tex
