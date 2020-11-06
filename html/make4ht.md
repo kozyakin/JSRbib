@@ -4,7 +4,7 @@
 \usepackage[a-1b,mathxmp]{pdfx}
 ```
 
-then this string it should be replaced by the strings
+then this string must be replaced by
 
 ```
 \ifdefined\HCode\relax
