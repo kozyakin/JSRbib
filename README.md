@@ -14,6 +14,11 @@ To add new record to the **JSRbib.pdf** it is needed
 * Compile **JSRbib.tex** to generate **JSRbib.pd**f
 * Process **JSRbib.tex** with **make4ht** to generate **JSRbib.html**
 
+## Pleliminary step
+
+Read carefully [html/make4ht.md](html/make4ht.md) and make appropriate preliminary steps if necessary.
+
+
 ## Generating JSRbib.pdf
 
 Let us remind once again: **Perl** must be installed with the registered path to it in **PATH** &mdash; the easiest way is to download and install **Strawberry Perl** on the Internet &mdash; after installation it will immediately be configured for execution &mdash; no additional actions are required.
