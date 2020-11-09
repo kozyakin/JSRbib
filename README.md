@@ -16,7 +16,7 @@ To add new record to the **JSRbib.pdf** it is needed
 
 ## Pleliminary step
 
-Read carefully [html/make4ht.md](html/make4ht.md) and make appropriate preliminary steps if necessary.
+Read carefully [html/README.md](html/README.md) and make appropriate preliminary steps if necessary.
 
 
 ## Generating JSRbib.pdf
