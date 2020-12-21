@@ -75,7 +75,7 @@
 
     After that, in utf-8 encoding, instead of `&#x00A0;` the symbol `No-Breake-Space` will appear in the appropriate places. 
 
-    ---
+---
 
 #### Remark
 The procedures from points 5, 6 can be performed by running the following two bat-files sequentially (in this case, the compiler **Perl** must be installed and be in the **PATH** variable on the system):
