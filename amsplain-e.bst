@@ -135,9 +135,9 @@ INTEGERS { hrefform inlinelinks }
 FUNCTION {init.urlbst.variables}
 {
   "Available from: " 'urlintro := % prefix before URL
-  "http://arxiv.org/abs/" 'eprinturl := % prefix to make URL from eprint ref
+  "https://arxiv.org/abs/" 'eprinturl := % prefix to make URL from eprint ref
   "arXiv:" 'eprintprefix := % text prefix printed before eprint ref
-  "http://dx.doi.org/" 'doiurl := % prefix to make URL from DOI
+  "https://dx.doi.org/" 'doiurl := % prefix to make URL from DOI
   "doi:" 'doiprefix :=      % text prefix printed before DOI ref
   #2 'hrefform :=           % 0=no crossrefs; 1=hypertex xrefs; 2=hyperref refs
   #1 'inlinelinks :=        % 0=URLs explicit; 1=URLs attached to titles
@@ -1372,9 +1372,9 @@ FUNCTION {begin.bib}
     write$ newline$
   "\begin{thebibliography}{"  longest.label  * "}" *
     write$ newline$
-  "\def\mrref#1{\href{http://www.ams.org/mathscinet-getitem?mr=MR#1}{MR~#1}}"
+  "\def\mrref#1{\href{https://www.ams.org/mathscinet-getitem?mr=MR#1}{MR~#1}}"
     write$ newline$
-  "\def\zblref#1{\href{http://zbmath.org/?q=an\%3A#1}{Zbl~#1}}"
+  "\def\zblref#1{\href{https://zbmath.org/?q=an\%3A#1}{Zbl~#1}}"
     write$ newline$
   "\expandafter\ifx\csname url\endcsname\relax"
   write$ newline$
