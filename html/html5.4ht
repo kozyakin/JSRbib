@@ -1,4 +1,4 @@
-% html5.4ht (2020-04-13-14:20), generated from tex4ht-html5.tex
+% html5.4ht (2021-01-24-13:56), generated from tex4ht-html5.tex
 % Copyright 2016-2020 TeX Users Group
 %
 % This work may be distributed and/or modified under the
@@ -16,7 +16,7 @@
 %
 % If you modify this program, changing the
 % version identification would be appreciated.
-\immediate\write-1{version 2020-04-13-14:20}
+\immediate\write-1{version 2021-01-24-13:56}
 
 \exit:ifnot{amsart,% 
 amsbook,% 
@@ -24,6 +24,7 @@ amsproc,%
 article,% 
 book,% 
 latex,% 
+memoir,% 
 report,% 
 scrartcl,% 
 scrbook,% 
@@ -78,8 +79,8 @@ tex4ht}
    \else
       \Log:Note{for inline CSS code, use the command line option `css-in'}
       \Configure{@HEAD}{\HCode{<link
-         rel="stylesheet" type="text/css"
-         href="\expandafter\csname aa:CssFile\endcsname" />\Hnewline}}
+             rel="stylesheet" type="text/css"
+                      href="\expandafter\csname aa:CssFile\endcsname" />\Hnewline}}
    \fi
 
 \Configure{@HEAD}
@@ -295,6 +296,13 @@ tex4ht}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
 
 
+\ConfigureEnv{abstract}
+{\ifvmode\IgnorePar\fi\EndP\HCode{<section role="doc-abstract" class="abstract">\Hnewline}}
+{\ifvmode\IgnorePar\fi\EndP\HCode{</section>}}{}{}
+
+\Css{.abstract{margin:1em;}}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
@@ -333,11 +341,19 @@ tex4ht}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
 
 
+\ConfigureEnv{abstract}
+{\ifvmode\IgnorePar\fi\EndP\HCode{<section role="doc-abstract" class="abstract">\Hnewline}}
+{\ifvmode\IgnorePar\fi\EndP\HCode{</section>}}{}{}
+
+\Css{.abstract{margin:1em;}}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
@@ -392,7 +408,6 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 \ConfigureHinput{amsbook}
@@ -575,6 +590,49 @@ tex4ht}
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                \ConfigureHinput{memoir}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \Configure{float}
+   {\ifOption{refcaption}{}{\csname par\endcsname\ShowPar \leavevmode}}
+     {\:xhtml{\IgnorePar\EndP}\HCode{<figure class="float"\Hnewline>}}
+   {\ifvmode \IgnorePar \fi\EndP
+     \HCode{</figure>}\csname par\endcsname\ShowPar}
+
+\ConfigureEnv{figure}
+{\:xhtml{\IgnorePar\EndP}\HCode{<figure class="figure">\Hnewline}%
+    \bgroup \Configure{float}{\ShowPar}{}{}%
+   }
+   {\egroup
+   \:xhtml{\IgnorePar\EndP}\HCode{</figure>}\ShowPar
+\par}
+   {}{}
+
+\Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
+\Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
+\Css{figure.figure > p {text-align:center;}}
+
+\Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
+   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
+   \cur:th\:currentlabel\space-->}%
+}
+\Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
+                  text-align:center;}}
+\Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+
+\ConfigureEnv{abstract}
+{\ifvmode\IgnorePar\fi\EndP\HCode{<section role="doc-abstract" class="abstract">\Hnewline}}
+{\ifvmode\IgnorePar\fi\EndP\HCode{</section>}}{}{}
+
+\Css{.abstract{margin:1em;}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\endinput\empty\empty\empty\empty\empty\empty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
@@ -676,6 +734,7 @@ tex4ht}
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 \ConfigureHinput{scrartcl}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -714,7 +773,6 @@ tex4ht}
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 \ConfigureHinput{scrreprt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -752,6 +810,10 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 
 
 
