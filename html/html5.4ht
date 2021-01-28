@@ -1,4 +1,4 @@
-% html5.4ht (2021-01-24-13:56), generated from tex4ht-html5.tex
+% html5.4ht (2021-01-27-14:11), generated from tex4ht-html5.tex
 % Copyright 2016-2020 TeX Users Group
 %
 % This work may be distributed and/or modified under the
@@ -16,7 +16,7 @@
 %
 % If you modify this program, changing the
 % version identification would be appreciated.
-\immediate\write-1{version 2021-01-24-13:56}
+\immediate\write-1{version 2021-01-27-14:11}
 
 \exit:ifnot{amsart,% 
 amsbook,% 
@@ -298,7 +298,7 @@ tex4ht}
 
 \ConfigureEnv{abstract}
 {\ifvmode\IgnorePar\fi\EndP\HCode{<section role="doc-abstract" class="abstract">\Hnewline}}
-{\ifvmode\IgnorePar\fi\EndP\HCode{</section>}}{}{}
+{\ifvmode\IgnorePar\fi\EndP\HCode{</section>}\par}{}{}
 
 \Css{.abstract{margin:1em;}}
 
@@ -343,7 +343,7 @@ tex4ht}
 
 \ConfigureEnv{abstract}
 {\ifvmode\IgnorePar\fi\EndP\HCode{<section role="doc-abstract" class="abstract">\Hnewline}}
-{\ifvmode\IgnorePar\fi\EndP\HCode{</section>}}{}{}
+{\ifvmode\IgnorePar\fi\EndP\HCode{</section>}\par}{}{}
 
 \Css{.abstract{margin:1em;}}
 
@@ -623,7 +623,7 @@ tex4ht}
 
 \ConfigureEnv{abstract}
 {\ifvmode\IgnorePar\fi\EndP\HCode{<section role="doc-abstract" class="abstract">\Hnewline}}
-{\ifvmode\IgnorePar\fi\EndP\HCode{</section>}}{}{}
+{\ifvmode\IgnorePar\fi\EndP\HCode{</section>}\par}{}{}
 
 \Css{.abstract{margin:1em;}}
 
@@ -810,6 +810,7 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
