@@ -1,4 +1,4 @@
-% html5.4ht (2021-01-27-14:11), generated from tex4ht-html5.tex
+% html5.4ht (2021-02-14-13:56), generated from tex4ht-html5.tex
 % Copyright 2016-2020 TeX Users Group
 %
 % This work may be distributed and/or modified under the
@@ -16,7 +16,7 @@
 %
 % If you modify this program, changing the
 % version identification would be appreciated.
-\immediate\write-1{version 2021-01-27-14:11}
+\immediate\write-1{version 2021-02-14-13:56}
 
 \exit:ifnot{amsart,% 
 amsbook,% 
@@ -246,7 +246,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
@@ -284,7 +284,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
@@ -329,7 +329,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
@@ -370,7 +370,6 @@ tex4ht}
 
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 \ConfigureHinput{amsart}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -391,7 +390,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
@@ -429,7 +428,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
@@ -467,7 +466,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
@@ -484,8 +483,6 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 
 
 
@@ -610,7 +607,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
@@ -696,6 +693,11 @@ tex4ht}
 
 
 
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 \ConfigureHinput{scrbook}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -716,7 +718,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
@@ -733,7 +735,6 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 \ConfigureHinput{scrartcl}
@@ -755,7 +756,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
@@ -793,7 +794,7 @@ tex4ht}
 
 \Css{figure.float, div.figure {margin-left: auto; margin-right: auto;}}
 \Css{figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}}
-\Css{figure.figure > p {text-align:center;}}
+\Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
    {:} {\HCode{</span><span \Hnewline class="content">}}
