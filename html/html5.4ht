@@ -1,5 +1,5 @@
-% html5.4ht (2021-02-14-13:56), generated from tex4ht-html5.tex
-% Copyright 2016-2020 TeX Users Group
+% html5.4ht (2021-06-13-08:45), generated from tex4ht-html5.tex
+% Copyright 2016-2021 TeX Users Group
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either
@@ -16,7 +16,7 @@
 %
 % If you modify this program, changing the
 % version identification would be appreciated.
-\immediate\write-1{version 2021-02-14-13:56}
+\immediate\write-1{version 2021-06-13-08:45}
 
 \exit:ifnot{amsart,% 
 amsbook,% 
@@ -256,6 +256,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 
 
@@ -294,6 +295,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 
 \ConfigureEnv{abstract}
@@ -339,6 +341,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 
 \ConfigureEnv{abstract}
@@ -400,6 +403,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 
 
@@ -438,6 +442,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 
 
@@ -445,6 +450,7 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 \ConfigureHinput{amsproc}
@@ -476,6 +482,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 
 
@@ -617,6 +624,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 \ConfigureEnv{abstract}
 {\ifvmode\IgnorePar\fi\EndP\HCode{<section role="doc-abstract" class="abstract">\Hnewline}}
@@ -629,7 +637,6 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 
@@ -728,6 +735,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 
 
@@ -766,6 +774,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 
 
@@ -804,6 +813,7 @@ tex4ht}
 \Css{figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em;
                   text-align:center;}}
 \Css{figcaption.caption span.id{font-weight: bold; white-space: nowrap; }}
+\Css{p + figcaption, img + figcaption{margin-top: 1em;}}
 
 
 
@@ -811,6 +821,13 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
 
 
 
