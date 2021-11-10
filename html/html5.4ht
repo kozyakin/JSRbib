@@ -1,4 +1,4 @@
-% html5.4ht (2021-10-18-12:58), generated from tex4ht-html5.tex
+% html5.4ht (2021-11-09-10:26), generated from tex4ht-html5.tex
 % Copyright 2016-2021 TeX Users Group
 %
 % This work may be distributed and/or modified under the
@@ -16,7 +16,7 @@
 %
 % If you modify this program, changing the
 % version identification would be appreciated.
-\immediate\write-1{version 2021-10-18-12:58}
+\immediate\write-1{version 2021-11-09-10:26}
 
 \exit:ifnot{amsart,% 
 amsbook,% 
@@ -217,7 +217,6 @@ tex4ht}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \Configure{halignTB<>}{tabular}{\HCode{id="TBL-\TableNo"  class="tabular"\Hnewline \GROUPS\Hnewline
    }<>\HAlign}
-\Css{table.tabular{border-collapse: collapse; border-spacing: 0;}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
