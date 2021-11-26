@@ -1,54 +1,50 @@
-%%% ====================================================================
-%%% Modified by V. Kozyakin on 2013.08.21:
-%%%
-%%% 1. added support for electronic resource and hyperreferencing
-%%%
-%%% 2. added support to strip unnecessary records from MR references
-%%%
-%%% 3. URL is printed only if both DOI and EPRINT fields
-%%%    for a reference are absent or empty
-%%%
-%%%
-%%%  @BibTeX-style-file{
-%%%     filename        = "amsplain.bst",
-%%%     version         = "2.0",
-%%%     date            = "2000/03/27",
-%%%     time            = "13:49:29 EST",
-%%%     checksum        = "37449 1255 3734 27098",
-%%%     author          = "American Mathematical Society",
-%%%     address         = "American Mathematical Society,
-%%%                        Technical Support,
-%%%                        Electronic Products and Services,
-%%%                        P. O. Box 6248,
-%%%                        Providence, RI 02940,
-%%%                        USA",
-%%%     telephone       = "401-455-4080 or (in the USA and Canada)
-%%%                        800-321-4AMS (321-4267)",
-%%%     FAX             = "401-331-3842",
-%%%     email           = "tech-support@ams.org (Internet)",
-%%%     copyright       = "Copyright 1995 American Mathematical Society,
-%%%                        all rights reserved.  Copying of this file is
-%%%                        authorized only if either:
-%%%                        (1) you make absolutely no changes to your copy,
-%%%                        including name; OR
-%%%                        (2) if you do make changes, you first rename it
-%%%                        to some other name.",
-%%%     codetable       = "ISO/ASCII",
-%%%     keywords        = "bibtex, bibliography, amslatex, ams-latex",
-%%%     supported       = "yes",
-%%%     abstract        = "BibTeX bibliography style `amsplain' for BibTeX
-%%%                        versions 0.99a or later and LaTeX version 2e.
-%%%                        Produces numeric-label bibliography items in
-%%%                        a form typical for American Mathematical Society
-%%%                        publications.",
-%%%     docstring       = "The checksum field above contains a CRC-16
-%%%                        checksum as the first value, followed by the
-%%%                        equivalent of the standard UNIX wc (word
-%%%                        count) utility output of lines, words, and
-%%%                        characters.  This is produced by Robert
-%%%                        Solovay's checksum utility.",
-%%%  }
-%%% ====================================================================
+%% filename: amsplain-e.bst
+%% date: 2013/08/21
+%%
+%% Modified version of amsplain.bst by V. Kozyakin
+%%
+%% 1. added support for electronic resource and hyperreferencing
+%%
+%% 2. added support to strip unnecessary records from MR references
+%%
+%% 3. URL is printed only if both DOI and EPRINT fields,
+%%    for a reference, are absent or empty
+%%
+%% 4. Sorting is made according year-names with indication of
+%% year as a non-numbered item
+%%
+%% ====================================================================
+%% filename: amsplain.bst
+%% version: 2.0
+%% date: 2000/03/27
+%%
+%% American Mathematical Society
+%% Technical Support
+%% Publications Technical Group
+%% 201 Charles Street
+%% Providence, RI 02904
+%% USA
+%% tel: (401) 455-4080
+%%      (800) 321-4267 (USA and Canada only)
+%% fax: (401) 331-3842
+%% email: tech-support@ams.org
+%% 
+%% Copyright 1995, 2000, 2010 American Mathematical Society.
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%% 
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is the American Mathematical
+%% Society.
+%%
+%% ====================================================================
 
 % See the file btxbst.doc for extra documentation other than
 % what is included here.  And see btxhak.tex for a description
@@ -138,7 +134,7 @@ FUNCTION {init.urlbst.variables}
   "Available from: " 'urlintro := % prefix before URL
   "https://arxiv.org/abs/" 'eprinturl := % prefix to make URL from eprint ref
   "arXiv:" 'eprintprefix := % text prefix printed before eprint ref
-  "https://dx.doi.org/" 'doiurl := % prefix to make URL from DOI
+  "https://doi.org/" 'doiurl := % prefix to make URL from DOI
   "doi:" 'doiprefix :=      % text prefix printed before DOI ref
   "0" 'yeartemp :=          % label of used years
   #2 'hrefform :=           % 0=no crossrefs; 1=hypertex xrefs; 2=hyperref refs
@@ -332,8 +328,7 @@ FUNCTION {output.bibitem}
 }
 
 FUNCTION {output.nonempty.mrnumber}
-{
-   duplicate$ missing$
+{   duplicate$ missing$
     { pop$ "" }
     'skip$
   if$
@@ -352,14 +347,12 @@ FUNCTION {output.nonempty.mrnumber}
 % end of extraction	of #######
      " \mrref{" swap$ * "}" * add.period$ write$ }
   if$
-  newline$
 }
 
 FUNCTION {format.zblnumber}
-{
-  zblnumber duplicate$ empty$
+{  zblnumber duplicate$ empty$
     { pop$ "" }
-    { "\zblref{" swap$ * "}" * add.period$}
+    { " \zblref{" swap$ * "}" * add.period$}
   if$
 }
 
@@ -897,7 +890,7 @@ FUNCTION {article}
       format.pages "pages" output.check
     }
   if$
-  format.language *
+%  format.language *
   format.note output
   format.doi output
   format.eprint output
@@ -926,7 +919,7 @@ FUNCTION {book}
     }
   if$
   format.date "year" output.check
-  format.language *
+%  format.language *
   format.note output
   format.doi output
   format.eprint output
@@ -970,7 +963,7 @@ FUNCTION {inbook}
     }
   if$
   format.date "year" output.check
-  format.language *
+%  format.language *
   format.note output
   format.doi output
   format.eprint output
@@ -993,7 +986,7 @@ FUNCTION {incollection}
     }
   if$
   format.book.pages output
-  format.language *
+%  format.language *
   format.note output
   format.doi output
   format.eprint output
@@ -1015,7 +1008,7 @@ FUNCTION {inproceedings}
     }
   if$
   format.book.pages output
-  format.language *
+%  format.language *
   format.note output
   format.doi output
   format.eprint output
@@ -1363,7 +1356,6 @@ FUNCTION {longest.label.pass}
     'skip$
   if$
 }
-
 
 EXECUTE {initialize.longest.label}
 EXECUTE {init.urlbst.variables}
