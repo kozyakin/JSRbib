@@ -2,7 +2,7 @@
 
 В случае установленного **TexLive** выполнение полного цикла трансляции состоит из следующих команд
 
-```
+```cmd
 pdflatex --shell-escape JSRbib.tex
 bibtex JSRbib
 pdflatex --shell-escape JSRbib.tex
@@ -11,7 +11,7 @@ pdflatex --shell-escape JSRbib.tex
 
 В случае установленного **MikTeX** выполнение полного цикла трансляции состоит из следующих команд
 
-```
+```cmd
 pdflatex --enable-write18 JSRbib.tex
 bib tex JSRbib
 pdflatex --enable-write18 JSRbib.tex

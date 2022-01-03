@@ -1,12 +1,12 @@
 1. If file **JSRbib.tex** contains the string
 
-    ```
+    ```latex
     \usepackage[a-1b,mathxmp]{pdfx}
     ```
 
     then this string must be replaced by
 
-    ```
+    ```latex
     \ifdefined\HCode\relax
     \else
     \usepackage[a-1b,mathxmp]{pdfx}
@@ -15,7 +15,7 @@
 
 2. If necessary to sort and compress cites WHEN USING **authorindex**, then insert the following commands
 
-    ```
+    ```latex
     \usepackage[numbers,sort,compress]{natbib}
     \let\cite=\citep
     \makeatletter
@@ -47,7 +47,7 @@
 
 4. Run the command
 
-    ```
+    ```cmd
     make4ht -sc myconfig.cfg JSRbib.tex "html,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
     ```
 
@@ -55,32 +55,33 @@
 
 5. To "embed" the created by the last command .css file in .html, run additionally the following command once or twice
 
-    ```
+    ```cmd
     htlatex JSRbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
     ```
 
     or run the command
 
-    ```
+    ```cmd
     make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
     ```
 
 6. Make the following replacements in the resulting .html file
 
-    ```
+    ```perl
     <\/a>,(\xC2\xA0|\x00\xA0|&#xC2A0;|&#x00A0;)<a -> <\/a>, <a
     ,(\xC2\xA0|\x00\xA0|&#xC2A0;|&#x00A0;)<\/span> -> , <\/span>
     .figure \&gt; p -> .figure \> p
     ```
 
-    After that, in utf-8 encoding, instead of `&#x00A0;` the symbol `No-Breake-Space` will appear in the appropriate places. 
+    After that, in utf-8 encoding, instead of `&#x00A0;` the symbol `No-Breake-Space` will appear in the appropriate places.
 
 ---
 
 #### Remark
+
 The procedures from points 5, 6 can be performed by running the following two bat-files sequentially (in this case, the compiler **Perl** must be installed and be in the **PATH** variable on the system):
 
-```
+```cmd
 my_make4ht.bat JSRbib.tex
 my_make4ht+include_css+more_selective_cleaning.bat JSRbib.tex
 ```
