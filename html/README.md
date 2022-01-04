@@ -47,7 +47,7 @@
 
 4. Run the command
 
-    ```cmd
+    ```shell
     make4ht -sc myconfig.cfg JSRbib.tex "html,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
     ```
 
@@ -55,13 +55,13 @@
 
 5. To "embed" the created by the last command .css file in .html, run additionally the following command once or twice
 
-    ```cmd
+    ```shell
     htlatex JSRbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
     ```
 
     or run the command
 
-    ```cmd
+    ```shell
     make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
     ```
 
@@ -81,7 +81,7 @@
 
 The procedures from points 5, 6 can be performed by running the following two bat-files sequentially (in this case, the compiler **Perl** must be installed and be in the **PATH** variable on the system):
 
-```cmd
+```shell
 my_make4ht.bat JSRbib.tex
 my_make4ht+include_css+more_selective_cleaning.bat JSRbib.tex
 ```

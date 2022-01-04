@@ -9,7 +9,7 @@ This is a set of files to create **JSRbib.pdf** and **JSRbib.html** containing *
 
 To add new record to the **JSRbib.pdf** it is needed
 
-* Add appropriate **BiBTex** record to **JSR+matprod.bib** 
+* Add appropriate **BiBTex** record to **JSR+matprod.bib**
 * Add reference to new record in **JSRbib.tex**
 * Compile **JSRbib.tex** to generate **JSRbib.pd**f
 * Process **JSRbib.tex** with **make4ht** to generate **JSRbib.html**
@@ -24,7 +24,7 @@ Let us remind once again: **Perl** must be installed with the registered path to
 
 In the case of installed **TexLive**, it is necessary to execute the following commands
 
-```cmd
+```shell
 pdflatex --shell-escape JSRbib.tex
 bibtex JSRbib
 pdflatex --shell-escape JSRbib.tex
@@ -33,7 +33,7 @@ pdflatex --shell-escape JSRbib.tex
 
 In the case of **MikTeX** installed, the execution of a full processing cycle consists of the following commands
 
-```cmd
+```shell
 pdflatex --enable-write18 JSRbib.tex
 bibtex JSRbib
 pdflatex --enable-write18 JSRbib.tex
@@ -54,7 +54,7 @@ You can execute these commands either on the command line or by setting up the a
 
 4. Run the command
 
-    ```cmd
+    ```shell
     my_make4ht+include_css+more_selective_cleaning.bat JSRbib.tex 
     ```
 

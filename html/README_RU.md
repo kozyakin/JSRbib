@@ -47,7 +47,7 @@
 
 4. Выполнить команду
 
-    ```cmd
+    ```shell
     make4ht -sc myconfig.cfg JSRbib.tex "html,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
     ```
 
@@ -55,13 +55,13 @@
 
 5. Для "вложения" сгенерированного файла .css в .html, запустить дополнительно один или два раза команду
 
-    ```cmd
+    ```shell
     htlatex JSRbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
     ```
 
     или команду
 
-    ```cmd
+    ```shell
     make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
     ```
 
@@ -81,7 +81,7 @@
 
 Процедуры из пунктов 5, 6 можно выполнить, запустив последовательно два bat-файла (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**):
 
-```cmd
+```shell
 my_make4ht.bat JSRbib.tex
 my_make4ht+include_css+more_selective_cleaning.bat JSRbib.tex
 ```
