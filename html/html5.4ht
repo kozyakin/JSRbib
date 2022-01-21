@@ -1,4 +1,4 @@
-% html5.4ht (2021-11-09-10:26), generated from tex4ht-html5.tex
+% html5.4ht (2022-01-20-14:20), generated from tex4ht-html5.tex
 % Copyright 2016-2021 TeX Users Group
 %
 % This work may be distributed and/or modified under the
@@ -16,7 +16,7 @@
 %
 % If you modify this program, changing the
 % version identification would be appreciated.
-\immediate\write-1{version 2021-11-09-10:26}
+\immediate\write-1{version 2022-01-20-14:20}
 
 \exit:ifnot{amsart,% 
 amsbook,% 
@@ -247,7 +247,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -285,7 +285,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -330,7 +330,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -352,9 +352,6 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 
 
 
@@ -392,7 +389,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -430,7 +427,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -445,7 +442,6 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 \ConfigureHinput{amsproc}
@@ -469,7 +465,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -484,6 +480,11 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 
 
 
@@ -610,7 +611,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -720,7 +721,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -735,6 +736,7 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 \ConfigureHinput{scrartcl}
@@ -758,7 +760,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -796,7 +798,7 @@ tex4ht}
 \Css{figure.figure {text-align:center;}}
 
 \Configure{caption}{\:xhtml{\IgnorePar\EndP}\HCode{<figcaption class="caption" ><span class="id">}}
-   {:} {\HCode{</span><span \Hnewline class="content">}}
+   {: } {\HCode{</span><span \Hnewline class="content">}}
    {\HCode{</span></figcaption>}\HCode{<!--tex4ht:label?:
    \cur:th\:currentlabel\space-->}%
 }
@@ -811,6 +813,7 @@ tex4ht}
   
 \endinput\empty\empty\empty\empty\empty\empty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
