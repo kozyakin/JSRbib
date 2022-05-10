@@ -1,28 +1,22 @@
-33 Patch Control
+36 Patch Control
 
 0
 0
 1
 JSRbib.tex
-16
+13
 2
-0
+1
 
-JSRbib.tex
-TeX:Soft
-286273531 0 -1 708 -1 708 120 120 817 504 1 1 377 420 -1 -1 0 0 677 -1 -1 677 2 0 708 -1 1 16971 -1  0 -1 0
 JSR+matprod.bib
 BibTeX:UNIX
-1147890 0 156 19 204 80 30 30 728 417 0 1 755 580 -1 -1 0 0 1 10 10 1 5 0 80 204 1 1 16172 2 1 16172 3 1 16172 4 1 16172  0 -1 0
-:\Users\Vitya\AppData\Roaming\WinEdt Team\WinEdt 10\Macros\LaTeX\bibMacros\bibMacros.cfg
-ASCII:EDT
-269494138 1 31 35 31 37 52 52 868 491 1 0 361 527 -1 -1 0 0 -1 -1 -1 -1 1 0 37 31  0 0 0
-:\texlive\2021\texmf-dist\tex\latex\pdfx\pdfx.sty
-TeX:STY:UNIX
-269594610 7 2855 1 2854 1 78 78 894 517 0 0 26 1500 -1 -1 0 0 -1 -1 -1 -1 1 0 1 2854  0 0 0
-:\Users\Vitya\AppData\Roaming\WinEdt Team\WinEdt 10\ConfigEx\MainMenu.ini
+1147890 2 16 19 16 24 30 30 728 417 1 1 309 320 -1 -1 0 0 1 10 10 1 5 0 24 16 1 1 16172 2 1 16172 3 1 16172 4 1 16172  0 -1 0
+JSRbib.tex
+TeX:Soft
+286273531 1 -1 27 -1 46 120 120 817 504 1 1 273 20 -1 -1 0 0 677 -1 -1 677 2 0 46 -1 1 16971 -1  0 -1 0
+:\Users\Vitya\AppData\Roaming\WinEdt Team\WinEdt 11\ConfigEx\MainMenu.ini
 DATA:INI:EDT:UNIX
-269583354 0 4064 13 4049 76 52 52 833 468 1 1 689 238 -1 -1 0 0 83 0 0 83 1 0 76 4049  0 -1 0
+269583354 0 4504 11 4507 105 0 0 973 674 1 1 814 368 -1 -1 0 0 83 0 0 83 1 0 105 4507  0 -1 0
 :\Users\Vitya\Dropbox\Mathematics\Bibliography\kozpub-cp1251.bib
 BibTeX:UNIX:CP1251
 269583346 2 2497 19 2497 41 52 52 881 491 0 1 404 120 -1 -1 0 0 31 0 0 31 1 0 41 2497  0 -1 0
@@ -44,9 +38,6 @@ BibTeX:UNIX:UTF-8
 :\Users\Vitya\Dropbox\Mathematics\Bibliography\kozpubU.bib
 BibTeX:UNIX:UTF-8
 269583346 0 3932 9 3949 1 182 182 1010 621 0 1 44 460 -1 -1 0 0 25 0 0 25 1 0 1 3949  0 -1 0
-:\Users\Vitya\Dropbox\Teaching\LYar\2019-YSK\review\reply.tex
-TeX:UNIX:CP1251
-286371835 0 -1 3515 -1 3516 52 52 798 470 0 1 152 120 -1 -1 0 0 -1 -1 -1 -1 1 0 3516 -1  0 -1 0
 :\Users\Vitya\Dropbox\Mathematics\2018-AlternatingFactors-2\stanford.pgf
 TeX:UNIX:Hard
 269594619 0 0 1 0 1 52 52 881 491 0 1 44 0 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0  0 -1 0
