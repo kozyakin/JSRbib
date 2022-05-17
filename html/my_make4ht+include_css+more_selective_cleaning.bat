@@ -3,16 +3,16 @@ chcp 65001 >nul
 echo.============================================================================
 echo                                ВНИМАНИЕ!
 echo.
-echo Чтобы внедрить (с помощью опции css-in) в результирующий html-файл, 
-echo создаваемый в процессе компиляции css-файл, корневая директория должна 
-echo содержать модифицированный файл html5.4ht !
+echo Чтобы внедрить (с помощью опции css-in) в результирующий html-файл 
+echo css-файл, создаваемый в процессе компиляции, [93mкорневая директория должна 
+echo содержать модифицированный файл html5.4ht[0m !
 echo.
 echo ----------------------------------------------------------------------------
 echo                                ATTENTION!
 echo.
-echo To embed (using the css-in option) in the resulting html file generated 
-echo during compilation css-file, the root directory must contain the modified 
-echo html5.4ht file!
+echo To inject (with the css-in option) the css-file created during the 
+echo compilation process into the resulting html-file, the [93mthe root directory 
+echo must contain a modified html5.4ht file[0m !
 echo.============================================================================
 echo.
 echo 1. Creation of %~n1.html
