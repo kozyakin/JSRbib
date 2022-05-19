@@ -78,9 +78,9 @@
 ---
 
 #### Замечание
-Процедуры из пунктов 5, 6 можно выполнить, запустив последовательно два bat-файла (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**):
+Процедуры из пунктов 5, 6 можно выполнить, запустив последовательно два cmd-файла (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**):
 
 ```
-my_make4ht.bat JSRbib.tex
-my_make4ht+include_css+more_selective_cleaning.bat JSRbib.tex
+my_make4ht.cmd JSRbib.tex
+my_make4ht+include_css+more_selective_cleaning.cmd JSRbib.tex
 ```

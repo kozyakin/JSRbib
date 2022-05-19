@@ -78,9 +78,9 @@
 ---
 
 #### Remark
-The procedures from points 5, 6 can be performed by running the following two bat-files sequentially (in this case, the compiler **Perl** must be installed and be in the **PATH** variable on the system):
+The procedures from points 5, 6 can be performed by running the following two cmd-files sequentially (in this case, the compiler **Perl** must be installed and be in the **PATH** variable on the system):
 
 ```
-my_make4ht.bat JSRbib.tex
-my_make4ht+include_css+more_selective_cleaning.bat JSRbib.tex
+my_make4ht.cmd JSRbib.tex
+my_make4ht+include_css+more_selective_cleaning.cmd JSRbib.tex
 ```
