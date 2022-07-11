@@ -1,7 +1,7 @@
 {
     "InternalPDFViewer": {
         "Embedded": false,
-        "File": ""
+        "File": "JSRbib.pdf"
     },
     "Session": {
         "Bookmarks": [
@@ -10,9 +10,17 @@
         "FileVersion": 1,
         "Files": [
             {
-                "Col": 0,
+                "Col": 70,
                 "EditorGroup": 0,
                 "FileName": "JSRbib.tex",
+                "FirstLine": 191,
+                "FoldedLines": "",
+                "Line": 194
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "JSR+matprod.bib",
                 "FirstLine": 0,
                 "FoldedLines": "",
                 "Line": 0
