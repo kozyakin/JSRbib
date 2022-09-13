@@ -13,6 +13,10 @@
 %% 4. Sorting is made according year-names with indication of
 %% year as a non-numbered item
 %%
+%% 5. On 2022-09-13 command format.note disjointed into two commands:
+%%    format.url & format.note with rearranging all format... output
+%%    commands
+%%
 %% ====================================================================
 %% filename: amsplain.bst
 %% version: 2.0
@@ -342,7 +346,7 @@ FUNCTION {output.nonempty.mrnumber}
      duplicate$
      #1 #2 substring$ "MR" =
      {#3 #10 substring$}
-     {skip$}
+     'skip$
      if$
 % end of extraction	of #######
      " \mrref{" swap$ * "}" * add.period$ write$ }
@@ -514,19 +518,21 @@ FUNCTION {format.doi}
   if$
 }
 
-FUNCTION {format.note}
-% beginning output URL only if both doi and eprint are absent or empty
+FUNCTION {format.url}
 { doi empty$
   { eprint empty$
     { url empty$
-      'skip$
-      { "\urlprefix\url{" url * "}" * output }
+      { "" }
+      { "\urlprefix\url{" url * "}" * }
       if$}
-    'skip$
+    { "" }
     if$}
-  'skip$
+  { "" }
   if$
-% end
+}
+
+FUNCTION {format.note}
+{
  note empty$
     { "" }
     { note #1 #1 substring$
@@ -894,6 +900,7 @@ FUNCTION {article}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -923,6 +930,7 @@ FUNCTION {book}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -936,6 +944,7 @@ FUNCTION {booklet}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -967,6 +976,7 @@ FUNCTION {inbook}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -990,6 +1000,7 @@ FUNCTION {incollection}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -1012,6 +1023,7 @@ FUNCTION {inproceedings}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -1045,6 +1057,7 @@ FUNCTION {manual}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -1060,6 +1073,7 @@ FUNCTION {mastersthesis}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -1073,6 +1087,7 @@ FUNCTION {misc}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
   empty.misc.check
 }
@@ -1089,6 +1104,7 @@ FUNCTION {phdthesis}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -1120,6 +1136,7 @@ FUNCTION {proceedings}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -1134,6 +1151,7 @@ FUNCTION {techreport}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
@@ -1145,6 +1163,7 @@ FUNCTION {unpublished}
   format.note output
   format.doi output
   format.eprint output
+  format.url output
   fin.entry
 }
 
