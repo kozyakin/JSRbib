@@ -1,4 +1,4 @@
-%% filename: amsplain-e.bst
+%% filename: amsplain-ey.bst
 %% date: 2013/08/21
 %%
 %% Modified version of amsplain.bst by V. Kozyakin
@@ -16,6 +16,8 @@
 %% 5. On 2022-09-13 command format.note disjointed into two commands:
 %%    format.url & format.note with rearranging all format... output
 %%    commands
+%%
+%% 6. On 2022-09-15 comma before and after note replaced by period
 %%
 %% ====================================================================
 %% filename: amsplain.bst
@@ -145,11 +147,13 @@ FUNCTION {init.urlbst.variables}
   #1 'inlinelinks :=        % 0=URLs explicit; 1=URLs attached to titles
 }
 
-INTEGERS { output.state before.all mid.sentence }
+INTEGERS { output.state before.all mid.sentence after.sentence after.block }
 
 FUNCTION {init.state.consts}
 { #0 'before.all :=
   #1 'mid.sentence :=
+  #2 'after.sentence :=
+  #3 'after.block :=
 }
 
 % Scratch variables:
@@ -267,13 +271,17 @@ FUNCTION {output.nonnull}
   output.state mid.sentence =
 % If we're in mid-sentence, add a comma to the new top item and write it
     { ", " * write$ }
-% Otherwise, if we're at the beginning of a bibitem,
-    { output.state before.all =
-% just write out the top item from the stack;
-      'write$
-% and the last alternative is that we're at the end of the current
-% bibitem, so we add a period to the top stack item and write it out.
-        { add.period$ " " * write$ }
+    { output.state after.block =
+% If we're in block, add a period to the new top item and write it
+        { ". " * write$
+          newline$
+          "\newblock " write$
+        }
+        { output.state before.all =
+            'write$
+            { add.period$ " " * write$ }
+          if$
+        }
       if$
       mid.sentence 'output.state :=
     }
@@ -332,7 +340,7 @@ FUNCTION {output.bibitem}
 }
 
 FUNCTION {output.nonempty.mrnumber}
-{   duplicate$ missing$
+{ duplicate$ missing$
     { pop$ "" }
     'skip$
   if$
@@ -378,10 +386,32 @@ FUNCTION {fin.entry}
   if$
 }
 
-% Removed new.block, new.block.checka, new.block.checkb, new.sentence,
-% new.sentence.checka, and new.sentence.checkb functions here, since they
-% don't seem to be needed in the AMS style.  Also moved some real
-% basic functions like `and' and 'or' earlier in the file.
+FUNCTION {new.block}
+{ output.state before.all =
+    'skip$
+    { after.block 'output.state := }
+  if$
+}
+
+FUNCTION {new.sentence.orig}
+{ output.state after.block =
+    'skip$
+    { output.state before.all =
+        'skip$
+        { after.sentence 'output.state := }
+      if$
+    }
+  if$
+}
+
+FUNCTION {new.sentence}
+{
+  new.block
+%  new.sentence.orig
+}
+
+% Moved some real basic functions like `and' and 'or' 
+% earlier in the file.
 
 INTEGERS { nameptr namesleft numnames }
 
@@ -897,7 +927,9 @@ FUNCTION {article}
     }
   if$
 %  format.language *
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -927,7 +959,9 @@ FUNCTION {book}
   if$
   format.date "year" output.check
 %  format.language *
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -941,7 +975,9 @@ FUNCTION {booklet}
   howpublished output
   address output
   format.date output
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -973,7 +1009,9 @@ FUNCTION {inbook}
   if$
   format.date "year" output.check
 %  format.language *
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -997,7 +1035,9 @@ FUNCTION {incollection}
   if$
   format.book.pages output
 %  format.language *
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -1020,7 +1060,9 @@ FUNCTION {inproceedings}
   if$
   format.book.pages output
 %  format.language *
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -1054,7 +1096,9 @@ FUNCTION {manual}
   if$
   format.edition output
   format.date output
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -1070,7 +1114,9 @@ FUNCTION {mastersthesis}
   address output
   format.date "year" output.check
   format.book.pages output
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -1084,7 +1130,9 @@ FUNCTION {misc}
   howpublished output
   format.date output
   format.book.pages output
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -1101,7 +1149,9 @@ FUNCTION {phdthesis}
   address output
   format.date "year" output.check
   format.book.pages output
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -1133,7 +1183,9 @@ FUNCTION {proceedings}
       format.date "year" output.check
     }
   if$
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -1148,7 +1200,9 @@ FUNCTION {techreport}
   institution "institution" output.check
   address output
   format.date "year" output.check
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
@@ -1160,7 +1214,9 @@ FUNCTION {unpublished}
   format.authors "author" output.check
   format.title "title" output.check
   format.date output
+  new.block
   format.note output
+  new.block
   format.doi output
   format.eprint output
   format.url output
