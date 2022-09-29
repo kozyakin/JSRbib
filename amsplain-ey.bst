@@ -212,25 +212,25 @@ FUNCTION {emphasize}
 FUNCTION {n.dashify}
 { 't :=
   ""
-  { t empty$ not }
-  { t #1 #1 substring$ "-" =
-      { t #1 #2 substring$ "--" = not
-          { "--" *
-            t #2 global.max$ substring$ 't :=
-          }
-          { { t #1 #1 substring$ "-" = }
-            { "-" *
+    { t empty$ not }
+    { t #1 #1 substring$ "-" =
+        { t #1 #2 substring$ "--" = not
+            { "--" *
               t #2 global.max$ substring$ 't :=
             }
-            while$
-          }
-        if$
-      }
-      { t #1 #1 substring$ *
-        t #2 global.max$ substring$ 't :=
-      }
-    if$
-  }
+            {   { t #1 #1 substring$ "-" = }
+                { "-" *
+                  t #2 global.max$ substring$ 't :=
+                }
+              while$
+            }
+          if$
+        }
+        { t #1 #1 substring$ *
+          t #2 global.max$ substring$ 't :=
+        }
+      if$
+    }
   while$
 }
 
@@ -436,27 +436,27 @@ FUNCTION {format.names}
   #1 'nameptr :=
   s num.names$ 'numnames :=
   numnames 'namesleft :=
-  { namesleft #0 > }
-  { s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=
-    nameptr #1 >
-      { namesleft #1 >
-          { ", " * t * }
-          { numnames #2 >
-              { "," * }
-              'skip$
-            if$
-            t "others" =
-              { " et~al." * }
-              { " and " * t * }
-            if$
-          }
-        if$
-      }
-      't
-    if$
-    nameptr #1 + 'nameptr :=
-    namesleft #1 - 'namesleft :=
-  }
+    { namesleft #0 > }
+    { s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=
+      nameptr #1 >
+        { namesleft #1 >
+            { ", " * t * }
+            { numnames #2 >
+                { "," * }
+                'skip$
+              if$
+              t "others" =
+                { " et~al." * }
+                { " and " * t * }
+              if$
+            }
+          if$
+        }
+        't
+      if$
+      nameptr #1 + 'nameptr :=
+      namesleft #1 - 'namesleft :=
+    }
   while$
 }
 
@@ -741,19 +741,19 @@ INTEGERS { multiresult }
 FUNCTION {multi.page.check}
 { 't :=
   #0 'multiresult :=
-  { multiresult not
-    t empty$ not
-    and
-  }
-  { t #1 #1 substring$
-    duplicate$ "-" =
-    swap$ duplicate$ "," =
-    swap$ "+" =
-    or or
-      { #1 'multiresult := }
-      { t #2 global.max$ substring$ 't := }
-    if$
-  }
+    { multiresult not
+      t empty$ not
+      and
+    }
+    { t #1 #1 substring$
+      duplicate$ "-" =
+      swap$ duplicate$ "," =
+      swap$ "+" =
+      or or
+        { #1 'multiresult := }
+        { t #2 global.max$ substring$ 't := }
+      if$
+    }
   while$
   multiresult
 }
@@ -1275,31 +1275,31 @@ FUNCTION {sort.format.names}
   ""
   s num.names$ 'numnames :=
   numnames 'namesleft :=
-  { namesleft #0 > }
-  { s nameptr
-    "{vv{ } }{ll{ }}{  ff{ }}{  jj{ }}"
-    format.name$ 't :=
-    nameptr #1 >
-      {
-        nameptr #3
-        #1 + =
-          numnames #3
-          > and
-            { "others" 't :=
-              #1 'namesleft := }
-            'skip$
-          if$
-          "   "  *
-          namesleft #1 = t "others" = and
-            { "zzzzz" * }
-            { t sortify * }
-          if$
-      }
-      { t sortify * }
-    if$
-    nameptr #1 + 'nameptr :=
-    namesleft #1 - 'namesleft :=
-  }
+    { namesleft #0 > }
+    { s nameptr
+      "{vv{ } }{ll{ }}{  ff{ }}{  jj{ }}"
+      format.name$ 't :=
+      nameptr #1 >
+        {
+          nameptr #3
+          #1 + =
+            numnames #3
+            > and
+              { "others" 't :=
+                #1 'namesleft := }
+              'skip$
+            if$
+            "   "  *
+            namesleft #1 = t "others" = and
+              { "zzzzz" * }
+              { t sortify * }
+            if$
+        }
+        { t sortify * }
+      if$
+      nameptr #1 + 'nameptr :=
+      namesleft #1 - 'namesleft :=
+    }
   while$
 }
 
@@ -1440,8 +1440,8 @@ EXECUTE {init.urlbst.variables}
 ITERATE {longest.label.pass}
 
 FUNCTION {write.lines}
-{ { duplicate$ "." = NOT }
-  { write$ newline$ }
+{   { duplicate$ "." = NOT }
+    { write$ newline$ }
   while$
   pop$
 }
