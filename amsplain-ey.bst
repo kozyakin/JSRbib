@@ -1447,11 +1447,7 @@ FUNCTION {write.lines}
 }
 
 FUNCTION {begin.bib}
-{ preamble$ empty$
-    'skip$
-    { preamble$ write$ newline$ }
-  if$
-  "\providecommand{\BibAnnote}[1]{#1}"
+{ "\providecommand{\BibAnnote}[1]{#1}"
     write$ newline$
   "\providecommand{\KeyWords}[1]{#1}"
     write$ newline$
@@ -1471,6 +1467,10 @@ FUNCTION {begin.bib}
   write$ newline$
   "  \def\href#1#2{#2} \def\path#1{#1}\fi"
   write$ newline$
+  preamble$ empty$
+    'skip$
+    { preamble$ write$ newline$ }
+  if$
 }
 
 EXECUTE {begin.bib}
