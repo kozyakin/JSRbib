@@ -53,7 +53,7 @@
 
     (**DO NOT DELETE** space in the last pair of quotes !)
 
-5. To "embed" the created by the last command .css file in .html, run additionally the following command once or twice
+    To "embed" the created by the last command .css file in .html, run additionally the following command once or twice
 
     ```
     htlatex JSRbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
@@ -63,6 +63,14 @@
 
     ```
     make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
+    ```
+
+5. Unfortunately, for unknown reasons, the commands from point 4 stopped working in **batch** files in recent releases of **TeXLive** . Therefore, they can be replaced with commands:
+
+    ```
+    htlatex JSRbib.tex "myconfig,html5,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
+    
+    htlatex JSRbib.tex "myconfig,html5,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
     ```
 
 6. Make the following replacements in the resulting .html file

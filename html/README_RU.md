@@ -48,12 +48,12 @@
 4. Выполнить команду
 
     ```
-    make4ht -sc myconfig.cfg JSRbib.tex "html,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
+    make4ht -sc myconfig.cfg %1 "0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
     ```
 
     (пробел в последней паре кавычек **НЕ УДАЛЯТЬ!**)
 
-5. Для "вложения" сгенерированного файла .css в .html, запустить дополнительно один или два раза команду
+    Для "вложения" сгенерированного файла .css в .html, запустить дополнительно один или два раза команду
 
     ```
     htlatex JSRbib.tex "myconfig,html,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
@@ -62,7 +62,14 @@
     или команду
 
     ```
-    make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
+    make4ht -sc myconfig.cfg -m draft %1 "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
+    ```
+
+5. К сожалению по непонятным причинам команды из п4 перестали работать в **batch**-файлах в последних выпусках **TeXLive** . Поэтому они могут быть заменены на команды:
+    ```
+    htlatex JSRbib.tex "myconfig,html5,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
+    
+    htlatex JSRbib.tex "myconfig,html5,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
     ```
 
 6. Сделать в полученном .html файле замены

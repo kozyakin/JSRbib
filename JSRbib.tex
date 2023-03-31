@@ -4,21 +4,12 @@
 %\UseRawInputEncoding
 \ifdefined\HCode\relax
 \else
-\begin{filecontents*}{\jobname.xmpdata}
-\Title{An annotated bibliography on the convergence of matrix products and the theory of joint/generalized spectral radius}
-\Author{V. Kozyakin}
-\Language{en-EN}
-\Keywords{joint spectral radius\sep generalized spectral radius}
-\Subject{This is an attempt to systematize my personal knowledge about convergence of infinite matrix products and the rate of their growth/decrease when the number of multipliers tends to infinity.}
-\Publisher{V. Kozyakin}
-\end{filecontents*}
+% The following command has been added to prevent hyperlinks
+% from spanning 2 pages plus support for the PDF/A-2b standard
+\DocumentMetadata{testphase=new-or-1,pdfstandard=A-2b}
 \fi
 \documentclass[a4paper,fleqn]{article}
 %
-\ifdefined\HCode\relax
-\else
-\usepackage[a-1b,mathxmp]{pdfx}
-\fi
 \usepackage{amsmath,amssymb,amsfonts,bm}
 \usepackage[mathscr]{eucal}
 \usepackage{a4wide}
@@ -52,8 +43,15 @@
 \usepackage[small,firstabbrev]{authorindex}
 
 \usepackage{hyperref}
-\hypersetup{hypertexnames=false}
-
+\hypersetup{
+pdftitle={An annotated bibliography on the convergence of matrix products and the theory of joint/generalized spectral radius},
+pdfsubject={This is an attempt to systematize my personal knowledge about convergence of infinite matrix products and the rate of their growth/decrease when the number of multipliers tends to infinity.},
+pdfauthor={V. Kozyakin},
+pdfkeywords={joint spectral radius; generalized spectral radius},
+linkbordercolor=[rgb]{0.5, 1, 1},
+urlbordercolor=[rgb]{0.5, 1, 1},
+citebordercolor=[rgb]{0.5, 1, 0.5},
+hypertexnames=false}
 
 %\usepackage{mVersion}
 %\setVersion{9}
