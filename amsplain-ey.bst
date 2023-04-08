@@ -1454,7 +1454,7 @@ FUNCTION {begin.bib}
     write$ newline$
   "\def\mrref#1{\href{https://www.ams.org/mathscinet-getitem?mr=MR#1}{MR~#1}}"
     write$ newline$
-  "\def\zblref#1{\href{https://zbmath.org/?q=an\%3A#1}{Zbl~#1}}"
+  "\def\zblref#1{\href{https://zbmath.org/?q=an:#1}{Zbl~#1}}"
     write$ newline$
   "\expandafter\ifx\csname url\endcsname\relax"
   write$ newline$
