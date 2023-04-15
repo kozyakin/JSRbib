@@ -48,23 +48,21 @@
 4. Run the command
 
     ```
-    make4ht -sc myconfig.cfg JSRbib.tex "0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
+    make4ht -s JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```
 
     (**DO NOT DELETE** space in the last pair of quotes !) And then to "embed" the created by the last command .css file in .html, run additionally the following command
 
     ```
-    make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
+    make4ht -sm draft JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```
     
 5. Unfortunately, for unknown reasons, the commands from point 4 stopped working in **batch** files in recent releases of **TeXLive** . Therefore, they can be replaced with commands:
-
     ```
-    htlatex JSRbib.tex "myconfig,html5,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
+    htlatex JSRbib.tex "myconfig" " -cunihtf -utf8"
+    htlatex JSRbib.tex "myconfig" " -cunihtf -utf8"
+    ```
     
-    htlatex JSRbib.tex "myconfig,html5,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
-    ```
-
 6. Make the following replacements in the resulting .html file
 
     ```
@@ -78,9 +76,9 @@
 ---
 
 #### Remark
-The procedures from points 5, 6 can be performed by running the following two cmd-files sequentially (in this case, the compiler **Perl** must be installed and be in the **PATH** variable on the system):
+The procedures from points 5, 6 can be performed by running one of the following two cmd-files sequentially (in this case, the compiler **Perl** must be installed and be in the **PATH** variable on the system):
 
 ```
-my_make4ht.cmd JSRbib.tex
-my_make4ht+include_css+more_selective_cleaning.cmd JSRbib.tex
+htlatex+include_css+cleaning.cmd 
+make4ht+include_css+cleaning.cmd 
 ```

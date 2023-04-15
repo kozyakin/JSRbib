@@ -17,11 +17,11 @@ echo.===========================================================================
 echo.
 echo [92m1. Creation of %~n1.html[0m
 echo.
-make4ht -sc myconfig.cfg %1 "0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
+make4ht -s %1 "myconfig" " -cunihtf -utf8"
 echo.
 echo [92m2. Embedding css-file %~n1.css in %~n1.html[0m
 echo.
-make4ht -sc myconfig.cfg -m draft %1 "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
+make4ht -sm draft %1 "myconfig" " -cunihtf -utf8"
 echo.
 echo [92m3. "Cleaning" of %~n1.html[0m
 echo.

@@ -48,22 +48,21 @@
 4. Выполнить команду
 
     ```
-    make4ht -sc myconfig.cfg JSRbib.tex "0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
+    make4ht -s JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```
 
     (пробел в последней паре кавычек **НЕ УДАЛЯТЬ!**) А затем для "вложения" сгенерированного файла .css в .html, запустить дополнительно команду
 
     ```
-    make4ht -sc myconfig.cfg -m draft JSRbib.tex "0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
+    make4ht -sm draft JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```
     
-5. К сожалению по непонятным причинам команды из п4 перестали работать в **batch**-файлах в последних выпусках **TeXLive** . Поэтому они могут быть заменены на команды:
+5. К сожалению по непонятным причинам команды из п4 перестали работать в **batch**-файлах в последних выпусках **TeXLive** . Поэтому они могут быть заменены на две одинаковые команды:
     ```
-    htlatex JSRbib.tex "myconfig,html5,0,mathjax,p-indent,charset=utf-8" " -cunihtf -utf8"
+    htlatex JSRbib.tex "myconfig" " -cunihtf -utf8"
+    htlatex JSRbib.tex "myconfig" " -cunihtf -utf8"
+    ```
     
-    htlatex JSRbib.tex "myconfig,html5,0,mathjax,p-indent,charset=utf-8,css-in" " -cunihtf -utf8"
-    ```
-
 6. Сделать в полученном .html файле замены
 
     ```
@@ -77,9 +76,9 @@
 ---
 
 #### Замечание
-Процедуры из пунктов 5, 6 можно выполнить, запустив последовательно два cmd-файла (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**):
+Процедуры из пунктов 5, 6 можно выполнить, запустив один из двух cmd-файлов (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**):
 
 ```
-my_make4ht.cmd JSRbib.tex
-my_make4ht+include_css+more_selective_cleaning.cmd JSRbib.tex
+htlatex+include_css+cleaning.cmd 
+make4ht+include_css+cleaning.cmd 
 ```

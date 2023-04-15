@@ -55,7 +55,7 @@ You can execute these commands either on the command line or by setting up the a
 4. Run the command
 
     ```shell
-    my_make4ht+include_css+more_selective_cleaning.cmd JSRbib.tex 
+    make4ht+include_css+cleaning.cmd
     ```
 
 5. After a while you should get **JSRbib.html**
