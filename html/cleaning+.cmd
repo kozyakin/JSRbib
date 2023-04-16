@@ -9,9 +9,11 @@ SET /p choice=To keep working files of make4ht enter any symbol and press ENTER:
 IF NOT '%choice%'=='' GOTO exit
 
 del /S /F /Q "%~n1.html.bak"
-if exist "%~n1.html" ren "%~n1.html" "%~n1.html.bak"
+xcopy /Y *.html  %TEMP%\%~n1\ 
+xcopy /Y *.svg  %TEMP%\%~n1\ 
 make4ht -m clean -a info %1
-if exist "%~n1.html.bak" ren "%~n1.html.bak" "%~n1.html"
+xcopy /Y %TEMP%\%~n1\  .\ 
+rd /S /Q  %TEMP%\%~n1  
 call th.bat %~n1.html
 pause
 ::exit
