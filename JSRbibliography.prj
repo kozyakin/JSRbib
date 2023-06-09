@@ -4,41 +4,17 @@
 0
 1
 JSRbib.tex
-11
+3
 2
-1
+0
 
 JSR+matprod.bib
 BibTeX:UNIX
-1147890 1 775 19 775 64 30 30 728 417 1 1 669 140 -1 -1 0 0 1 10 10 1 5 0 64 775 1 1 16673 2 1 16673 3 1 16673 4 1 16673  0 -1 0
+269583346 1 3689 19 3689 51 30 30 728 417 1 1 495 513 -1 -1 0 0 1 10 10 1 5 0 51 3689 1 1 16685 2 1 16685 3 1 16685 4 1 16685  0 -1 0
 JSRbib.tex
 TeX:Soft
-286273531 0 -1 2474 -1 2888 120 120 817 504 1 1 948 340 -1 -1 0 0 336 -1 -1 336 2 0 2888 -1 1 17304 -1  0 -1 0
+17838075 0 -1 3987 -1 13314 120 120 817 504 1 1 591 399 -1 -1 0 0 336 -1 -1 336 2 0 13314 -1 1 17332 -1  0 -1 0
 amsplain-ey.bst
 BST:UNIX
 269583346 0 1456 48 1456 49 120 120 818 507 0 0 456 340 -1 -1 0 0 73 0 0 73 2 0 49 1456 1 4 313  0 0 0
-:\Users\Vitya\Dropbox\Reviews\2023--LMA\LMA-2022-0822-report_ru.tex
-TeX:UTF-8
-286273531 1 -1 761 -1 827 52 52 860 524 1 1 210 120 -1 -1 0 0 23 -1 -1 23 1 0 827 -1  0 -1 0
-:\Users\Vitya\AppData\Roaming\WinEdt Team\WinEdt 11\Macros\LaTeX\bibMacros\Fields.cfg
-ASCII:EDT
-1058810 2 581 2 581 8 52 52 850 524 1 0 120 544 -1 -1 0 0 -1 -1 -1 -1 1 0 8 581  0 0 0
-:\Users\Vitya\AppData\Roaming\WinEdt Team\WinEdt 11\Macros\LaTeX\bibMacros\New Field.edt
-ASCII:EDT:UNIX
-269592570 0 85 22 85 23 52 52 850 524 1 0 225 400 -1 -1 0 0 23 0 0 23 1 0 23 85  0 0 0
-:\Users\Vitya\Dropbox\Mathematics\Bibliography\kozpubU.bib
-BibTeX:UNIX:UTF-8
-269583346 0 4372 1 4380 23 182 182 1010 621 1 1 300 180 -1 -1 0 0 25 0 0 25 1 0 23 4380  0 -1 0
-:\Users\Vitya\Dropbox\Mathematics\Bibliography\kozpub-cp1251.bib
-BibTeX:UNIX:CP1251
-269583346 2 2497 19 2497 41 52 52 881 491 0 1 404 120 -1 -1 0 0 31 0 0 31 1 0 41 2497  0 -1 0
-:\Users\Vitya\Dropbox\Mathematics\Bibliography\kozbib-cp1251.bib
-BibTeX:CP1251
-269485042 0 36 1 0 1 52 52 880 491 0 1 44 0 -1 -1 0 0 31 0 0 31 1 0 1 0  0 -1 0
-:\Users\Vitya\Dropbox\Mathematics\Bibliography\kozpub.bib
-BibTeX:UNIX:UTF-8
-269583346 0 3885 1 3888 1 156 156 984 595 0 1 44 400 -1 -1 0 0 24 0 0 24 1 0 1 3888  0 -1 0
-:\Users\Vitya\Dropbox\Mathematics\2018-AlternatingFactors-2\stanford.pgf
-TeX:UNIX:Hard
-269594619 0 0 1 0 1 52 52 881 491 0 1 44 0 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0  0 -1 0
 
