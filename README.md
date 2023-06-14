@@ -1,5 +1,67 @@
 # JSRbib
 
+Здесь представлено все необходимое для создания файлов **JSRbib.pdf** и **JSRbib.html**,  содержащих *An annotated bibliography on convergence of matrix products and the theory of joint/generalized spectral radius* *(Аннотированную библиографию по сходимости матричных произведений и теории совместного/обобщенного спектрального радиуса)* 
+
+## Пререквизиты и подготовка
+
+* **TexLive** или **MikTex** (или любая другая система **TeX**)
+* **Perl**, доступный для всех пользователей (т.е. добавленный в системный **PATH**)
+
+Для добавления новых записей в **JSRbib.pdf** необходимо:
+
+* добавить подходящие записи **BiBTex** в файл **JSR+matprod.bib**
+* добавить цитирование новых записей в файл **JSRbib.tex**
+* откомпилировать **JSRbib.tex** для создания **JSRbib.pdf**
+* обработать файл **JSRbib.tex** с помощью программы **make4ht** для создания **JSRbib.html**
+
+## Предварительные шаги
+
+Внимательно прочитайте [html/README.md](html/README.md) и при необходимости сделайте описанные там предварительные шаги.
+
+## Создание JSRbib.pdf
+
+Напомним еще раз: в системе должен быть установлен **Perl** с прописанным путем к нему в **PATH** &mdash; для этого проще всего скачать в интернете и установить **Strawberry Perl** &mdash; после установки он сразу настроится на выполнение и никаких дополнительных действий не потребуется.
+
+В случае, если в системе установлен **TexLive**, выполнение полного цикла трансляции состоит из следующих команд:
+
+```shell
+pdflatex --shell-escape JSRbib.tex
+bibtex JSRbib
+pdflatex --shell-escape JSRbib.tex
+pdflatex --shell-escape JSRbib.tex
+```
+
+В случае, если в системе установлен **MikTeX**, выполнение полного цикла трансляции состоит из следующих команд:
+
+```shell
+pdflatex --enable-write18 JSRbib.tex
+bibtex JSRbib
+pdflatex --enable-write18 JSRbib.tex
+pdflatex --enable-write18 JSRbib.tex
+```
+
+Ключевым моментом здесь является наличие параметров **--shell-escape** и **--enable-write18**, которые позволяют программе **pdflatex** запускать внешние программы &mdash; в данном случае **Perl**, который в свою очередь исполнит скрип **authorindex-mod.pl**, с помощью которого будет создан требуемый авторский индекс.
+
+Указанные команды могут быть выполнены как в командной строке, так и в подходящем редакторе, но последняя возможность, конечно, зависит от используемого редактора и его возможностей &mdash; обычно инструкции по необходимой конфигурации наиболее распространенных редакторов могут быть найдены в интернете.
+
+## Создание JSRbib.html
+
+1. Создайте временную папку и скопируйте туда все файлы (исключая папку **html** !) из папки **JSRbib**
+
+2. Скопируйте туда же содержимое папки **JSRbib/html**
+
+3. Создайте в этой временной папке файл **JSRbib.pdf**, как описано в разделе *Создание JSRbib.pdf*. **Не удаляйте созданные при этом временные и рабочие файлы!**
+
+4. Выполните в этой временной папке (в командной строке) команду
+
+    ```shell
+    make4ht+include_css+cleaning.cmd
+    ```
+
+5. Через некоторое время Вы получите файл **JSRbib.html**
+
+---
+
 This is a set of files to create **JSRbib.pdf** and **JSRbib.html** containing *An annotated bibliography on convergence of matrix products and the theory of joint/generalized spectral radius*
 
 ## Prerequisites and updating
@@ -11,7 +73,7 @@ To add new record to the **JSRbib.pdf** it is needed
 
 * Add appropriate **BiBTex** record to **JSR+matprod.bib**
 * Add reference to new record in **JSRbib.tex**
-* Compile **JSRbib.tex** to generate **JSRbib.pd**f
+* Compile **JSRbib.tex** to generate **JSRbib.pdf**
 * Process **JSRbib.tex** with **make4ht** to generate **JSRbib.html**
 
 ## Pleliminary step
