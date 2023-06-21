@@ -1452,7 +1452,7 @@ FUNCTION {begin.bib}
     write$ newline$
   "\begin{thebibliography}{"  longest.label  * "}" *
     write$ newline$
-  "\def\mrref#1{\href{https://mathscinet.ams.org/mathscinet/relay-station?mr=#1}{MR~#1}}"
+  "\def\mrref#1{\href{https://www.ams.org/mathscinet-getitem?mr=#1}{MR~#1}}"
     write$ newline$
   "\def\zblref#1{\href{https://zbmath.org/?q=an:#1}{Zbl~#1}}"
     write$ newline$
