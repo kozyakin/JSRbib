@@ -1,7 +1,7 @@
 %% filename: amsplain-ey.bst
-%% date: 2013/08/21
+%% date: 2023/07/00
 %%
-%% Modified version of amsplain.bst by V. Kozyakin
+%% Version of amsplain.bst modified on 2013/08/21 by V. Kozyakin
 %%
 %% 1. added support for electronic resource and hyperreferencing
 %%
@@ -13,11 +13,13 @@
 %% 4. Sorting is made according year-names with indication of
 %% year as a non-numbered item
 %%
-%% 5. On 2022-09-13 command format.note disjointed into two commands:
+%% 5. On 2022/09/13 command format.note disjointed into two commands:
 %%    format.url & format.note with rearranging all format... output
 %%    commands
 %%
-%% 6. On 2022-09-15 comma before and after note replaced by period
+%% 6. On 2022/09/15 comma before and after note replaced by period
+%%
+%% 7. On 2023/07/04 addaed support for hal_id/hal_version processing
 %%
 %% ====================================================================
 %% filename: amsplain.bst
@@ -106,6 +108,8 @@ ENTRY
     editor
     eid
     eprint
+    hal_id
+    hal_version
     howpublished
     institution
     journal
@@ -133,12 +137,15 @@ ENTRY
 
 % Removed after.sentence, after.block---not needed.
 STRINGS { urlintro eprinturl eprintprefix doiprefix doiurl yeartemp} % urlbst...
+STRINGS { halurl halprefix } % kozyakin for supporting hal...
 INTEGERS { hrefform inlinelinks }
 FUNCTION {init.urlbst.variables}
 {
   "Available from: " 'urlintro := % prefix before URL
   "https://arxiv.org/abs/" 'eprinturl := % prefix to make URL from eprint ref
   "arXiv:" 'eprintprefix := % text prefix printed before eprint ref
+  "https://hal.science/" 'halurl := % prefix to make URL from hal ref
+  "HAL:" 'halprefix := % text prefix printed before hal ref
   "https://doi.org/" 'doiurl := % prefix to make URL from DOI
   "doi:" 'doiprefix :=      % text prefix printed before DOI ref
   "0" 'yeartemp :=          % label of used years
@@ -540,6 +547,17 @@ FUNCTION {format.eprint}
   if$
 }
 
+FUNCTION {format.hal}
+{ hal_id empty$
+    { "" }
+    { hal_version empty$
+        { halprefix hal_id * halurl hal_id * make.href }
+	{ halprefix hal_id * hal_version * halurl hal_id * hal_version * make.href }
+	  if$
+	}
+  if$
+}
+
 FUNCTION {format.doi}
 { doi empty$
     { "" }
@@ -550,10 +568,14 @@ FUNCTION {format.doi}
 FUNCTION {format.url}
 { doi empty$
     { eprint empty$
-        { url empty$
+        { hal_id empty$
+            { url empty$
+                { "" }
+                { "\urlprefix\url{" url * "}" * }
+              if$
+            }
             { "" }
-            { "\urlprefix\url{" url * "}" * }
-          if$
+		  if$
         }
         { "" }
       if$
@@ -933,6 +955,7 @@ FUNCTION {article}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -965,6 +988,7 @@ FUNCTION {book}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -981,6 +1005,7 @@ FUNCTION {booklet}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -1015,6 +1040,7 @@ FUNCTION {inbook}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -1041,6 +1067,7 @@ FUNCTION {incollection}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -1066,6 +1093,7 @@ FUNCTION {inproceedings}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -1102,6 +1130,7 @@ FUNCTION {manual}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -1120,6 +1149,7 @@ FUNCTION {mastersthesis}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -1136,6 +1166,7 @@ FUNCTION {misc}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
   empty.misc.check
@@ -1155,6 +1186,7 @@ FUNCTION {phdthesis}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -1189,6 +1221,7 @@ FUNCTION {proceedings}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -1206,6 +1239,7 @@ FUNCTION {techreport}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
@@ -1220,6 +1254,7 @@ FUNCTION {unpublished}
   new.block
   format.doi output
   format.eprint output
+  format.hal output
   format.url output
   fin.entry
 }
