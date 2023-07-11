@@ -1,6 +1,6 @@
 # JSRbib
 
-Здесь представлено все необходимое для создания файлов **JSRbib.pdf** и **JSRbib.html**,  содержащих *An annotated bibliography on convergence of matrix products and the theory of joint/generalized spectral radius* *(Аннотированную библиографию по сходимости матричных произведений и теории совместного/обобщенного спектрального радиуса)* 
+Здесь представлено все необходимое для создания файлов **JSRbib.pdf** и **JSRbib.html**,  содержащих *An annotated bibliography on convergence of matrix products and the theory of joint/generalized spectral radius* *(Аннотированную библиографию по сходимости матричных произведений и теории совместного/обобщенного спектрального радиуса)*
 
 ## Пререквизиты и подготовка
 
