@@ -1,3 +1,5 @@
+# JSRBib.tex_to_JSRBib.html
+
 1. Если в файле **JSRbib.tex** имеется строка
 
     ```latex
@@ -74,7 +76,7 @@
 
     После этого вместо `&#x00A0;` в utf-8 кодировке в соответствующих местах будет стоять символ `No-Breake-Space`
 
-#### Замечание
+## Замечание
 
 Процедуры из пунктов 5, 6 можно выполнить, запустив один из двух cmd-файлов (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**):
 
@@ -161,7 +163,7 @@ make4ht+include_css+cleaning.cmd
 
     After that, in utf-8 encoding, instead of `&#x00A0;` the symbol `No-Breake-Space` will appear in the appropriate places.
 
-#### Remark
+## Remark
 
 The procedures from points 5, 6 can be performed by running one of the following two cmd-files sequentially (in this case, the compiler **Perl** must be installed and be in the **PATH** variable on the system):
 
