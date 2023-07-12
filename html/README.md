@@ -1,4 +1,4 @@
-# JSRBib.tex_to_JSRBib.html
+# JSRBib.tex to JSRBib.html
 
 1. Если в файле **JSRbib.tex** имеется строка
 
