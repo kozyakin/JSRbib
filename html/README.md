@@ -49,19 +49,19 @@
 
 4. Выполнить команду
 
-    ```shell
+    ```sh
     make4ht -s JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```
 
     (пробел в последней паре кавычек **НЕ УДАЛЯТЬ!**) А затем для "вложения" сгенерированного файла .css в .html, запустить дополнительно команду
 
-    ```shell
+    ```sh
     make4ht -sm draft JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```
 
 5. К сожалению по непонятным причинам команды из п4 перестали работать в **batch**-файлах в последних выпусках **TeXLive** . Поэтому они могут быть заменены на две одинаковые команды:
 
-    ```shell
+    ```sh
     htlatex JSRbib.tex "myconfig" " -cunihtf -utf8"
     htlatex JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```
@@ -80,7 +80,7 @@
 
 Процедуры из пунктов 5, 6 можно выполнить, запустив один из двух cmd-файлов (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**):
 
-```shell
+```sh
 htlatex+include_css+cleaning.cmd 
 make4ht+include_css+cleaning.cmd 
 ```
@@ -136,19 +136,19 @@ make4ht+include_css+cleaning.cmd
 
 4. Run the command
 
-    ```shell
+    ```sh
     make4ht -s JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```
 
     (**DO NOT DELETE** space in the last pair of quotes !) And then to "embed" the created by the last command .css file in .html, run additionally the following command
 
-    ```shell
+    ```sh
     make4ht -sm draft JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```
 
 5. Unfortunately, for unknown reasons, the commands from point 4 stopped working in **batch** files in recent releases of **TeXLive** . Therefore, they can be replaced with commands:
 
-    ```shell
+    ```sh
     htlatex JSRbib.tex "myconfig" " -cunihtf -utf8"
     htlatex JSRbib.tex "myconfig" " -cunihtf -utf8"
     ```

@@ -24,7 +24,7 @@
 
 В случае, если в системе установлен **TexLive**, выполнение полного цикла трансляции состоит из следующих команд:
 
-```shell
+```sh
 pdflatex --shell-escape JSRbib.tex
 bibtex JSRbib
 pdflatex --shell-escape JSRbib.tex
@@ -33,7 +33,7 @@ pdflatex --shell-escape JSRbib.tex
 
 В случае, если в системе установлен **MikTeX**, выполнение полного цикла трансляции состоит из следующих команд:
 
-```shell
+```sh
 pdflatex --enable-write18 JSRbib.tex
 bibtex JSRbib
 pdflatex --enable-write18 JSRbib.tex
@@ -54,7 +54,7 @@ pdflatex --enable-write18 JSRbib.tex
 
 4. Выполните в этой временной папке (в командной строке) команду
 
-    ```shell
+    ```sh
     make4ht+include_css+cleaning.cmd
     ```
 
@@ -86,7 +86,7 @@ Let us remind once again: **Perl** must be installed with the registered path to
 
 In the case of installed **TexLive**, it is necessary to execute the following commands
 
-```shell
+```sh
 pdflatex --shell-escape JSRbib.tex
 bibtex JSRbib
 pdflatex --shell-escape JSRbib.tex
@@ -95,7 +95,7 @@ pdflatex --shell-escape JSRbib.tex
 
 In the case of **MikTeX** installed, the execution of a full processing cycle consists of the following commands
 
-```shell
+```sh
 pdflatex --enable-write18 JSRbib.tex
 bibtex JSRbib
 pdflatex --enable-write18 JSRbib.tex
@@ -116,7 +116,7 @@ You can execute these commands either on the command line or by setting up the a
 
 4. Run the command
 
-    ```shell
+    ```sh
     make4ht+include_css+cleaning.cmd
     ```
 
