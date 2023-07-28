@@ -15,13 +15,15 @@ echo compilation process into the resulting html-file, [93mthe root directory
 echo must contain a modified html5.4ht file[0m !
 echo.============================================================================
 echo.
+set "infile=%~f1"
+set "infile=%infile:\=/%"
 echo [92m1. Creation of %~n1.html[0m
 echo.
-make4ht -s %1 "myconfig" " -cunihtf -utf8"
+make4ht -s %infile% "myconfig" " -cunihtf -utf8"
 echo.
 echo [92m2. Embedding css-file %~n1.css in %~n1.html[0m
 echo.
-make4ht -sm draft %1 "myconfig" " -cunihtf -utf8"
+make4ht -sm draft %infile% "myconfig" " -cunihtf -utf8"
 echo.
 echo [92m3. "Cleaning" of %~n1.html[0m
 echo.
