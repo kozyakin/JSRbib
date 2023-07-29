@@ -15,6 +15,7 @@ echo compilation process into the resulting html-file, [93mthe root directory
 echo must contain a modified html5.4ht file[0m !
 echo.============================================================================
 echo.
+:: The next two lines define forward slashed full path of input file %1
 set "infile=%~f1"
 set "infile=%infile:\=/%"
 echo [92m1. Creation of %~n1.html[0m
