@@ -4,16 +4,25 @@
 0
 1
 JSRbib.tex
-8
+11
 2
 1
 
 JSR+matprod.bib
 BibTeX
-1048818 0 16867 1 16866 1 30 30 728 417 1 1 95 608 -1 -1 0 0 1 10 10 1 5 0 1 16866 1 1 15403 2 1 16866 3 1 16866 4 1 16866  0 -1 0
+1048818 0 0 1 16849 1 30 30 728 417 1 1 95 627 -1 -1 0 0 1 16774 16774 1 4 0 1 16849 2 1 17813 3 1 17813 4 1 17813  0 -1 0
 JSRbib.tex
 TeX:Soft
-286273531 0 -1 17304 -1 0 120 120 817 504 1 1 95 0 -1 -1 0 0 336 -1 -1 336 3 0 0 -1 1 17423 -1 4 5873 -1  0 -1 0
+286273531 0 -1 17304 -1 622 120 120 817 504 1 1 351 418 -1 -1 0 0 336 -1 -1 336 3 0 622 -1 1 17423 -1 4 5873 -1  0 -1 0
+:\Users\kozya\AppData\Roaming\WinEdt Team\WinEdt 11\Macros\LaTeX\bibMacros\Clean Entry.edt
+ASCII:EDT
+1058810 0 356 7 356 9 104 104 721 575 1 0 144 475 -1 -1 0 0 23 0 0 23 1 0 9 356  0 0 0
+:\Users\kozya\AppData\Roaming\WinEdt Team\WinEdt 11\Macros\LaTeX\bibMacros\Sort.edt
+EDT:UTF-8
+269485050 0 709 7 709 9 78 78 695 549 1 0 144 513 -1 -1 0 0 23 0 0 23 1 0 9 709  0 0 0
+D:\Hard_Soft\TeX-aux\INNO & NSIS scripts\WinEdt 111\UserData\Macros\LaTeX\bibMacros\Sort.edt
+EDT:UTF-8
+269485050 2 506 76 506 80 78 78 695 549 1 0 712 627 -1 -1 0 0 1 2 2 1 1 0 80 506  0 0 0
 :\temp\2013-jsr-bib\JSRbib.tex
 TeX:Soft
 17837307 0 -1 0 -1 0 52 52 669 523 1 1 95 0 -1 -1 0 0 25 -1 -1 25 1 0 0 -1  0 -1 0
