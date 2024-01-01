@@ -4,7 +4,7 @@
 0
 1
 JSRbib.tex
-12
+11
 2
 1
 
@@ -14,9 +14,6 @@ BibTeX
 JSRbib.tex
 TeX:Soft
 286273531 1 -1 17409 -1 17420 120 120 817 504 1 1 591 304 -1 -1 0 0 336 -1 -1 336 3 0 17420 -1 1 17460 -1 4 5873 -1  0 -1 0
-JSRbib.bbl
-TeX:AUX:UNIX
-269593842 1 2585 10 2585 21 130 130 819 596 1 0 240 0 -1 -1 0 0 -1 -1 -1 -1 2 0 21 2585 1 21 2585  0 0 0
 :\Users\kozya\AppData\Roaming\WinEdt Team\WinEdt 11\Macros\LaTeX\bibMacros\Clean Entry.edt
 ASCII:EDT
 1058810 0 356 7 356 9 104 104 721 575 1 0 144 475 -1 -1 0 0 23 0 0 23 1 0 9 356  0 0 0
