@@ -34,4 +34,3 @@ echo [92m3. "Cleaning" of %~n1.html[0m
 echo.
 call cleaning.cmd   %1
 exit
-
