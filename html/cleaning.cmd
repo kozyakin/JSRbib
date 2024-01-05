@@ -2,9 +2,15 @@
 chcp 65001 >nul
 SET /p choice=[93mTo start cleaning %~n1.html file press ENTER: [0m
 
+echo.
+echo [94m...tidy first pass...[0m
 call tidy-html5.bat %~n1.html
+echo.
+echo [94m...powershell pass...[0m
 powershell -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
-call tidy-html5.bat %~n1.html 
+echo.
+echo [94m...tidy second pass...[0m
+call tidy-html5.bat --show-info no %~n1.html 
 
 echo.
 SET /p choice=[93mTo keep working files of make4ht enter any symbol and press ENTER: [0m
