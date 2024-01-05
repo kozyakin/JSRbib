@@ -6,8 +6,8 @@ echo.
 echo [94m...tidy first pass...[0m
 call tidy-html5.bat %~n1.html
 echo.
-echo [94m...powershell pass...[0m
-powershell -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
+echo [94m...powershell search/replace pass...[0m
+call powershell -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
 echo.
 echo [94m...tidy second pass...[0m
 call tidy-html5.bat --show-info no %~n1.html 
