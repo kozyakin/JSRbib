@@ -57,7 +57,9 @@ hypertexnames=false}
 %\setVersion{9}
 %\increaseBuild
 
+\immediate\write18{bibtexu -H -l ru -o ru "\jobname"}
 \immediate\write18{perl authorindex-mod.pl -c "\jobname"}
+
 %---------------------------------------------
 
 \begin{document}
