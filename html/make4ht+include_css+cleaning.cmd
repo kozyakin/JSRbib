@@ -24,8 +24,7 @@ set "infile=%~f1"
 set "infile=%infile:\=/%"
 echo [92m1. Creation of %~n1.html[0m
 echo.
-pdflatex --shell-escape --interaction="batchmode" %infile%
-@del /S /Q /F %~n1.pdf
+make4ht -sm draft %infile% "myconfig" " -cunihtf -utf8"
 echo.
 bibtexu -H -l ru -o ru %~n1
 echo.
