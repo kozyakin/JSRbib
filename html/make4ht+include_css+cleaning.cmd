@@ -24,8 +24,10 @@ set "infile=%~f1"
 set "infile=%infile:\=/%"
 echo [92m1. Creation of %~n1.html[0m
 echo.
-make4ht -um draft %infile%
+pdflatex --shell-escape %infile%
 bibtexu -H -l ru -o ru %~n1
+pdflatex --shell-escape %infile%
+pdflatex --shell-escape %infile%
 make4ht -s %infile% "myconfig" " -cunihtf -utf8"
 echo.
 echo [92m2. Embedding css-file %~n1.css in %~n1.html[0m
