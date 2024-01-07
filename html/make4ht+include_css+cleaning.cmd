@@ -26,6 +26,7 @@ echo [92m1. Creation of %~n1.html[0m
 echo.
 make4ht -sm draft %infile% "myconfig" " -cunihtf -utf8"
 echo.
+echo Creating %~n1.bbl file
 bibtexu -H -l ru -o ru %~n1
 echo.
 make4ht -s %infile% "myconfig" " -cunihtf -utf8"
@@ -36,5 +37,28 @@ make4ht -sm draft %infile% "myconfig" " -cunihtf -utf8"
 echo.
 echo [92m3. "Cleaning" of %~n1.html[0m
 echo.
-call cleaning.cmd   %1
+SET /p choice=[93mTo start cleaning %~n1.html file press ENTER: [0m
+
+echo.
+echo [94m...tidy first pass...[0m
+call tidy-html5.bat %~n1.html
+echo.
+echo [94m...powershell search/replace pass...[0m
+call powershell -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
+echo.
+echo [94m...tidy second pass...[0m
+call tidy-html5.bat --show-info no %~n1.html 
+
+echo.
+SET /p choice=[93mTo keep working files of make4ht enter any symbol and press ENTER: [0m
+IF NOT '%choice%'=='' GOTO exit
+echo.
+xcopy /Y *.html  %TEMP%\%~n1\ 
+xcopy /Y *.svg  %TEMP%\%~n1\ 
+make4ht -m clean -a info %1
+xcopy /Y %TEMP%\%~n1\  .\ 
+rd /S /Q  %TEMP%\%~n1 
+
+pause
+::exit
 exit
