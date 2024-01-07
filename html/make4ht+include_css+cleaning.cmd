@@ -27,6 +27,7 @@ echo.
 make4ht -sm draft %infile% "myconfig" " -cunihtf -utf8"
 echo.
 echo Creating %~n1.bbl file
+del /S /Q /F %~n1.bbl
 bibtexu -H -l ru -o ru %~n1
 echo.
 make4ht -s %infile% "myconfig" " -cunihtf -utf8"
