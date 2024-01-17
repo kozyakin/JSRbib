@@ -1,5 +1,5 @@
 %% filename: amsplain-ey.bst
-%% date: 2023/07/00
+%% date: 2024/01/17
 %%
 %% Version of amsplain.bst modified on 2013/08/21 by V. Kozyakin
 %%
@@ -19,7 +19,9 @@
 %%
 %% 6. On 2022/09/15 comma before and after note replaced by period
 %%
-%% 7. On 2023/07/04 addaed support for hal_id/hal_version processing
+%% 7. On 2023/07/04 added support for hal_id/hal_version processing
+%%
+%% 8. On 2024/01/17 removed doi duplicating destination of ArXivID
 %%
 %% ====================================================================
 %% filename: amsplain.bst
@@ -196,6 +198,40 @@ FUNCTION {or}
 {   { pop$ #1 }
     'skip$
   if$
+}
+
+INTEGERS{ l }
+FUNCTION{ string.length }
+{
+  #1 'l :=
+  {duplicate$ duplicate$ #1 l substring$ = not}
+    { l #1 + 'l :=}
+  while$
+  pop$ l
+}
+
+INTEGERS {find.length search.start search.end done}
+STRINGS {find.string find.pattern}
+FUNCTION {contains}
+{
+  'find.pattern :=
+  'find.string :=
+  find.pattern string.length 'find.length :=
+  #1 'search.start :=
+  find.string string.length find.length - #2 + 'search.end :=
+  #0 'done :=
+  { search.start search.end < }
+  {
+    find.string search.start find.length substring$ find.pattern =
+      { 
+        #1 'done :=
+        search.end 'search.start :=%% stop searching
+      }
+      { #1 search.start + 'search.start := }
+    if$
+  }
+  while$
+  done
 }
 
 FUNCTION {field.or.null}
@@ -562,6 +598,23 @@ FUNCTION {format.doi}
 { doi empty$
     { "" }
     { doiprefix doi * doiurl doi * make.href }
+  if$
+}
+
+FUNCTION {format.doi.eprint.output}
+{ doi empty$
+  { format.eprint output }
+  { eprint empty$
+      { format.doi output }
+      { doi eprint contains
+          { format.eprint output }
+          { format.doi output
+            format.eprint output
+          }
+        if$
+       }
+    if$  
+  }
   if$
 }
 
@@ -953,8 +1006,7 @@ FUNCTION {article}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -986,8 +1038,7 @@ FUNCTION {book}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1003,8 +1054,7 @@ FUNCTION {booklet}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1038,8 +1088,7 @@ FUNCTION {inbook}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1065,8 +1114,7 @@ FUNCTION {incollection}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1091,8 +1139,7 @@ FUNCTION {inproceedings}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1128,8 +1175,7 @@ FUNCTION {manual}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1147,8 +1193,7 @@ FUNCTION {mastersthesis}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1164,9 +1209,7 @@ FUNCTION {misc}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
-  format.hal output
+  format.doi.eprint.output
   format.url output
   fin.entry
   empty.misc.check
@@ -1184,8 +1227,7 @@ FUNCTION {phdthesis}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1219,8 +1261,7 @@ FUNCTION {proceedings}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1237,8 +1278,7 @@ FUNCTION {techreport}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
@@ -1252,8 +1292,7 @@ FUNCTION {unpublished}
   new.block
   format.note output
   new.block
-  format.doi output
-  format.eprint output
+  format.doi.eprint.output
   format.hal output
   format.url output
   fin.entry
