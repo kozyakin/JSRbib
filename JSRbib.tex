@@ -15,7 +15,7 @@
 \usepackage{a4wide}
 %
 %\usepackage[numbers,sort]{natbib}
-\usepackage[numbers,sort,compress]{natbib}
+\usepackage[numbers,sort&compress]{natbib}
 \let\cite=\citep
 \makeatletter
 %%%%%%%%%%%%% natbib.cfg
@@ -36,6 +36,8 @@
 \immediate\write\@auxout{\string\aibibcite{#5}{#1}}%
 \immediate\write\@auxout{\string\bibcite{#5}{{#1}{#2}{{#3}}{{#4}}}}}%
 \fi}}{}}
+\def\NAT@def@citea{\def\@citea{\NAT@separator}}% removed \NAT@space
+\bibpunct{[}{]}{, }{n}{}{,}
 %%%%%%%%%%%%%
 \makeatother
 %
