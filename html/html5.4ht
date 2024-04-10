@@ -55,6 +55,9 @@ tex4ht}
 \Configure{@HEAD}{\HCode{<meta name="generator" content="TeX4ht
 (https://tug.org/tex4ht/)" />\Hnewline}}
 \Configure{@HEAD}{\HCode{<meta name="viewport" content="width=device-width,initial-scale=1" />\Hnewline}}
+\Configure{@HEAD}{\HCode{<link
+             rel="stylesheet" type="text/css"
+                      href="\expandafter\csname aa:CssFile\endcsname" />\Hnewline}}
 \:CheckOption{css-in} \if:Option
       \Log:Note{the inline CSS code is extracted from the input of the
           previous compilation, so an extra compilation might be needed}
