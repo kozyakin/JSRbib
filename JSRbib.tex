@@ -214,18 +214,18 @@ Some math tools that have proven useful when exploring joint/generalized spectra
 
 %\nocite{*}
 
-\ifdefined\HCode\
+\ifdefined\HCode%
 \newcommand{\BibAnnote}[1]{%
 \setlength{\parskip}{0pt}%
 \setlength{\parindent}{1.5em}%
-\par\medskip #1\par\medskip}
-\else
+\par\medskip #1\par\medskip}%
+\else%
 \newcommand{\BibAnnote}[1]{%
 \setlength{\parskip}{0pt}%
 \setlength{\parindent}{1.5em}%
-\par\medskip{\small #1\par}\medskip}
-%\vskip\itemsep{\small #1\par}\vskip\itemsep}
-\fi
+\par\medskip{\small #1\par}\medskip}%
+%\vskip\itemsep{\small #1\par}\vskip\itemsep}%
+\fi%
 
 \bibliographystyle{amsplain-ey}
 \bibliography{JSR+matprod}
