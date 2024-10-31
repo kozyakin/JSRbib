@@ -327,16 +327,27 @@ ushort}
 };
 }
 \fi
+\NewConfigure{MathjaxInline}{2}
+\NewConfigure{MathjaxBlock}{2}
+\Configure{MathjaxInline}{\HCode{<span class="mathjax-inline">}}{\HCode{</span>}}
+\Configure{MathjaxBlock}{\ifvmode\IgnorePar\fi\HCode{<span class="mathjax-block">}}{\HCode{</span>}}
+\Configure{MathjaxEnv}{\ifvmode\IgnorePar\fi\HCode{<span class="mathjax-env mathjax-\@currenvir">}}{\HCode{</span>}}
+
+%%%%%%%%%%%% Commented lines break block math formatting (V.K.) %%%%%%%%%%%%%
+%\Configure{MathjaxBlock}{\ifvmode\IgnorePar\fi\EndP\HCode{<div class="mathjax-block">}}{\HCode{</div>}}
+%\Configure{MathjaxEnv}{\ifvmode\IgnorePar\fi\EndP\HCode{<div class="mathjax-env mathjax-\@currenvir">}}{\HCode{</div>}}
+
+
 \Configure{@HEAD}{\HCode{<script>window.MathJax = \a:MathJaxConfig</script>\Hnewline}}
 \Configure{MathjaxSource}{https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js}
-\Configure{@HEAD}{\HCode{ <script type="text/javascript" async="async" id="MathJax-script" src="\a:MathjaxSource"></script> \Hnewline}}
+\Configure{@HEAD}{\ifx\a:MathjaxSource\@empty\else\HCode{<script type="text/javascript" async="async" id="MathJax-script" src="\a:MathjaxSource"></script> \Hnewline}\fi}
 \edef\:RestoreMathjaxCatcodes{\catcode`\noexpand \&=\the\catcode`\&}
 \def\:HandleMathjaxCatcodes{\edef\:RestoreMathjaxCatcodes{\catcode`\noexpand \&=\the\catcode`\&}\catcode`\&=11}
-\Configure{$}{\:HandleMathjaxCatcodes}{\:RestoreMathjaxCatcodes}{\expandafter\AltMathOne}
-\Configure{$$}{\:HandleMathjaxCatcodes}{\:RestoreMathjaxCatcodes}{\expandafter\AltlDisplayDollars}
-% for some reason, it is necessary to specify the catcode change directly in the configuration
-\Configure{()}{\:HandleMathjaxCatcodes\catcode`\&=11\AltlMath}{\:RestoreMathjaxCatcodes}
-\Configure{[]}{\:HandleMathjaxCatcodes\catcode`\&=11\AltlDisplay}{\:RestoreMathjaxCatcodes}
+\Configure{$}{\a:MathjaxInline\:HandleMathjaxCatcodes}{\:RestoreMathjaxCatcodes\b:MathjaxInline}{\expandafter\AltMathOne}
+\Configure{()}{\a:MathjaxInline\:HandleMathjaxCatcodes\catcode`\&=11\AltlMath}{\:RestoreMathjaxCatcodes\b:MathjaxInline}
+\Configure{$$}{\a:MathjaxBlock\:HandleMathjaxCatcodes}{\:RestoreMathjaxCatcodes\b:MathjaxBlock}{\expandafter\AltlDisplayDollars}
+\Configure{[]}{\a:MathjaxBlock\:HandleMathjaxCatcodes\catcode`\&=11\AltlDisplay}{\:RestoreMathjaxCatcodes\b:MathjaxBlock}
+
 \fi
 
 \NewConfigure{bar-css}{2}
