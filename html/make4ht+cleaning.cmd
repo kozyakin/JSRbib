@@ -3,17 +3,18 @@ chcp 65001 >nul
 echo.============================================================================
 echo                                ВНИМАНИЕ!
 echo.
-echo Для удаления неиспользуемых элементов форматирования в генерируемом
-echo css-файле, в системе [93mдолжна быть установлена платформа Node.js (Node),
-echo а в ней с помощью команды npm install -g purify-css установлен модуль 
-echo purifycss[0m !
+echo Для очистки и форматирования генерируемго css-файла, в системе [93mдолжна
+echo быть установлена платформа Node.js (Node), а в ней с помощью команд 
+echo "npm install -g purify-css" и "npm install -g clean-css-cli" установлены
+echo модули "purifycss" и "cleancss"[0m !
 echo.
 echo ----------------------------------------------------------------------------
 echo                                ATTENTION!
 echo.
-echo To remove unused elements in the generated css file, the Node.js (Node)
-echo platform must be installed on the system, and [93mthe purifycss module
-echo must be installed in it using the npm install -g purify-css command[0m !
+echo To clean and format the generated css file, the Node.js (Node) platform
+echo must be installed on the system, and [93mmodules "purifycss" and "cleancss" must
+echo be installed in it using the commands "npm install -g purify-css" and 
+echo "npm install -g clean-css-cli"[0m !
 echo.============================================================================
 echo.
 :: Sometimes using the input file %1 without a full path, or with a full path 

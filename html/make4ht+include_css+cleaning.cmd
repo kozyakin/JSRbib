@@ -7,10 +7,10 @@ echo Чтобы внедрить в результирующий html-файл �
 echo css-файл (с помощью опции css-in), [93mкорневая директория должна содержать 
 echo модифицированный файл html5.4ht[0m !
 echo.
-echo Для удаления неиспользуемых элементов форматирования в генерируемом
-echo css-файле, в системе [93mдолжна быть установлена платформа Node.js (Node),
-echo а в ней с помощью команды npm install -g purify-css установлен модуль 
-echo purifycss[0m !
+echo Для очистки и форматирования генерируемго css-файла, в системе [93mдолжна
+echo быть установлена платформа Node.js (Node), а в ней с помощью команд 
+echo "npm install -g purify-css" и "npm install -g clean-css-cli" установлены
+echo модули "purifycss" и "cleancss"[0m !
 echo.
 echo ----------------------------------------------------------------------------
 echo                                ATTENTION!
@@ -19,9 +19,10 @@ echo To embed the css file created during compilation into the resulting html fi
 echo (using the css-in option), [93mthe root directory must contain a modified
 echo html5.4ht file[0m !
 echo.
-echo To remove unused elements in the generated css file, the Node.js (Node)
-echo platform must be installed on the system, and [93mthe purifycss module
-echo must be installed in it using the npm install -g purify-css command[0m !
+echo To clean and format the generated css file, the Node.js (Node) platform
+echo must be installed on the system, and [93mmodules "purifycss" and "cleancss" must
+echo be installed in it using the commands "npm install -g purify-css" and 
+echo "npm install -g clean-css-cli"[0m !
 echo.============================================================================
 echo.
 :: Sometimes using the input file %1 without a full path, or with a full path 
@@ -42,7 +43,7 @@ echo.
 make4ht.exe -s %infile% "myconfig,charset=utf-8,css-in" " -cunihtf -utf8"
 echo.
 echo [92m2. Purifying %~n1.css[0m
-call purify-css.bat %~n1.css %~n1.html -m
+call purify-css.bat %~n1.css %~n1.html
 echo.
 echo [92m3. Embedding css-file %~n1.css in %~n1.html[0m
 echo.
