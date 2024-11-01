@@ -3,16 +3,25 @@ chcp 65001 >nul
 echo.============================================================================
 echo                                ВНИМАНИЕ!
 echo.
-echo Чтобы внедрить (с помощью опции css-in) в результирующий html-файл 
-echo css-файл, создаваемый в процессе компиляции, [93mкорневая директория должна 
-echo содержать модифицированный файл html5.4ht[0m !
+echo Чтобы внедрить в результирующий html-файл создаваемый в процессе компиляции
+echo css-файл (с помощью опции css-in), [93mкорневая директория должна содержать 
+echo модифицированный файл html5.4ht[0m !
+echo.
+echo Для удаления неиспользуемых элементов форматирования в генерируемом
+echo css-файле, в системе [93mдолжна быть установлена платформа Node.js (Node),
+echo а в ней с помощью команды npm install -g purify-css установлен модуль 
+echo purifycss[0m !
 echo.
 echo ----------------------------------------------------------------------------
 echo                                ATTENTION!
 echo.
-echo To inject (with the css-in option) the css-file created during the 
-echo compilation process into the resulting html-file, [93mthe root directory 
-echo must contain a modified html5.4ht file[0m !
+echo To embed the css file created during compilation into the resulting html file
+echo (using the css-in option), [93mthe root directory must contain a modified
+echo html5.4ht file[0m !
+echo.
+echo To remove unused elements in the generated css file, the Node.js (Node)
+echo platform must be installed on the system, and [93mthe purifycss module
+echo must be installed in it using the npm install -g purify-css command[0m !
 echo.============================================================================
 echo.
 :: Sometimes using the input file %1 without a full path, or with a full path 
@@ -32,11 +41,14 @@ bibtexu.exe -H -l ru -o ru %~n1
 echo.
 make4ht.exe -s %infile% "myconfig,charset=utf-8,css-in" " -cunihtf -utf8"
 echo.
-echo [92m2. Embedding css-file %~n1.css in %~n1.html[0m
+echo [92m2. Purifying %~n1.css[0m
+call purify-css.bat %~n1.css %~n1.html -m
+echo.
+echo [92m3. Embedding css-file %~n1.css in %~n1.html[0m
 echo.
 make4ht.exe -sm draft %infile% "myconfig,charset=utf-8,css-in" " -cunihtf -utf8"
 echo.
-echo [92m3. "Cleaning" of %~n1.html[0m
+echo [92m4. "Cleaning" of %~n1.html[0m
 echo.
 SET /p choice=[93mTo start cleaning %~n1.html file press ENTER: [0m
 

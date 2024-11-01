@@ -1,5 +1,20 @@
 @echo off
 chcp 65001 >nul
+echo.============================================================================
+echo                                ВНИМАНИЕ!
+echo.
+echo Для удаления неиспользуемых элементов форматирования в генерируемом
+echo css-файле, в системе [93mдолжна быть установлена платформа Node.js (Node),
+echo а в ней с помощью команды npm install -g purify-css установлен модуль 
+echo purifycss[0m !
+echo.
+echo ----------------------------------------------------------------------------
+echo                                ATTENTION!
+echo.
+echo To remove unused elements in the generated css file, the Node.js (Node)
+echo platform must be installed on the system, and [93mthe purifycss module
+echo must be installed in it using the npm install -g purify-css command[0m !
+echo.============================================================================
 echo.
 :: Sometimes using the input file %1 without a full path, or with a full path 
 :: where the directories are separated by a backslash (\), causes an error in 
@@ -18,7 +33,10 @@ bibtexu.exe -H -l ru -o ru %~n1
 echo.
 make4ht.exe -s %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
-echo [92m3. "Cleaning" of %~n1.html[0m
+echo [92m2. Purifying %~n1.css[0m
+call purify-css.bat %~n1.css %~n1.html
+echo.
+echo [92m3. Cleaning %~n1.html[0m
 echo.
 SET /p choice=[93mTo start cleaning %~n1.html file press ENTER: [0m
 
