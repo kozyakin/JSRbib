@@ -34,11 +34,13 @@ set "infile=%~f1"
 set "infile=%infile:\=/%"
 echo [92m1. Creation of %~n1.html[0m
 echo.
-make4ht.exe  -l -sm draft %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
+del /S /Q /F *.aux >nul 2>&1
+del /S /Q /F *.bbl >nul 2>&1
+del /S /Q /F *.blg >nul 2>&1
+lualatex.exe -draftmode %infile% >nul
 echo.
 echo Creating %~n1.bbl file
-del /S /Q /F %~n1.bbl
-bibtexu.exe -H -l ru -o ru %~n1
+for %%f in (*.aux) do (bibtexu.exe -H -l ru -o ru %%~nf)
 echo.
 make4ht.exe -l -s  %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
@@ -72,7 +74,10 @@ xcopy /Y *.svg  %TEMP%\%~n1\
 make4ht.exe -l -m clean -a info %1
 xcopy /Y %TEMP%\%~n1\  .\ 
 rd /S /Q  %TEMP%\%~n1 
-
+del /S /Q /F *.aux >nul 2>&1
+del /S /Q /F *.bbl >nul 2>&1
+del /S /Q /F *.blg >nul 2>&1
+del /S /Q /F *.toc >nul 2>&1
 pause
 ::exit
 exit
