@@ -26,11 +26,13 @@ set "infile=%~f1"
 set "infile=%infile:\=/%"
 echo [92m1. Creation of %~n1.html[0m
 echo.
+del /S /Q /F *.aux > NUL
+del /S /Q /F *.bbl > NUL
+del /S /Q /F *.blg > NUL
 make4ht.exe -sm draft %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
 echo Creating %~n1.bbl file
-del /S /Q /F %~n1.bbl
-bibtexu.exe -H -l ru -o ru %~n1
+for %%f in (*.aux) do (bibtexu.exe -H -l ru -o ru %%~nf)
 echo.
 make4ht.exe -s %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
@@ -61,7 +63,9 @@ xcopy /Y *.css  %TEMP%\%~n1\
 make4ht.exe -m clean -a info %1
 xcopy /Y %TEMP%\%~n1\  .\ 
 rd /S /Q  %TEMP%\%~n1 
-
+del /S /Q /F *.aux > NUL
+del /S /Q /F *.bbl > NUL
+del /S /Q /F *.blg > NUL
 pause
 ::exit
 exit
