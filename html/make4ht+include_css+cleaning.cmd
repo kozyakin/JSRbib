@@ -34,13 +34,13 @@ set "infile=%~f1"
 set "infile=%infile:\=/%"
 echo [92m1. Creation of %~n1.html[0m
 echo.
-make4ht.exe -sm draft %infile% "myconfig,charset=utf-8,css-in" " -cunihtf -utf8"
+make4ht.exe -sm draft %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
 echo Creating %~n1.bbl file
 del /S /Q /F %~n1.bbl
 bibtexu.exe -H -l ru -o ru %~n1
 echo.
-make4ht.exe -s %infile% "myconfig,charset=utf-8,css-in" " -cunihtf -utf8"
+make4ht.exe -s %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
 echo [92m2. Purifying %~n1.css[0m
 call purify-css.bat %~n1.css %~n1.html
