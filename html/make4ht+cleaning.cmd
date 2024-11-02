@@ -29,9 +29,12 @@ echo.
 del /S /Q /F *.aux >nul 2>&1
 del /S /Q /F *.bbl >nul 2>&1
 del /S /Q /F *.blg >nul 2>&1
-pdflatex.exe -draftmode %infile% >nul
+echo pdflatex.exe -draftmode --shell-escape %infile%
+echo.
+pdflatex.exe -draftmode --shell-escape %infile% >nul
 echo.
 echo Creating %~n1.bbl file
+echo.
 for %%f in (*.aux) do (bibtexu.exe -H -l ru -o ru %%~nf)
 echo.
 make4ht.exe -s %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
