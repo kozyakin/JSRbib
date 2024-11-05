@@ -78,10 +78,9 @@
 
 ## Замечание
 
-Процедуры из пунктов 5, 6 можно выполнить, запустив один из двух cmd-файлов (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**):
+Процедуры из пунктов 5, 6 можно выполнить, запустив следующий cmd-файл (при этом в системе должен быть установлен и находиться в переменной **PATH** компилятор **Perl**, а также платформа для работы с языком JavaScript **Node. js** (Node)):
 
 ```sh
-htlatex+include_css+cleaning.cmd 
 make4ht+include_css+cleaning.cmd 
 ```
 
@@ -165,9 +164,8 @@ make4ht+include_css+cleaning.cmd
 
 ## Remark
 
-The procedures from points 5, 6 can be performed by running one of the following two cmd-files sequentially (in this case, the compiler **Perl** must be installed and be in the **PATH** variable on the system):
+The procedures from points 5, 6 can be performed by running the following cmd-file (the **Perl** compiler must be installed in the system and in the **PATH** variable, as well as the **Node. js** (Node) platform for working with the JavaScript language):
 
 ```latex
-htlatex+include_css+cleaning.cmd 
 make4ht+include_css+cleaning.cmd 
 ```
