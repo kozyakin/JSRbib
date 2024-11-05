@@ -48,8 +48,8 @@ echo [92m3. Injecting css-file %~n1.css in %~n1.html[0m
 echo.
 echo [93mTo inject css-file in html-file press ENTER[0m
 set choice=
-set /p choice=[93mTo skip injecting press ANY LETTER KEY and then ENTER: [0m
-IF NOT '%choice%'=='' GOTO clean
+set /p "choice=[93mTo skip injecting press any key and then ENTER: [0m"
+if /i not "%choice%"=="" GOTO clean
 node inject-css.js %~n1.css %~n1.html
 del /S /Q /F %~n1.css >nul 2>&1
 :clean
@@ -57,7 +57,7 @@ echo.
 echo [92m4. "Cleaning" %~n1.html[0m
 echo.
 set choice=
-set /p choice=[93mTo start cleaning %~n1.html file press ENTER: [0m
+set /p "choice=[93mTo start cleaning %~n1.html file press ENTER: [0m"
 
 echo.
 echo [94m...tidy first pass...[0m
@@ -71,8 +71,8 @@ call tidy-html5.bat --show-info no %~n1.html
 
 echo.
 set choice=
-set /p choice=[93mTo keep working files of make4ht press any key and then ENTER: [0m
-IF NOT '%choice%'=='' GOTO exit
+set /p "choice=[93mTo keep working files of make4ht press any key and then ENTER: [0m"
+if /i not "%choice%"=="" GOTO exit
 echo.
 xcopy /Y *.html  %TEMP%\%~n1\ 
 xcopy /Y *.svg  %TEMP%\%~n1\ 
