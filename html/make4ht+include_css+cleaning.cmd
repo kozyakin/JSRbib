@@ -3,10 +3,6 @@ chcp 65001 >nul
 echo.============================================================================
 echo                                ВНИМАНИЕ!
 echo.
-echo Чтобы внедрить в результирующий html-файл создаваемый в процессе компиляции
-echo css-файл (с помощью опции css-in), [93mкорневая директория должна содержать 
-echo модифицированный файл html5.4ht[0m !
-echo.
 echo Для очистки и форматирования генерируемго css-файла, в системе [93mдолжна
 echo быть установлена платформа Node.js (Node), а в ней с помощью команд 
 echo "npm install -g purify-css" и "npm install -g clean-css-cli" установлены
@@ -14,10 +10,6 @@ echo модули "purifycss" и "cleancss"[0m !
 echo.
 echo ----------------------------------------------------------------------------
 echo                                ATTENTION!
-echo.
-echo To embed the css file created during compilation into the resulting html file
-echo (using the css-in option), [93mthe root directory must contain a modified
-echo html5.4ht file[0m !
 echo.
 echo To clean and format the generated css file, the Node.js (Node) platform
 echo must be installed on the system, and [93mmodules "purifycss" and "cleancss" must
@@ -37,6 +29,8 @@ echo.
 del /S /Q /F *.aux >nul 2>&1
 del /S /Q /F *.bbl >nul 2>&1
 del /S /Q /F *.blg >nul 2>&1
+del /S /Q /F %~n1.html >nul 2>&1
+del /S /Q /F %~n1.css >nul 2>&1
 echo pdflatex.exe -draftmode --shell-escape %infile%
 echo.
 pdflatex.exe -draftmode --shell-escape %infile% >nul
@@ -50,13 +44,20 @@ echo.
 echo [92m2. Purifying %~n1.css[0m
 call purify-css.bat %~n1.css %~n1.html
 echo.
-echo [92m3. Embedding css-file %~n1.css in %~n1.html[0m
+echo [92m3. Injecting css-file %~n1.css in %~n1.html[0m
 echo.
-make4ht.exe -sm draft %infile% "myconfig,charset=utf-8,css-in" " -cunihtf -utf8"
+echo [93mTo inject css-file in html-file press ENTER[0m
+set choice=
+set /p choice=[93mTo skip injecting press ANY LETTER KEY and then ENTER: [0m
+IF NOT '%choice%'=='' GOTO clean
+node inject-css.js %~n1.css %~n1.html
+del /S /Q /F %~n1.css >nul 2>&1
+:clean
 echo.
-echo [92m4. "Cleaning" of %~n1.html[0m
+echo [92m4. "Cleaning" %~n1.html[0m
 echo.
-SET /p choice=[93mTo start cleaning %~n1.html file press ENTER: [0m
+set choice=
+set /p choice=[93mTo start cleaning %~n1.html file press ENTER: [0m
 
 echo.
 echo [94m...tidy first pass...[0m
@@ -69,11 +70,13 @@ echo [94m...tidy second pass...[0m
 call tidy-html5.bat --show-info no %~n1.html 
 
 echo.
-SET /p choice=[93mTo keep working files of make4ht enter any symbol and press ENTER: [0m
+set choice=
+set /p choice=[93mTo keep working files of make4ht press any key and then ENTER: [0m
 IF NOT '%choice%'=='' GOTO exit
 echo.
 xcopy /Y *.html  %TEMP%\%~n1\ 
 xcopy /Y *.svg  %TEMP%\%~n1\ 
+xcopy /Y *.css  %TEMP%\%~n1\ 
 make4ht.exe -m clean -a info %1
 xcopy /Y %TEMP%\%~n1\  .\ 
 rd /S /Q  %TEMP%\%~n1 
@@ -82,5 +85,5 @@ del /S /Q /F *.bbl >nul 2>&1
 del /S /Q /F *.blg >nul 2>&1
 del /S /Q /F *.toc >nul 2>&1
 pause
-::exit
+:exit
 exit
