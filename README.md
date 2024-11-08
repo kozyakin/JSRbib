@@ -52,10 +52,11 @@ pdflatex --enable-write18 JSRbib.tex
 
 3. Создайте в этой временной папке файл **JSRbib.pdf**, как описано в разделе *Создание JSRbib.pdf*. **Не удаляйте созданные при этом временные и рабочие файлы!**
 
-4. Выполните в этой временной папке (в командной строке) команду
+4. Выполните в этой временной папке (в командной строке) одну из команд
 
     ```sh
-    make4ht+include_css+cleaning.cmd
+    make4ht+inject_css_js+cleaning.cmd
+    make4ht+inject_css_pl+cleaning.cmd
     ```
 
 5. Через некоторое время Вы получите файл **JSRbib.html**
@@ -114,10 +115,11 @@ You can execute these commands either on the command line or by setting up the a
 
 3. Generate in the temporary directory file **JSRbib.pdf** as instructed in Section *Generating JSRbib.pdf*. **Do not remove auxiliary and working files!**
 
-4. Run the command
+4. Run one of the following commands:
 
     ```sh
-    make4ht+include_css+cleaning.cmd
+    make4ht+inject_css_js+cleaning.cmd
+    make4ht+inject_css_pl+cleaning.cmd
     ```
 
 5. After a while you should get **JSRbib.html**
