@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 "use strict";
 
-const fs = require('fs');
-
 const filecss = process.argv[2];
 const filehtml = process.argv[3];
 
+const fs = require('fs');
 const html = fs.readFileSync(filehtml, 'utf8');
 const css = fs.readFileSync(filecss, 'utf8');
 
