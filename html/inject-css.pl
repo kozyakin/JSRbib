@@ -1,4 +1,3 @@
-#!/usr/bin/env perl
 use strict;
 use warnings;
 use File::Slurp;
@@ -14,10 +13,10 @@ my $rpattern = "<style type='text/css'>\n\n<!--\n$css\n\n-->\n</style>";
 
 my $injectedHtml = $html =~ s/$spattern/$rpattern/r;
 
-if ($injectedHtml) { 
+if ($injectedHtml) {
     write_file($filehtml, $injectedHtml);
-    print "\n\033[94mInject-CSS: done!\033[0m\n";
+    print "\n\x1b[94mInject-CSS: done!\x1b[0m\n";
 } else {
-    print "\n\033[91mInject-CSS: Sorry! Something went wrong!\033[0m\n";
+    print "\n\x1b[91mInject-CSS: Sorry! Something went wrong!\x1b[0m\n";
 }
 

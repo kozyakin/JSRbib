@@ -15,7 +15,7 @@ const injectedHtml = html.replace(spattern, rpattern);
 
 if (injectedHtml) {
 	fs.writeFileSync(filehtml, injectedHtml);
-	console.log("\n[94mInject-CSS: done![0m");
+	console.log("\n\x1b[94mInject-CSS: done!\x1b[0m");
 } else {
-	console.log("\n[91mInject-CSS: Sorry! Something went wrong![0m");
+	console.log("\n\x1b[91mInject-CSS: Sorry! Something went wrong!\x1b[0m");
 }
