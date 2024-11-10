@@ -48,7 +48,7 @@ echo.
 make4ht.exe -s %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
 echo %green%2. Purifying %~n1.css%reset%
-call purify-css.bat %~n1.css %~n1.html
+call purify-css.cmd %~n1.css %~n1.html
 echo.
 echo %green%3. Injecting css-file %~n1.css in %~n1.html%reset%
 echo.
@@ -67,13 +67,13 @@ set /p "choice=%yellow%To start cleaning %~n1.html file press ENTER: %reset%"
 
 echo.
 echo %blue%...tidy first pass...%reset%
-call tidy-html5.bat %~n1.html
+call tidy-html5.cmd %~n1.html
 echo.
 echo %blue%...powershell search/replace pass...%reset%
 powershell.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
 echo.
 echo %blue%...tidy second pass...%reset%
-call tidy-html5.bat --show-info no %~n1.html 
+call tidy-html5.cmd --show-info no %~n1.html 
 
 echo.
 set choice=
