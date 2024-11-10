@@ -89,6 +89,7 @@ rd /S /Q  %TEMP%\%~n1
 del /S /Q /F *.aux >nul 2>&1
 del /S /Q /F *.bbl >nul 2>&1
 del /S /Q /F *.blg >nul 2>&1
+del /S /Q /F *.out >nul 2>&1
 del /S /Q /F *.toc >nul 2>&1
 pause
 :exit
