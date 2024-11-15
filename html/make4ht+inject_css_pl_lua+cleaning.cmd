@@ -1,11 +1,11 @@
 @echo off
 chcp 65001 >nul
 for /F %%a in ('echo prompt $E ^| cmd') do (set "esc=%%a")
-set "red=%esc%[91m%"
-set "green=%esc%[92m%"
-set "yellow=%esc%[93m%"
-set "blue=%esc%[94m%"
-set "reset=%esc%[0m%"
+set "red=%esc%[91m"
+set "green=%esc%[92m"
+set "yellow=%esc%[93m"
+set "blue=%esc%[94m"
+set "reset=%esc%[0m"
 echo.============================================================================
 echo                                ВНИМАНИЕ!
 echo.
