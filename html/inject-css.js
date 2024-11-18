@@ -8,7 +8,7 @@ const fs = require('fs');
 const html = fs.readFileSync(filehtml, 'utf8');
 const css = fs.readFileSync(filecss, 'utf8');
 
-const spattern = new RegExp(`<link .*href='${filecss}'.*>`);
+const spattern = new RegExp(`<link .*href='${filecss}'.*/>`);
 const rpattern = `<style type='text/css'>\n\n<!--\n${css}\n\n-->\n</style>`;
 
 const injectedHtml = html.replace(spattern, rpattern);
