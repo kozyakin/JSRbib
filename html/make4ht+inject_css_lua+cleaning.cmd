@@ -56,7 +56,7 @@ echo %yellow%To inject css-file in html-file press ENTER%reset%
 set choice=
 set /p "choice=%yellow%To skip injecting press any key and then ENTER: %reset%"
 if /i not "%choice%"=="" GOTO clean
-lualatex --luaonly inject-css.lua %~n1.css %~n1.html
+texlua inject-css.lua %~n1.css %~n1.html
 del /S /Q /F %~n1.css >nul 2>&1
 :clean
 echo.
