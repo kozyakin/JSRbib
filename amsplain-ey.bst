@@ -607,7 +607,7 @@ FUNCTION {format.doi.eprint.output}
   { eprint empty$
       { format.doi output }
       { doi eprint contains
-          { format.eprint output }
+          { format.doi output }
           { format.doi output
             format.eprint output
           }
