@@ -14,7 +14,7 @@ local html = readFile(filehtml)
 local csstmp = readFile(filecss)
 local css = csstmp:gsub('%%', '%%%%')
 
-local spattern = "<link .*href='" .. filecss .. ".*css'%s*/>"
+local spattern = "<link .*href='" .. filecss .. "'.-/>"
 local rpattern = "<style type='text/css'>\n\n<!--\n" .. css .. "\n\n-->\n</style>"
 
 local htmltmp = html:gsub(spattern, rpattern)
