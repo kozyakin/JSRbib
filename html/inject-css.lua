@@ -11,14 +11,14 @@ local function readFile(filename)
 end
 
 local html = readFile(filehtml)
-local csstmp = readFile(filecss)
-local css = csstmp:gsub('%%', '%%%%')
+local css = readFile(filecss)
+local css = css:gsub('%%', '%%%%')
 
 local spattern = "<link .*href='" .. filecss .. "'.-/>"
 local rpattern = "<style type='text/css'>\n\n<!--\n" .. css .. "\n\n-->\n</style>"
 
-local htmltmp = html:gsub(spattern, rpattern)
-local injectedHtml = htmltmp:gsub('%%%%','%%')
+local injectedHtml = html:gsub(spattern, rpattern)
+local injectedHtml = injectedHtml:gsub('%%%%','%%')
 
 if injectedHtml then
     local file = io.open(filehtml, "w")
