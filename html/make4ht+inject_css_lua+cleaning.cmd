@@ -3,7 +3,7 @@ chcp 65001 >nul
 for /F %%a in ('echo prompt $E ^| cmd') do (set "esc=%%a")
 set "red=%esc%[91m"
 set "green=%esc%[92m"
-set "yellow=%esc%[93m"
+set "yellow=%esc%[93m%"
 set "blue=%esc%[94m"
 set "reset=%esc%[0m"
 echo.============================================================================
@@ -37,15 +37,15 @@ del /S /Q /F *.bbl >nul 2>&1
 del /S /Q /F *.blg >nul 2>&1
 del /S /Q /F %~n1.html >nul 2>&1
 del /S /Q /F %~n1.css >nul 2>&1
-echo lualatex.exe --draftmode --shell-escape %infile%
+echo pdflatex.exe -draftmode --shell-escape %infile%
 echo.
-lualatex.exe --draftmode --shell-escape %infile% >nul
+pdflatex.exe -draftmode --shell-escape %infile% >nul
 echo.
 echo Creating %~n1.bbl file
 echo.
 for %%f in (*.aux) do (bibtexu.exe -H -l ru -o ru %%~nf)
 echo.
-make4ht.exe -l -s  %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
+make4ht.exe -s %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
 echo %green%2. Purifying %~n1.css%reset%
 call purify-css.cmd %~n1.css %~n1.html
@@ -56,7 +56,7 @@ echo %yellow%To inject css-file in html-file press ENTER%reset%
 set choice=
 set /p "choice=%yellow%To skip injecting press any key and then ENTER: %reset%"
 if /i not "%choice%"=="" GOTO clean
-node inject-css.js %~n1.css %~n1.html
+lualatex --luaonly inject-css.tls %~n1.css %~n1.html
 del /S /Q /F %~n1.css >nul 2>&1
 :clean
 echo.
@@ -81,9 +81,9 @@ set /p "choice=%yellow%To keep working files of make4ht press any key and then E
 if /i not "%choice%"=="" GOTO exit
 echo.
 xcopy /Y *.html  %TEMP%\%~n1\ 
-xcopy /Y *.svg  %TEMP%\%~n1\
+xcopy /Y *.svg  %TEMP%\%~n1\ 
 xcopy /Y *.css  %TEMP%\%~n1\ 
-make4ht.exe -l -m clean -a info %1
+make4ht.exe -m clean -a info %1
 xcopy /Y %TEMP%\%~n1\  .\ 
 rd /S /Q  %TEMP%\%~n1 
 del /S /Q /F *.aux >nul 2>&1
