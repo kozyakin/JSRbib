@@ -1,8 +1,8 @@
-local filecss = arg[1]
-local filehtml = arg[2]
+filecss = arg[1]
+filehtml = arg[2]
 
-local lfs = require('lfs')
-local function readFile(filename)
+lfs = require('lfs')
+function readFile(filename)
     local file = io.open(filename, "r")
     if not file then return nil end
     local content = file:read("*a")
@@ -10,15 +10,15 @@ local function readFile(filename)
     return content
 end
 
-local html = readFile(filehtml)
-local css = readFile(filecss)
-local css = css:gsub('%%', '%%%%')
+html = readFile(filehtml)
+css = readFile(filecss)
+css = css:gsub('%%', '%%%%')
 
-local spattern = "<link .*href='" .. filecss .. "'.-/>"
-local rpattern = "<style type='text/css'>\n\n<!--\n" .. css .. "\n\n-->\n</style>"
+spattern = "<link .*href='" .. filecss .. "'.-/>"
+rpattern = "<style type='text/css'>\n\n<!--\n" .. css .. "\n\n-->\n</style>"
 
-local injectedHtml = html:gsub(spattern, rpattern)
-local injectedHtml = injectedHtml:gsub('%%%%','%%')
+injectedHtml = html:gsub(spattern, rpattern)
+injectedHtml = injectedHtml:gsub('%%%%','%%')
 
 if injectedHtml then
     local file = io.open(filehtml, "w")
@@ -28,4 +28,3 @@ if injectedHtml then
 else
     print("\n\x1b[91mInject-CSS: Sorry! Something went wrong!\x1b[0m")
 end
-
