@@ -1,13 +1,19 @@
 filecss = arg[1]
 filehtml = arg[2]
 
-lfs = require('lfs')
-function readFile(filename)
-    local file = io.open(filename, "r")
-    if not file then return nil end
-    local content = file:read("*a")
-    file:close()
+local function readFile(filename)
+    local f = io.open(filename, "r")
+    if not f then return nil end
+    local content = f:read("*a")
+    f:close()
     return content
+end
+
+local function writeFile(file, data)
+    local f = io.open(file, "w")
+    if not f then return nil end
+    f:write(data)
+    f:close()
 end
 
 html = readFile(filehtml)
@@ -21,9 +27,7 @@ injectedHtml = html:gsub(spattern, rpattern)
 injectedHtml = injectedHtml:gsub('%%%%','%%')
 
 if injectedHtml then
-    local file = io.open(filehtml, "w")
-    file:write(injectedHtml)
-    file:close()
+    writeFile(filehtml, injectedHtml)
     print("\n\x1b[94mInject-CSS: done!\x1b[0m")
 else
     print("\n\x1b[91mInject-CSS: Sorry! Something went wrong!\x1b[0m")
