@@ -1,5 +1,5 @@
-filecss = arg[1]
-filehtml = arg[2]
+local filecss = arg[1]
+local filehtml = arg[2]
 
 local function readfile(name)
   local f = assert(io.open(name, "r"))
@@ -14,14 +14,14 @@ local function writefile(name, sum)
   f:close()
 end
 
-html = readfile(filehtml)
-css = readfile(filecss)
+local html = readfile(filehtml)
+local css = readfile(filecss)
 css = css:gsub('%%', '%%%%')
 
-spattern = "<link .*href='" .. filecss .. "'.-/>"
-rpattern = "<style type='text/css'>\n\n<!--\n" .. css .. "\n\n-->\n</style>"
+local spattern = "<link .*href='" .. filecss .. "'.-/>"
+local rpattern = "<style type='text/css'>\n\n<!--\n" .. css .. "\n\n-->\n</style>"
 
-injectedHtml = html:gsub(spattern, rpattern)
+local injectedHtml = html:gsub(spattern, rpattern)
 injectedHtml = injectedHtml:gsub('%%%%','%%')
 
 if injectedHtml then
