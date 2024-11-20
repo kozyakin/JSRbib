@@ -2,16 +2,16 @@ local filecss = arg[1]
 local filehtml = arg[2]
 
 local function readfile(name)
-  local f = assert(io.open(name, "r"))
-  local s = f:read("*a")
-  f:close()
-  return s
+    local f = assert(io.open(name, "r"))
+    local s = f:read("*a")
+    f:close()
+    return s
 end
 
 local function writefile(name, sum)
-  local f = assert(io.open(name, "w"))
-  f:write(sum)
-  f:close()
+    local f = assert(io.open(name, "w"))
+    f:write(sum)
+    f:close()
 end
 
 local html = readfile(filehtml)
