@@ -16,13 +16,13 @@ end
 
 local html = readfile(filehtml)
 local css = readfile(filecss)
-css = css:gsub('%%', '%%%%')
+css = css:gsub("%%", "%%%%")
 
 local spattern = "<link .*href='" .. filecss .. "'.-/>"
 local rpattern = "<style type='text/css'>\n\n<!--\n" .. css .. "\n\n-->\n</style>"
 
 local injectedHtml = html:gsub(spattern, rpattern)
-injectedHtml = injectedHtml:gsub('%%%%','%%')
+injectedHtml = injectedHtml:gsub("%%%%", "%%")
 
 if injectedHtml then
     writefile(filehtml, injectedHtml)
