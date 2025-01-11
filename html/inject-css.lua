@@ -17,9 +17,9 @@ end
 local html = readfile(filehtml)
 local css = readfile(filecss)
 css = css:gsub("%%", "%%%%")
-xfilecss = string.gsub(filecss, "[%(%)%.%+%-%*%?%[%]%^%$%%]","%%%1")
+local filecssname = string.gsub(filecss, "[%(%)%.%+%-%*%?%[%]%^%$%%]","%%%1")
 
-local spattern = "<link .*href='" .. xfilecss .. "'.-/>"
+local spattern = "<link .*href='" .. filecssname .. "'.-/>"
 local rpattern = "<style type='text/css'>\n\n<!--\n" .. css .. "\n\n-->\n</style>"
 
 local injectedHtml = html:gsub(spattern, rpattern)
