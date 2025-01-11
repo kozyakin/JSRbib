@@ -8,8 +8,8 @@ my $filehtml = $ARGV[1];
 my $html = read_file($filehtml);
 my $css  = read_file($filecss);
 
-my $spattern = qr{<link .*href='$filecss'.*/>};
-my $rpattern = "<style type='text/css'>\n\n<!--\n$css\n\n-->\n</style>";
+my $spattern = qr{<link .*href='$filecss'.*/?>};
+my $rpattern = "<style type='text/css'>\n<!--\n$css\n-->\n</style>";
 
 my $injectedHtml = $html =~ s/$spattern/$rpattern/r;
 
