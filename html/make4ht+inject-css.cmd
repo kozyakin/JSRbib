@@ -3,7 +3,7 @@ chcp 65001 >nul
 for /F %%a in ('echo prompt $E ^| cmd') do (set "esc=%%a")
 set "red=%esc%[91m"
 set "green=%esc%[92m"
-set "yellow=%esc%[93m"
+set "yellow=%esc%[93m%"
 set "blue=%esc%[94m"
 set "reset=%esc%[0m"
 echo.============================================================================
@@ -56,8 +56,32 @@ echo %yellow%To inject css-file in html-file press ENTER%reset%
 set choice=
 set /p "choice=%yellow%To skip injecting press any key and then ENTER: %reset%"
 if /i not "%choice%"=="" GOTO clean
+echo.
+CHOICE /C tljp /M "%yellow%Select engine for injecting: [T] TexLua or [L] Lua or [J] JavaScript or [P] Perl%reset% "
+If %ERRORLEVEL% EQU 1 goto sub_texlua
+If %ERRORLEVEL% EQU 2 goto sub_lua
+If %ERRORLEVEL% EQU 3 goto sub_js
+If %ERRORLEVEL% EQU 2 goto sub_perl
+
+:sub_texlua
+texlua inject-css.lua %~n1.css %~n1.html
+del /S /Q /F %~n1.css >nul 2>&1
+GOTO clean
+
+:sub_lua
+lua inject-css.lua %~n1.css %~n1.html
+del /S /Q /F %~n1.css >nul 2>&1
+GOTO clean
+
+:sub_js
 node inject-css.js %~n1.css %~n1.html
 del /S /Q /F %~n1.css >nul 2>&1
+GOTO clean
+
+:sub_perl
+perl inject-css.pl %~n1.css %~n1.html
+del /S /Q /F %~n1.css >nul 2>&1
+
 :clean
 echo.
 echo %green%4. "Cleaning" %~n1.html%reset%
