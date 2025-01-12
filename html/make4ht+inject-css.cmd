@@ -52,12 +52,11 @@ call purify-css.cmd %~n1.css %~n1.html
 echo.
 echo %green%3. Injecting css-file %~n1.css in %~n1.html%reset%
 echo.
-echo %yellow%To inject css-file in html-file press ENTER%reset%
 set choice=
-set /p "choice=%yellow%To skip injecting press any key and then ENTER: %reset%"
+set /p "choice=%yellow%To inject css-file press ENTER; to skip injecting press any key and then ENTER: %reset%"
 if /i not "%choice%"=="" GOTO clean
 echo.
-CHOICE /C tljp /M "%yellow%Select engine for injecting: [T] TexLua or [L] Lua or [J] JavaScript or [P] Perl%reset% "
+CHOICE /T 5 /D t /C tljp /M "%yellow%Select engine for injecting: [T]exLua (%red%default after 5 sec%yellow%), [L]ua, [J]avaScript, or [P]erl%reset% "
 If %ERRORLEVEL% EQU 4 goto sub_perl
 If %ERRORLEVEL% EQU 3 goto sub_js
 If %ERRORLEVEL% EQU 2 goto sub_lua
