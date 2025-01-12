@@ -61,7 +61,7 @@ CHOICE /C tljp /M "%yellow%Select engine for injecting: [T] TexLua or [L] Lua or
 If %ERRORLEVEL% EQU 1 goto sub_texlua
 If %ERRORLEVEL% EQU 2 goto sub_lua
 If %ERRORLEVEL% EQU 3 goto sub_js
-If %ERRORLEVEL% EQU 2 goto sub_perl
+If %ERRORLEVEL% EQU 4 goto sub_perl
 
 :sub_texlua
 texlua inject-css.lua %~n1.css %~n1.html
