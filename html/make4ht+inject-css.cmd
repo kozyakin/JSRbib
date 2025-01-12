@@ -56,7 +56,8 @@ set choice=
 set /p "choice=%yellow%To inject css-file press ENTER; to skip injecting press any key and then ENTER: %reset%"
 if /i not "%choice%"=="" GOTO clean
 echo.
-CHOICE /T 5 /D t /C tljp /M "%yellow%Select engine for injecting: [T]exLua (%red%default after 5 sec%yellow%), [L]ua, [J]avaScript, or [P]erl%reset% "
+echo %yellow%Select engine for injecting:%reset%
+CHOICE /T 5 /D t /C tljp /M "%yellow%    [T]exLua (%red%default after 5 sec%yellow%), [L]ua, [J]avaScript, or [P]erl%reset% "
 If %ERRORLEVEL% EQU 4 goto sub_perl
 If %ERRORLEVEL% EQU 3 goto sub_js
 If %ERRORLEVEL% EQU 2 goto sub_lua
