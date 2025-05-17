@@ -11,7 +11,10 @@
 \providecommand{\bblsep}[0]{September}
 \providecommand{\bbloct}[0]{October}
 \providecommand{\bblnov}[0]{November}
-\providecommand{\bbldec}[0]{December}"}
+\providecommand{\bbldec}[0]{December}
+\providecommand{\mrref}[1]{\href{https://www.ams.org/mathscinet-getitem?mr=#1}{MR~#1}}
+\providecommand{\zblref}[1]{\href{https://zbmath.org/?q=an:#1}{Zbl~#1}}
+\providecommand{\doiref}[1]{\href{https://doi.org/#1}{doi:~#1}}"}
 
 @ARTICLE{AGGM:Automatica22,
  author        = "Aazan, Georges and Girard, Antoine and Greco, Luca and
@@ -272,10 +275,10 @@
                   particular, we show that existence of an extremal piecewise
                   algebraic Lyapunov function implies the finiteness property
                   of the optimal product, generalizing a result of Lagarias
-                  and Wang. As a corollary, we prove that the finiteness
-                  property holds for sets of matrices with an extremal
-                  Lyapunov function belonging to some of the most popular
-                  function classes in controls.",
+                  and Wang~\cite{LagWang:LAA95}. As a corollary, we prove
+                  that the finiteness property holds for sets of matrices
+                  with an extremal Lyapunov function belonging to some of the
+                  most popular function classes in controls.",
 }
 
 @ARTICLE{AJPR:IFACSRCD12,
@@ -485,7 +488,7 @@
  eprinttype    = "arXiv",
  eprint        = "2410.21097",
  doi           = "10.48550/arXiv.2410.21097",
- annote        = "We consider a new class of repeated zero-sum games in which
+ annote        = "We consider a new class of repeated zero-sum games in which,
                   the payoff is the escape rate of a switched dynamical
                   system, where at every stage, the transition is given by a
                   nonexpansive operator depending on the actions of both
@@ -494,14 +497,17 @@
                   family of matrices. We show that the value of this game
                   does exist, and we characterize it in terms of an infinite
                   dimensional non-linear eigenproblem. This provides a
-                  two-player analogue of Ma\~{n}e's lemma from ergodic
-                  control. This also extends to the two-player case results
-                  of Kohlberg and Neyman (1981), Karlsson (2001), and Vigeral
-                  and the second author (2012), concerning the asymptotic
-                  behavior of nonexpansive mappings. We discuss two special
-                  cases of this game: order preserving and positively
-                  homogeneous self-maps of a cone equipped with Funk's and
-                  Thompson's metrics, and groups of translations.",
+                  two-player analogue of Ma{\~n}{\'e}'s lemma~[\mrref{1166538},
+                  \zblref{0799.58030}] from ergodic control. This also
+                  extends to the two-player case results of Kohlberg and
+                  Neyman~[\mrref{617673}, \zblref{0476.47045}], Karlsson
+                  [\mrref{4715369}, \zblref{1539.53053}], and Vigeral and the
+                  second author~[\mrref{2887878}, \zblref{1255.47053}],
+                  concerning the asymptotic behavior of nonexpansive
+                  mappings. We discuss two special cases of this game: order
+                  preserving and positively homogeneous self-maps of a cone
+                  equipped with Funk's and Thompson's metrics, and groups of
+                  translations.",
 }
 
 @INPROCEEDINGS{AGM:MTNS24,
@@ -529,7 +535,8 @@
                   radius of sets of nonnegative matrices and arise in some
                   population dynamics problems (growth maximization and
                   minimization). We establish a two-player version of
-                  Ma{\~n}{\'e}'s lemma characterizing the value of the game
+                  Ma{\~n}{\'e}'s lemma~[\mrref{1166538},
+                  \zblref{0799.58030}] characterizing the value of the game
                   in terms of a nonlinear eigenproblem. This generalizes to
                   the two-player case the characterization of joint spectral
                   radii in terms of extremals norms. This also allows us to
@@ -594,7 +601,7 @@
                   analyze the measure of the set of $\theta$ for which
                   $\|W_n( \theta)\|\geq\lambda^{\delta n}$ ($0<\delta< 1$).
                   This can be regarded as a model problem for the so-called
-                  Bochi--Fayad conjecture.",
+                  Bochi--Fayad conjecture [\mrref{2267781}, \zblref{1130.37027}].",
 }
 
 @INPROCEEDINGS{AltPar:CDC19,
@@ -1021,7 +1028,7 @@
                   depending only on the letter in position zero. The
                   parameter space will be therefore the product
                   $(\mathit{SL}(2,\mathbb{R}))^N$. The parameters
-                  $(A_1,\ldots ,A_N)$ which correspond to a uniformly
+                  $(A_1,\ldots,A_N)$ which correspond to a uniformly
                   hyperbolic cocycle form an open set $\mathcal{H}$ which is
                   the object of our study: we would like to describe its
                   boundary, its connected components, and its complement.
@@ -1104,11 +1111,12 @@
  doi           = "10.1063/1.4951922",
  url           = "https://aip.scitation.org/doi/abs/10.1063/1.4951922",
  annote        = "In this paper we present a generalization of Yamamoto's
-                  theorem relating eigenvalue moduli and singular values of a
-                  matrix. In our generalization a single matrix is replaced
-                  by a bounded set of matrices. The main result of the paper
-                  includes also, as a special case, the equality between
-                  generalized spectral radius and joint spectral radius.",
+                  theorem~]\mrref{209304}, \zblref{0152.01404}] relating
+                  eigenvalue moduli and singular values of a matrix. In our
+                  generalization a single matrix is replaced by a bounded set
+                  of matrices. The main result of the paper includes also, as
+                  a special case, the equality between generalized spectral
+                  radius and joint spectral radius.",
 }
 
 @ARTICLE{BD:StochDyn21,
@@ -2070,45 +2078,46 @@
  doi           = "10.1016/j.laa.2008.01.016",
  url           = "https://www.sciencedirect.com/science/article/pii/S0024379508000402",
  annote        = "The joint spectral radius was first defined in 1960 in a
-                  paper by G.-C. Rota and G. Strang. It describes the maximal
-                  growth rate of arbitrary matrix products of matrices from a
-                  given set of matrices. As such it is a natural notion in
-                  matrix analysis. It turns out that what is easy to
-                  understand for a single matrix, in general poses a number
-                  of subtle problems for a set of matrices even if this set
-                  only contains two elements.\par In the beginning the notion
-                  did not receive widespread attention, even though it is
-                  intimately related to the stability of time-varying systems
-                  and at the time there was considerable interest in this
-                  subject. The first edition of Cesari's monograph on
-                  stability of ordinary differential equations had just
-                  appeared in which this problem has a prominent place. Also
-                  Yoshizawa's monograph on the theory of Lyapunov functions
-                  only appeared 6 years later. Indeed the intimate link of
-                  the theory of the joint spectral radius with stability
-                  theory and in particular Lyapunov functions was not noted
-                  until in the late 80s Barabanov and also Pyatnitskii took
-                  up the study of this problem independently. However, at the
-                  time of the first definition of the joint spectral radius
-                  this connection was unnoticed.\par In the early 90s this
-                  all changed. On one hand it was observed, that the question
-                  of convergence of products of matrices arises in a natural
-                  way in the theory of wavelets. On the other hand
-                  timevarying systems were receiving greater attention in the
-                  field of control and the study of linear inclusions was
-                  prominent. Driven by interest in these two fields,
-                  important progress has been made during the last decade.
-                  Further interesting applications of the joint spectral
-                  radius have been discovered. This quantity turned out to be
-                  useful in the analysis of the capacity of certain codes, in
-                  the stability analysis of numerical integration schemes and
-                  in the study of nonhomogeneous Markov chains. From a
-                  theoretical point of view the link between the joint
-                  spectral radius and extremal norms was explored in detail,
-                  regularity properties of the joint spectral radius as a map
-                  were discovered and approximation schemes were shown.
-                  Probably the most famous results in this area are related
-                  to the finiteness property~\cite{LagWang:LAA95}, which was
+                  paper by Rota and Strang~\cite{RotaStr:IM60}. It
+                  describes the maximal growth rate of arbitrary matrix
+                  products of matrices from a given set of matrices. As such
+                  it is a natural notion in matrix analysis. It turns out
+                  that what is easy to understand for a single matrix, in
+                  general poses a number of subtle problems for a set of
+                  matrices even if this set only contains two elements.\par
+                  In the beginning the notion did not receive widespread
+                  attention, even though it is intimately related to the
+                  stability of time-varying systems and at the time there was
+                  considerable interest in this subject. The first edition of
+                  Cesari's monograph on stability of ordinary differential
+                  equations had just appeared in which this problem has a
+                  prominent place. Also Yoshizawa's monograph on the theory
+                  of Lyapunov functions only appeared 6 years later. Indeed
+                  the intimate link of the theory of the joint spectral
+                  radius with stability theory and in particular Lyapunov
+                  functions was not noted until in the late 80s Barabanov and
+                  also Pyatnitskii took up the study of this problem
+                  independently. However, at the time of the first definition
+                  of the joint spectral radius this connection was
+                  unnoticed.\par In the early 90s this all changed. On one
+                  hand it was observed, that the question of convergence of
+                  products of matrices arises in a natural way in the theory
+                  of wavelets. On the other hand timevarying systems were
+                  receiving greater attention in the field of control and the
+                  study of linear inclusions was prominent. Driven by
+                  interest in these two fields, important progress has been
+                  made during the last decade. Further interesting
+                  applications of the joint spectral radius have been
+                  discovered. This quantity turned out to be useful in the
+                  analysis of the capacity of certain codes, in the stability
+                  analysis of numerical integration schemes and in the study
+                  of nonhomogeneous Markov chains. From a theoretical point
+                  of view the link between the joint spectral radius and
+                  extremal norms was explored in detail, regularity
+                  properties of the joint spectral radius as a map were
+                  discovered and approximation schemes were shown. Probably
+                  the most famous results in this area are related to the
+                  finiteness property~\cite{LagWang:LAA95}, which was
                   conjectured to hold for all finite matrix sets. This
                   conjecture was later disproved by showing that a
                   counterexample must exist.1 More on this subject can be
@@ -2570,18 +2579,18 @@
  url           = "https://jep.centre-mersenne.org/articles/10.5802/jep.109/",
  annote        = "In traditional Ergodic Optimization, one seeks to maximize
                   Birkhoff averages. The most useful tool in this area is the
-                  celebrated Ma{\~n}{\'e} Lemma, in its various forms. In
-                  this paper, we prove a non-commutative Ma{\~n}{\'e} Lemma,
-                  suited to the problem of maximization of Lyapunov exponents
-                  of linear cocycles or, more generally, vector bundle
-                  automorphisms. More precisely, we provide conditions that
-                  ensure the existence of an extremal norm, that is, a
-                  Finsler norm with respect to which no vector can be
-                  expanded in a single iterate by a factor bigger than the
-                  maximal asymptotic expansion rate. These conditions are
-                  essentially irreducibility and sufficiently strong fiber
-                  bunching. Therefore we extend the classic concept of
-                  Barabanov
+                  celebrated Ma{\~n}{\'e} Lemma~[\mrref{1166538},
+                  \zblref{0799.58030}], in its various forms. In this paper,
+                  we prove a non-commutative Ma{\~n}{\'e} Lemma, suited to
+                  the problem of maximization of Lyapunov exponents of linear
+                  cocycles or, more generally, vector bundle automorphisms.
+                  More precisely, we provide conditions that ensure the
+                  existence of an extremal norm, that is, a Finsler norm with
+                  respect to which no vector can be expanded in a single
+                  iterate by a factor bigger than the maximal asymptotic
+                  expansion rate. These conditions are essentially
+                  irreducibility and sufficiently strong fiber bunching.
+                  Therefore we extend the classic concept of Barabanov
                   norm~\cite{Bar:AIT88-2:e,Bar:AIT88-3:e,Bar:AIT88-5:e},
                   which is used in the study of the joint spectral radius. We
                   obtain several consequences, including sufficient
@@ -2787,7 +2796,7 @@
                   decide if a given set of $2 \times 2$ matrices is mortal. A
                   set $F=\{A_1,\ldots,A_m\}$ of square matrices is said to be
                   mortal if there exist an integer $k \geq 1$ and some
-                  integers $i_1 ,i_2 ,\ldots,i_k\in\{1,\ldots, m\}$ with
+                  integers $i_1,i_2,\ldots,i_k\in\{1,\ldots, m\}$ with
                   $A_{i_1} A_{i_2}\cdots A_{i_k} =0$. We survey this problem
                   and propose some new extensions. We prove the problem to be
                   BSS-undecidable for real matrices and Turing-decidable for
@@ -3036,17 +3045,17 @@
                   spectral radius of a matrix. The criteria for the existence
                   of such a solution can be very quickly examined. As a
                   result we give an affirmative answer to a conjecture raised
-                  by Colella and Heil in 1992. Moreover, using our criteria
-                  we find the smoothest compactly supported four-coefficient
-                  orthogonal scaling function and thus the smoothest
-                  compactly supported orthonormal wavelet generated by this
-                  scaling function.\par In particular, there is given the
-                  following formula for computation of the generalized
-                  spectral radius\par \textbf{Lemma 4.} \emph{Suppose $C_{0}$
-                  and $C_{1}$ are two $2\times{}2$ matrices. If
-                  $\mathop{\mathrm{det}}(C_{0})\le 0$ or
-                  $\mathop{\mathrm{det}}(C_{1})\le 0$, then} \[ \rho(C_{0},
-                  C_{1}) =\sup_{i+j\ge1,~
+                  by Colella and Heil~[\mrref{1162225}, \zblref{0743.42012}]
+                  in 1992. Moreover, using our criteria we find the smoothest
+                  compactly supported four-coefficient orthogonal scaling
+                  function and thus the smoothest compactly supported
+                  orthonormal wavelet generated by this scaling function.\par
+                  In particular, there is given the following formula for
+                  computation of the generalized spectral radius\par
+                  \textbf{Lemma 4.} \emph{Suppose $C_{0}$ and $C_{1}$ are two
+                  $2\times{}2$ matrices. If $\mathop{\mathrm{det}}(C_{0})\le
+                  0$ or $\mathop{\mathrm{det}}(C_{1})\le 0$, then} \[
+                  \rho(C_{0}, C_{1}) =\sup_{i+j\ge1,~
                   i,j\ge0}\left(\rho(C^{i}_{0}C^{j}_{1})\right)^{\frac{1}{i+j}},\]
                   \emph{where $\rho(C_{0}, C_{1})$ is the generalized
                   spectral radius of the family of matrices $\{C_{0},
@@ -3595,7 +3604,7 @@
                   first problem when the system switches between only two
                   subsystems whose corresponding graphs are undirected, a
                   problem that had been suggested to be NP-hard by Blondel
-                  and Olshevsky.",
+                  and Olshevsky~[\mrref{3256794}, \zblref{1304.93018}].",
 }
 
 @ARTICLE{CHJ:SCL17,
@@ -3680,14 +3689,13 @@
                   when $n=3$, a Poincar{\'e}-Bendixson theorem under a
                   regularity assumption on the set of matrices defining the
                   system. Moreover, we revisit the noteworthy result of
-                  \emph{N.E. Barabanov} [Dokl. Akad. Nauk 334(2), 154--155
-                  (1994)] dealing with the linear switched system on
-                  $\mathbb{R}^3$ associated with a pair of Hurwitz matrices
-                  $\{A,A+bc^T\}$. We first point out a fatal gap in
-                  Barabanov's argument in connection with geometric features
-                  associated with a Barabanov norm. We then provide partial
-                  answers relative to the asymptotic behavior of this linear
-                  switched system.",
+                  Barabanov~[\mrref{1275429}, \zblref{0835.93046}] dealing
+                  with the linear switched system on $\mathbb{R}^3$
+                  associated with a pair of Hurwitz matrices $\{A,A+bc^T\}$.
+                  We first point out a fatal gap in Barabanov's argument in
+                  connection with geometric features associated with a
+                  Barabanov norm. We then provide partial answers relative to
+                  the asymptotic behavior of this linear switched system.",
 }
 
 @ARTICLE{CGSP:NAHS21,
@@ -3791,6 +3799,34 @@
                   we give a necessary and sufficient condition for a
                   finite-dimensional continuoustime linear switched system to
                   admit a Barabanov norm.",
+}
+
+@INCOLLECTION{CMS:2025,
+ author        = "Chitour, Yacine and Mason, Paolo and Sigalotti, Mario",
+ title         = "Switched Systems in Dimension Three",
+ booktitle     = "Dynamics and Stability of Continuous-Time Switched Linear
+                  Systems",
+ year          = "2025",
+ publisher     = "Springer Nature Switzerland",
+ address       = "Cham",
+ pages         = "101--120",
+ abstract      = "In this chapter we use tools previously introduced to
+                  investigate the stability of switched linear systems in
+                  dimension three. We establish a Poincar{\'e}-Bendixson
+                  result for extremal trajectories under a generic condition
+                  on the set of modes, and in the corank one case with two
+                  modes we perform a detailed analysis of the switching
+                  behaviour of extremal trajectories.",
+ isbn          = "978-3-031-82982-6",
+ doi           = "10.1007/978-3-031-82982-6_5",
+ url           = "https://link.springer.com/chapter/10.1007/978-3-031-82982-6_5",
+ annote        = "In this chapter we use tools previously introduced to
+                  investigate the stability of switched linear systems in
+                  dimension three. We establish a Poincaré-Bendixson result
+                  for extremal trajectories under a generic condition on the
+                  set of modes, and in the corank one case with two modes we
+                  perform a detailed analysis of the switching behaviour of
+                  extremal trajectories.",
 }
 
 @ARTICLE{CMMS:EJP23,
@@ -3905,7 +3941,7 @@
                   evaluation of the joint spectral radius. We make use of
                   this algorithm to prove a finiteness conjecture about
                   $2\times 2$ sign-matrices proposed recently by Blondel,
-                  Jungers and Protasov.",
+                  Jungers and Protasov~\cite{BJP:IEEETIT06, JB:LAA08}.",
 }
 
 @MISC{Cicone:ArXiv15,
@@ -4060,23 +4096,23 @@
                   problem is related to the conjecture that pairs of
                   sign-matrices fulfil the finiteness property for any
                   dimension. This would imply, by a recent result by Blondel
-                  and Jungers, that finite sets of rational matrices fulfil
-                  the finiteness property, which would be very important in
-                  terms of the computation of the joint spectral radius. The
-                  technique used in this paper could suggest an extension of
-                  the analysis to $n\times n$ sign-matrices, which still
-                  remains an open problem.\par As a main tool of our proof we
-                  make use of a procedure to find a so-called real extremal
-                  polytope norm for the set. In particular, we present an
-                  algorithm which, under some suitable assumptions, is able
-                  to check if a certain product in the multiplicative
-                  semigroup is spectrum maximizing.\par For pairs of
-                  sign-matrices we develop the computations exactly and hence
-                  are able to prove analytically the finiteness property. On
-                  the other hand, the algorithm can be used in a floating
-                  point arithmetic and provide a general tool for
-                  approximating the joint spectral radius of a set of
-                  matrices.",
+                  and Jungers~\cite{JB:LAA08}, that finite sets of rational
+                  matrices fulfil the finiteness property, which would be
+                  very important in terms of the computation of the joint
+                  spectral radius. The technique used in this paper could
+                  suggest an extension of the analysis to $n\times n$
+                  sign-matrices, which still remains an open problem.\par As
+                  a main tool of our proof we make use of a procedure to find
+                  a so-called real extremal polytope norm for the set. In
+                  particular, we present an algorithm which, under some
+                  suitable assumptions, is able to check if a certain product
+                  in the multiplicative semigroup is spectrum maximizing.\par
+                  For pairs of sign-matrices we develop the computations
+                  exactly and hence are able to prove analytically the
+                  finiteness property. On the other hand, the algorithm can
+                  be used in a floating point arithmetic and provide a
+                  general tool for approximating the joint spectral radius of
+                  a set of matrices.",
 }
 
 @MISC{JSRpack,
@@ -4153,9 +4189,10 @@
                   This paper is a streamlined survey of the literature of
                   non-homogeneous Markov chains from the standpoint of tail
                   $\sigma$-fields. The original papers were in the main the
-                  author's own [Math. Proc. Camb. Phil. Soc. 92, 527--534
-                  (1982); Adv. Appl. Prob. 8, 502--516 (1976) and 9, 542--552
-                  (1977) and 13, 388--401 (1981)].",
+                  author's own [\mrref{677475}, \zblref{0501.60075};
+                  \mrref{418242}, \zblref{0371.60082} and \mrref{458593},
+                  \zblref{0377.60061} and \mrref{612210},
+                  \zblref{0469.60065}].",
 }
 
 @ARTICLE{Cong:SCL16,
@@ -4546,7 +4583,7 @@
                   of complex $n$-by-$n$ matrices, where $1 \leq n < \infty$.
                   Let $\hat{\rho}(S)$ denote the joint spectral radius of
                   $S$, defined as \[\hat{\rho}(S)=\limsup\left\{
-                  \sup_{(i_1,\ldots , i_l)\in \mathcal{I}^l} \| S_{i_1}\cdots
+                  \sup_{(i_1,\ldots, i_l)\in \mathcal{I}^l} \| S_{i_1}\cdots
                   S_{i_l}\|^{1/l}\right\},\] which is independent of the norm
                   $\|\cdot\|$ used here. A semi-norm $\|\cdot\|_{*}$ on
                   $\mathbb{C}^n$ is called ``extremal'' of $S$, if it
@@ -4627,7 +4664,7 @@
                   the product space $\mathcal{I}^{\mathbb{N}}$ and let
                   $\theta_{+}\colon\sigma_{\cdot}\mapsto\sigma_{\cdot+1}$ be
                   the standard shift transformation. One of the main theorems
-                  is the following:\par \textbf{Theorem C'.} \emph{If $\mu$
+                  is the following:\par \textbf{Theorem.} \emph{If $\mu$
                   is an ergodic measure of $\theta_{+}$ and the support of
                   $\mu$ contains a stable switching law $\sigma_{\cdot}$ for
                   $\boldsymbol{S}$, then $\boldsymbol{S}$ is $\mu$-almost
@@ -4719,16 +4756,16 @@
                   statements.\par (1) \emph{A discrete-time Markovian jump
                   linear system is uniformly exponentially stable if and only
                   if it is robustly periodically stable, by using a
-                  Gel'fand--Berger--Wang formula proved here.}\par (2)
-                  \emph{A random linear ODE driven by a semiflow with closing
-                  by periodic orbits property is uniformly exponentially
-                  stable if and only if it is robustly periodically stable,
-                  by using Shantao Liao's perturbation technique and the
-                  semi-uniform ergodic theorems.}\par The proofs involve
-                  ergodic theory in both of the above two cases. In addition,
-                  counterexamples are constructed to the robustness condition
-                  and to spectral finiteness~\cite{LagWang:LAA95} of linear
-                  cocycle.",
+                  Gel'fand--Berger--Wang formula~\cite{BerWang:LAA92} proved
+                  here.}\par (2) \emph{A random linear ODE driven by a
+                  semiflow with closing by periodic orbits property is
+                  uniformly exponentially stable if and only if it is
+                  robustly periodically stable, by using Shantao Liao's
+                  perturbation technique and the semi-uniform ergodic
+                  theorems.}\par The proofs involve ergodic theory in both of
+                  the above two cases. In addition, counterexamples are
+                  constructed to the robustness condition and to spectral
+                  finiteness~\cite{LagWang:LAA95} of linear cocycle.",
 }
 
 @MISC{DHH:ArXiv14,
@@ -5217,10 +5254,9 @@
                   $m<{{(\beta_n - \beta_0 )} / {(\alpha - 1)}} - 1$.\par Two
                   examples are considered: the de Rham continuous
                   nowhere-differentiable function [communicated by
-                  \emph{Y.~Meyer} (1987)] and the Lagrange interpolation
-                  functions of Deslauriers and Dubuc [\emph{G.~Deslauriers}
-                  and \emph{S.~Dubuc}, Constructive Approximation 5, No. 1,
-                  49--68 (1989)].",
+                  Y.~Meyer (1987)] and the Lagrange interpolation
+                  functions of Deslauriers and Dubuc~[\mrref{982724},
+                  \zblref{0659.65004}].",
 }
 
 @ARTICLE{DaubLag:SIAMMAN92,
@@ -5443,9 +5479,9 @@
                   conjectured that generically it should be true that $d_1
                   +d_2 >1$ should imply that $C_1 -C_2$ contains an interval.
                   We prove that for $2$-adic random Cantor sets generated by
-                  a vector of probabilities $(p_0 ,p_1)$ the interior of the
+                  a vector of probabilities $(p_0,p_1)$ the interior of the
                   region where the Palis conjecture does not hold is given by
-                  those $p_0 ,p_1$ which satisfy $p_0 +p_1 >\sqrt{2}$ and
+                  those $p_0,p_1$ which satisfy $p_0 +p_1 >\sqrt{2}$ and
                   $p_0 p_1 (1+p_{0}^{2} +p_{1}^{2})<1$. We furthermore prove
                   a general result which characterizes the interval/no
                   interval property in terms of the lower spectral radius of
@@ -5592,8 +5628,9 @@
                   every finite subset $\{S_{1},\ldots,S_{n}\}$ of $S$ it
                   holds that $\hat{r}(S_{1},\ldots,S_{n})=0$.}\par The
                   question whether the assertion (A) is true was considered
-                  by Nordgren, Radjavi and Rosenthal in 1984, and it seems to
-                  be still open.",
+                  by Nordgren, Radjavi and Rosenthal~[\mrref{733900},
+                  \zblref{0579.47041}] in 1984, and it seems to be still
+                  open.",
 }
 
 @ARTICLE{Drnovsek:SM97,
@@ -5655,11 +5692,11 @@
                   $\mathcal{C}$.}\par The proof of Theorem 3.3 is based on
                   Hilden's ``ping-pong'' method of proof of the celebrated
                   Lomonosov's invariant subspace theorem, exposed by
-                  \emph{A.\,J.~Michaels} [Adv. Math. 25, 56--58 (1977)]. \par
+                  Michaels~[\mrref{500214}, \zblref{0356.47003}]. \par
                   The last part of the paper includes versions of the above
                   described results for sets of positive operators on Banach
                   lattices. In particular, one extends a famous theorem of
-                  \emph{B.~de\,Pagter} [Math. Z. 192, 149--153 (1986)].",
+                  de\,Pagter~[\mrref{835399}, \zblref{0607.47033}].",
 }
 
 @ARTICLE{Dumas:LAA13,
@@ -6849,7 +6886,7 @@
                   in finite time is also derived. According to numerical
                   experiments, the algorithm for the JSR finds the exact
                   value for the vast majority of matrix families in
-                  dimensions $\leq$20. For nonnegative matrices it works
+                  dimensions $\leq20$. For nonnegative matrices it works
                   faster and finds the JSR in dimensions of order 100 within
                   a few iterations; the same is observed for the algorithm
                   computing the LSR. To illustrate the efficiency of the new
@@ -6980,8 +7017,8 @@
                   the approximation of the joint spectral radius of a family
                   of matrices which is based on these complex polytope norms.
                   As an example for our technique we consider the set of two
-                  matrices recently analyzed by Blondel, Nesterov and Theys
-                  to disprove the finiteness
+                  matrices recently analyzed by Blondel, Theys, and
+                  Vladimirov~\cite{BTV:SIAMJMA03} to disprove the finiteness
                   conjecture~\cite{LagWang:LAA95}.",
 }
 
@@ -7181,19 +7218,18 @@
                   S_{n}}\otimes^{n}_{i=1} a_{i,\sigma(i)} \] is the
                   max-algebraic permanent function. The authors define the
                   class of $P^1_{\max}$-matrices and obtain its
-                  characterization. Then using the approach of \emph{Y.~Song,
-                  M.\,S.~Gowda, G.~Ravindran} (On some properties of
-                  $P$-matrix sets. Linear Algebra Appl., \textbf{290} (1999),
-                  pp. 237--246) in the new max-algebraic context these
-                  results are extended for the sets of matrices. To do this
-                  the authors introduce row-$P^1_{\max}$-property and
-                  $S_{\max}$-property by the analogy with the corresponding
-                  definitions in the conventional arithmetics. It is proved
-                  that $S_{\max}$ property for a set of matrices is related
-                  to the stability of its max-convex hull. The above results
-                  are then applied to the study of stability questions for
-                  discrete-time systems and certain systems of difference
-                  equations over max-algebras.",
+                  characterization. Then using the approach of Song, Gowda,
+                  Ravindran~[\mrref{1672985}, \zblref{0949.15027}] in the new
+                  max-algebraic context these results are extended for the
+                  sets of matrices. To do this the authors introduce
+                  row-$P^1_{\max}$-property and $S_{\max}$-property by the
+                  analogy with the corresponding definitions in the
+                  conventional arithmetics. It is proved that $S_{\max}$
+                  property for a set of matrices is related to the stability
+                  of its max-convex hull. The above results are then applied
+                  to the study of stability questions for discrete-time
+                  systems and certain systems of difference equations over
+                  max-algebras.",
 }
 
 @INPROCEEDINGS{GurSam:CDC05,
@@ -7384,27 +7420,28 @@
                   real numbers). The results may be viewed as an extension of
                   the Perron--Frobenius theory for powers of non-negative
                   matrices. Previous results in this field are reviewed in
-                  E.~Seneta's book ``Non-negative matrices'' (1973). The
-                  present paper applies Birkhoff's theory of positive
-                  matrices as operators possessing a contraction property.
-                  The tendency of non-negative matrix products towards rank
-                  $1$ is referred to as ergodicity (a term derived in this
-                  context from the theory of non-homogeneous Markov chains)
-                  and is here defined in such a manner as to apply to
-                  sequences of matrix products in which successive terms are
-                  formed by inserting an additional matrix in any place (and
-                  not merely at the extreme right or left). --- The paper
-                  presents results for two sorts of sequences of products
-                  called ``ergodic sequences'' and ``ergodic sets''. An
-                  ergodic sequence must contain a subsequence of matrices
-                  having no zero elements. The paper proves such results as
-                  the following. Suppose that (i) $A_{1},A_{2},\ldots$ are
-                  non-negative matrices each of which has at least one
-                  strictly positive element in each row and each column and
-                  (ii) $\sum_{k}\frac{m_{k}}{M_{k}}=\infty$ (where $m_{k}$
-                  and $M_{k}$ are the smallest and largest element of
-                  $A_{k}$). Then if $H_{n}$ is a product of the first $n$ of
-                  the matrices $A_{k}$ multiplied in any order, the sequence
+                  E.~Seneta's book ``Non-negative matrices'' (1973,
+                  \mrref{389944}, \zblref{0278.15011}). The present paper
+                  applies Birkhoff's theory of positive matrices as operators
+                  possessing a contraction property. The tendency of
+                  non-negative matrix products towards rank $1$ is referred
+                  to as ergodicity (a term derived in this context from the
+                  theory of non-homogeneous Markov chains) and is here
+                  defined in such a manner as to apply to sequences of matrix
+                  products in which successive terms are formed by inserting
+                  an additional matrix in any place (and not merely at the
+                  extreme right or left). --- The paper presents results for
+                  two sorts of sequences of products called ``ergodic
+                  sequences'' and ``ergodic sets''. An ergodic sequence must
+                  contain a subsequence of matrices having no zero elements.
+                  The paper proves such results as the following. Suppose
+                  that (i) $A_{1},A_{2},\ldots$ are non-negative matrices
+                  each of which has at least one strictly positive element in
+                  each row and each column and (ii)
+                  $\sum_{k}\frac{m_{k}}{M_{k}}=\infty$ (where $m_{k}$ and
+                  $M_{k}$ are the smallest and largest element of $A_{k}$).
+                  Then if $H_{n}$ is a product of the first $n$ of the
+                  matrices $A_{k}$ multiplied in any order, the sequence
                   $\{H_{n}\}$ is a product of the first $n$ of the matrices
                   $A_{k}$ multiplied in any order, the sequence $\{H_{n}\}$
                   is ergodic, i.e. will be arbitrarily dose to matrix of rank
@@ -7482,8 +7519,9 @@
                   counterexamples to the finiteness conjecture exist, showing
                   in particular that there exists a family of pairs of
                   $2\times 2$ matrices which contains a counterexample.
-                  Similar results were subsequently given by V.D.~Blondel,
-                  J.~Theys and A.A.~Vladimirov and by V.S.~Kozyakin, but no
+                  Similar results were subsequently given by Blondel, Theys,
+                  and Vladimirov~\cite{BTV:SIAMJMA03} and by
+                  Kozyakin~\cite{Koz:CDC05:e, Koz:INFOPROC06:e}, but no
                   explicit counterexample to the finiteness conjecture has so
                   far been given. The purpose of this paper is to resolve
                   this issue by giving the first completely explicit
@@ -7623,16 +7661,16 @@
                   simultaneously and without synchronization. This method
                   also includes inertial type extrapolation terms to increase
                   the speed of convergence. In particular, we extend the
-                  application of the recent ``ARock algorithm'' [Peng, Z. et
-                  al, SIAM J. on Scientific Computing {\bf 38}, A2851-2879,
-                  (2016)] in the context of convex feasibility problems.
-                  Convergence of the ASI algorithm is proven with no
-                  assumption on the distribution of delays, except that they
-                  be uniformly bounded. Discussion is provided along with a
-                  computational example showing the performance of the ASI
-                  algorithm applied in conjunction with a diagonally relaxed
-                  orthogonal projections (DROP) algorithm for estimating
-                  solutions to large linear systems.",
+                  application of the recent ``ARock algorithm'' of Peng, Xu,
+                  Yan, and Yin~[\doiref{10.1137/15M1024950}] in the context
+                  of convex feasibility problems. Convergence of the ASI
+                  algorithm is proven with no assumption on the distribution
+                  of delays, except that they be uniformly bounded.
+                  Discussion is provided along with a computational example
+                  showing the performance of the ASI algorithm applied in
+                  conjunction with a diagonally relaxed orthogonal
+                  projections (DROP) algorithm for estimating solutions to
+                  large linear systems.",
 }
 
 @INCOLLECTION{HStr:LASP92,
@@ -7719,9 +7757,9 @@
  mrnumber      = "2816404 (2012c:15048)",
  zblnumber     = "1215.15026",
  annote        = "We present a simple proof of {\it Fritz John}'s ellipsoid
-                  theorem [cf. Fritz John. Collected papers. Volumes 1, 2.
-                  Contemporary Mathematicians, 543--560 (1985)] using a
-                  projection theorem proved by the Hahn--Banach theorem.",
+                  theorem [cf. \mrref{809786}, \mrref{809787} or
+                  \zblref{0584.01025}] using a projection theorem proved by
+                  the Hahn--Banach theorem.",
 }
 
 @ARTICLE{HSZ:IEEETAC09,
@@ -7867,13 +7905,12 @@
                   submultiplicative function on $B(K)$ such that
                   $\Phi|_{B_{n}(K)}$ is upper semicontinuous, then there
                   exists a K{\"o}nig chain for $\Phi$. This result leads to
-                  an improvement of a result of
-                  \emph{L.~Mate}~\cite{Mate:FM99}. The author also
-                  investigates \emph{Hutchinson systems} of self-maps of a
-                  metric space, and he obtains an extension of a result due
-                  to \emph{R.\,P.~Kelisky} and \emph{T.\,J.~Rivlin} [Pac. J.
-                  Math. 21, 511--520 (1967)] concerning iterates of the
-                  Bernstein operators on the Banach space $C([0,1])$.",
+                  an improvement of a result of Mate~\cite{Mate:FM99}. The
+                  author also investigates \emph{Hutchinson systems} of
+                  self-maps of a metric space, and he obtains an extension of
+                  a result due to Kelisky and Rivlin [\mrref{212457},
+                  \zblref{0177.31302}] concerning iterates of the Bernstein
+                  operators on the Banach space $C([0,1])$.",
 }
 
 @ARTICLE{Javaheri:JMAA13,
@@ -9276,7 +9313,7 @@
  url           = "https://www.researchgate.net/publication/228863199",
  annote        = "Looking at the dynamics of the system described by the
                   equation $x(n + 1) = f(x(n))$ one may say that coordinates
-                  of the vector $x = {x_{1}, x_{2},\ldots , x_{N}}$ are
+                  of the vector $x = {x_{1}, x_{2},\ldots, x_{N}}$ are
                   updated synchronously. What happens with the system if
                   coordinates of the vector $x$ are updated asynchronously,
                   i.e., if at a given moment $n$ only coordinates with
@@ -9683,11 +9720,12 @@
                   this formula is substantially restricted by a lack of
                   estimates for the rate of convergence of the quantities
                   $\|A^{n}\|^{1/n} \to \rho(A)$. In the paper this deficiency
-                  is made up to some extent. By using the Bochi inequalities
-                  we establish explicit computable estimates for the rate of
-                  convergence of the quantities $\|A^{n}\|^{1/n} \to
-                  \rho(A)$. The obtained estimates are then extended for
-                  evaluation of the joint spectral radius of matrix sets.",
+                  is made up to some extent. By using the Bochi
+                  inequalities~\cite{Bochi:LAA03} we establish explicit
+                  computable estimates for the rate of convergence of the
+                  quantities $\|A^{n}\|^{1/n} \to \rho(A)$. The obtained
+                  estimates are then extended for evaluation of the joint
+                  spectral radius of matrix sets.",
 }
 
 @MISC{Koz:ArXiv10-1,
@@ -10625,24 +10663,24 @@
  doi           = "10.1088/0305-4470/27/10/019",
  url           = "https://iopscience.iop.org/article/10.1088/0305-4470/27/10/019",
  annote        = "Despite significant work since the original paper by
-                  H.~Furstenberg (1963), explicit formulae for Lyapunov
-                  exponents of infinite products of random matrices are
-                  available only in very few cases. In this work, we get a
-                  rigorous explicit formula for the Lyapunov exponent for
-                  some binary infinite products of random $2\times 2$ real
-                  matrices. All these products are constructed using only two
-                  types of matrices, $A$ and $B$, which are chosen according
-                  to a stochastic process. The matrix $A$ is singular,
-                  namely, its determinant is zero. This formula is derived by
-                  using a particular decomposition for the matrix $B$, which
-                  allows us to write the Lyapunov exponent as a sum of
-                  convergent series. The key point is the computation of all
-                  integer powers of $B$, which is achieved by a suitable
-                  change of frame. The computation then follows by looking at
-                  each of the special types of $B$ (hyperbolic, parabolic and
-                  elliptic). Finally, we show with an example, that the
-                  Lyapunov exponent is a discontinuous function of the given
-                  parameter.",
+                  Furstenberg (1963, \mrref{163345}, \zblref{0203.19102}),
+                  explicit formulae for Lyapunov exponents of infinite
+                  products of random matrices are available only in very few
+                  cases. In this work, we get a rigorous explicit formula for
+                  the Lyapunov exponent for some binary infinite products of
+                  random $2\times 2$ real matrices. All these products are
+                  constructed using only two types of matrices, $A$ and $B$,
+                  which are chosen according to a stochastic process. The
+                  matrix $A$ is singular, namely, its determinant is zero.
+                  This formula is derived by using a particular decomposition
+                  for the matrix $B$, which allows us to write the Lyapunov
+                  exponent as a sum of convergent series. The key point is
+                  the computation of all integer powers of $B$, which is
+                  achieved by a suitable change of frame. The computation
+                  then follows by looking at each of the special types of $B$
+                  (hyperbolic, parabolic and elliptic). Finally, we show with
+                  an example, that the Lyapunov exponent is a discontinuous
+                  function of the given parameter.",
 }
 
 @INCOLLECTION{LiuXiao:LNCS12,
@@ -10724,14 +10762,12 @@
                   $\rho(\mathcal{F})=\rho(A)^{1/k}$, then $A$ is a product of
                   $k$ distinct matrices from $\mathcal{F}$. In this special
                   case, for small sets $\mathcal{F}$, this gives an efficient
-                  way to compute $\rho(\mathcal{F})$ (see also
-                  \emph{A.\,A.~Ahmadi} and
-                  \emph{P.\,A.~Parrilo}~\cite{AhmPar:CDC12}). To extend
-                  beyond this limited case, the authors consider the set
-                  $P(\mathcal{F}_{k})$ of rank one approximations to the
-                  elements in $\mathcal{F}_{k}$ (which may be obtained using
-                  singular value decompositions) and prove that
-                  $\rho(\mathcal{F})=
+                  way to compute $\rho(\mathcal{F})$ (see also Ahmadi and
+                  Parrilo~\cite{AhmPar:CDC12}). To extend beyond this limited
+                  case, the authors consider the set $P(\mathcal{F}_{k})$ of
+                  rank one approximations to the elements in
+                  $\mathcal{F}_{k}$ (which may be obtained using singular
+                  value decompositions) and prove that $\rho(\mathcal{F})=
                   \lim\sup_{k\rightarrow\infty}\rho(P(\mathcal{F}_{k}))^{1/k}$.
                   In the special case where each matrix in $\mathcal{F}$ has
                   nonnegative real entries and some product of matrices in
@@ -11456,16 +11492,17 @@
                   of the convergence of multiple subdivision schemes in terms
                   of the joint spectral radius is elegant, the numerical
                   computation of the joint spectral radius still poses big
-                  problems. In several papers of 2013~--~2016, Guglielmi and
-                  Protasov made a breakthrough in the problem of the joint
-                  spectral radius computation, developing the invariant
-                  polytope algorithm, which for most matrix families finds
-                  the exact value of the joint spectral radius. This
-                  algorithm found many applications in problems of functional
-                  analysis, approximation theory, combinatorics, etc. In this
-                  thesis we propose a modification of the invariant polytope
-                  algorithm making it roughly three times faster and suitable
-                  for higher dimensions. The modified version works for most
+                  problems. In several papers of 2013--2016, Guglielmi and
+                  Protasov~\cite{GugProt:FCM13, ProtGug:PJAA15, GugProt:SIAMJMAA16} made a
+                  breakthrough in the problem of the joint spectral radius
+                  computation, developing the invariant polytope algorithm,
+                  which for most matrix families finds the exact value of the
+                  joint spectral radius. This algorithm found many
+                  applications in problems of functional analysis,
+                  approximation theory, combinatorics, etc. In this thesis we
+                  propose a modification of the invariant polytope algorithm
+                  making it roughly three times faster and suitable for
+                  higher dimensions. The modified version works for most
                   matrix families of dimensions up to 25, for non-negative
                   matrices the dimension is up to 3000.\par Besides, we
                   introduce a new, fast algorithm for computing good lower
@@ -11494,26 +11531,27 @@
  zblnumber     = "1484.65090",
  doi           = "10.1145/3408891",
  url           = "https://dl.acm.org/doi/10.1145/3408891",
- annote        = "In several papers of 2013~--~2016, Guglielmi and Protasov
-                  made a breakthrough in the problem of the joint spectral
-                  radius computation, developing the invariant polytope
-                  algorithm which for most matrix families finds the exact
-                  value of the joint spectral radius. This algorithm found
-                  many applications in problems of functional analysis,
-                  approximation theory, combinatorics, etc.. In this paper we
-                  propose a modification of the invariant polytope algorithm
-                  making it roughly 3 times faster and suitable for higher
-                  dimensions. The modified version works for most matrix
-                  families of dimensions up to 25, for non-negative matrices
-                  the dimension is up to three thousand. Besides we introduce
-                  a new, fast algorithm for computing good lower bounds for
-                  the joint spectral radius. The corresponding examples and
-                  statistics of numerical results are provided. Several
-                  applications of our algorithms are presented. In
-                  particular, we find the exact values of the regularity
-                  exponents of Daubechies wavelets of high orders and the
-                  capacities of codes that avoid certain difference
-                  patterns.",
+ annote        = "In several papers of 2013--2016, Guglielmi and
+                  Protasov~\cite{GugProt:FCM13, ProtGug:PJAA15,
+                  GugProt:SIAMJMAA16} made a breakthrough in the problem of
+                  the joint spectral radius computation, developing the
+                  invariant polytope algorithm which for most matrix families
+                  finds the exact value of the joint spectral radius. This
+                  algorithm found many applications in problems of functional
+                  analysis, approximation theory, combinatorics, etc.. In
+                  this paper we propose a modification of the invariant
+                  polytope algorithm making it roughly 3 times faster and
+                  suitable for higher dimensions. The modified version works
+                  for most matrix families of dimensions up to 25, for
+                  non-negative matrices the dimension is up to three
+                  thousand. Besides we introduce a new, fast algorithm for
+                  computing good lower bounds for the joint spectral radius.
+                  The corresponding examples and statistics of numerical
+                  results are provided. Several applications of our
+                  algorithms are presented. In particular, we find the exact
+                  values of the regularity exponents of Daubechies wavelets
+                  of high orders and the capacities of codes that avoid
+                  certain difference patterns.",
 }
 
 @ARTICLE{Mejstrik:DRNA22,
@@ -11526,6 +11564,8 @@
  volume        = "15",
  number        = "5",
  pages         = "24--38",
+ eprinttype    = "arXiv",
+ eprint        = "2505.10178",
  issn          = "2035-6803",
  mrclass       = "15A18 (65F10)",
  mrnumber      = "4538598",
@@ -11774,13 +11814,11 @@
                   has negative determinant (Br{\"o}ker and
                   Zhou~\cite{BZh:SAIMJMAA00}) and when of the matrix is
                   singular (Lima and Rahibe~\cite{LimaRah:JPA94}). Other
-                  examples were given by Goodman, Micchelli, and Ward [in:
-                  Recent advances in wavelet analysis. Boston, MA: Academic
-                  Press, Inc. Wavelet Anal. Appl. 3, 335--360 (1994)] and by
-                  Villemoes [SIAM J. Math. Anal. 25, No. 5, 1433--1460
-                  (1994)].\par The main result of the paper is the
-                  computation of two palindromic matrices $L,P$ of order $2$.
-                  It is proved that $\text{jsr}(L,R)=
+                  examples were given by Goodman, Micchelli, and
+                  Ward~[\mrref{1244611}, \zblref{0840.42020}] and by Villemoes
+                  [\mrref{1289147}, \zblref{0809.42016}].\par The main result
+                  of the paper is the computation of two palindromic matrices
+                  $L,P$ of order $2$. It is proved that $\text{jsr}(L,R)=
                   \max\left(\rho(L),\sqrt{\rho(L,R)}\right)$ where $\rho(A)$
                   is the spectral radius of the matrix $A$:
                   $\rho(A):=\max\{|\lambda|: \lambda\text{ is an eigenvalue
@@ -11813,23 +11851,19 @@
  annote        = "In this paper we study ergodic optimization and multifractal
                   behavior of Lyapunov exponents for matrix cocycles. We show
                   that the restricted variational principle holds for generic
-                  cocycles in the sense of C.~Bonatti,
-                  X.~G{\'o}mez-Mont, and M.~Viana (G{\'e}n{\'e}ricit{\'e}
-                  d{\'e}xposants de Lyapunov nonnuls pour des produits
-                  d{\'e}terministes de matrices. Annales de l'Institut Henri
-                  Poincare (C) Non Linear Analysis, vol. 20, Elsevier, 2003,
-                  pp. 579--624) over mixing subshifts of finite type. We
-                  also show that the Lyapunov spectrum is equal to the
-                  closure of the set where the entropy spectrum is positive
-                  for such cocycles. Moreover, we show the continuity of the
-                  entropy spectrum at boundary of Lyapunov spectrum in the
-                  sense that $h_{top}(E(\alpha_{t}))\ \rightarrow
-                  h_{top}(E(\beta(\mathcal{A})))$, where $E(\alpha)=\{x\in X:
-                  \lim_{n\rightarrow \infty}\frac{1}{n}\log
-                  \|\mathcal{A}^{n}(x)\|=\alpha\}$, for such cocycles. \par
-                  We prove the continuity of the lower joint spectral radius
-                  for linear cocycles under the assumption that linear
-                  cocycles satisfy a cone condition.",
+                  cocycles in the sense of Bonatti, G{\'o}mez-Mont, and
+                  Viana~[\mrref{1981401}] over mixing subshifts of finite
+                  type. We also show that the Lyapunov spectrum is equal to
+                  the closure of the set where the entropy spectrum is
+                  positive for such cocycles. Moreover, we show the
+                  continuity of the entropy spectrum at boundary of Lyapunov
+                  spectrum in the sense that $h_{top}(E(\alpha_{t}))\
+                  \rightarrow h_{top}(E(\beta(\mathcal{A})))$, where
+                  $E(\alpha)=\{x\in X: \lim_{n\rightarrow
+                  \infty}\frac{1}{n}\log \|\mathcal{A}^{n}(x)\|=\alpha\}$,
+                  for such cocycles. \par We prove the continuity of the
+                  lower joint spectral radius for linear cocycles under the
+                  assumption that linear cocycles satisfy a cone condition.",
 }
 
 @INPROCEEDINGS{MOS:GTS99,
@@ -12059,8 +12093,8 @@
                   \[\varrho(\mathbf{A}) :=
                   \lim_{n\to\infty}\sup\{\|A_n,\ldots A_1\|^{1/n}:
                   A_i\in\mathbf{A}\}\] where $\|\cdot\|$ denotes any norm on
-                  $\mathbb{C}^d$. Berger--Wang formula~\cite{BerWang:LAA92}
-                  asserts that \[\varrho(\mathbf{A}) =
+                  $\mathbb{C}^d$. Berger--Wang formula asserts that
+                  \[\varrho(\mathbf{A}) =
                   \lim_{n\to\infty}\sup\{\rho(A_n,\ldots A_1)^{1/n}:
                   A_i\in\mathbf{A}\}\] where $\rho(A)$ denotes the spectral
                   radius of a matrix $A$. The rate of convergence of
@@ -12105,7 +12139,7 @@
                   radius as the original set. We also obtain an exact formula
                   for the joint spectral radii of sets of matrices which
                   contain at most one element not of rank one, generalising a
-                  recent result of X.~Dai.",
+                  recent result of Dai~\cite{DHLX:LAA12}.",
 }
 
 @ARTICLE{Morris:SIAMJMAA12,
@@ -12203,11 +12237,12 @@
                   describing the relationships between different joint
                   spectral radii for sets of bounded linear operators acting
                   on a Banach space. In particular we recover a formula
-                  previously proved by V.\,S.~Shulman and
-                  Yu.\,V.~Turovski{\u\i} using operator-theoretic ideas. As a
-                  byproduct of our method we answer a question of
-                  J.\,E.~Cohen on the limiting behaviour of the spectral
-                  radius of a measurable matrix cocycle.\par Let
+                  previously proved by Shulman and
+                  Turovski{\u\i}~\cite{ShulTur:JFA00} using
+                  operator-theoretic ideas. As a byproduct of our method we
+                  answer a question of Cohen~[\mrref{841077},
+                  \zblref{0581.00014}] on the limiting behaviour of the
+                  spectral radius of a measurable matrix cocycle.\par Let
                   $\mathcal{X}$ be a Banach space and let $B_{\mathcal{X}}$
                   be its unit ball. The Hausdorff measure of noncompactness
                   for an operator $A\in \mathcal{B}(\mathcal{X})$ is defined
@@ -12228,7 +12263,7 @@
                   \sup\{\|A\|_{f}^{1/n} : A\in \mathbf{A}^{n}\}$, and
                   $\varrho_{r}(\mathbf{A})=\limsup_{n\to\infty}
                   \sup\{\rho(A)^{1/n} : A\in \mathbf{A}^{n} \}$, where
-                  $\rho(A)$ is the spectral radius of the operator $A$.\par
+                  $\rho(A)$ is the spectral radius of the operator~$A$.\par
                   Let $T$ be a continuous transformation of a compact metric
                   space $X$ and $\mathcal{X}$ be a Banach space. A linear
                   cocycle over $T$ is a function $\mathcal{A} : X\times
@@ -12240,8 +12275,8 @@
                   following formulas hold true:} \[\lim_{n\to\infty}
                   \sup_{x\in X} \|\mathcal{A}(x,n)\|^{1/n}
                   =\max\left\{\limsup_{n\to\infty} \sup_{x\in X}
-                  \rho(\mathcal{A}(x,n))^{1/n} ,~ \lim_{n\to\infty}
-                  \sup_{x\in X} \|\mathcal{A}(x,n)\|_{\chi}^{1/n}\right\},\]
+                  \rho(\mathcal{A}(x,n))^{1/n},~ \lim_{n\to\infty} \sup_{x\in
+                  X} \|\mathcal{A}(x,n)\|_{\chi}^{1/n}\right\},\]
                   \[\lim_{n\to\infty} \sup_{x\in X}
                   \|\mathcal{A}(x,n)\|_{\chi}^{1/n} = \lim_{n\to\infty}
                   \sup_{x\in X} \|\mathcal{A}(x,n)\|_{f}^{1/n}.\] The
@@ -12271,6 +12306,8 @@
  volume        = "107",
  number        = "1",
  pages         = "121--150",
+ eprinttype    = "arXiv",
+ eprint        = "1109.4615",
  issn          = "0024-6115; 1460-244X/e",
  mrclass       = "37H15 (15A60)",
  mrnumber      = "3083190",
@@ -12295,9 +12332,11 @@
                   general theorems on the structure of orbits of maximum
                   growth for subadditive observations of dynamical systems,
                   including an extension of the semi-uniform subadditive
-                  ergodic theorem of Schreiber, Sturman and Stark, and an
-                  extension of a noted lemma of Y.~Peres. These theorems are
-                  presented in the appendix.",
+                  ergodic theorem of Schreiber~[\mrref{1643183},
+                  \zblref{0940.37007}], Sturman and Stark~[\mrref{1734626},
+                  \zblref{1005.37016}], and an extension of a noted lemma of
+                  Peres~[\mrref{931186}, \zblref{0642.10051}]. These theorems
+                  are presented in the appendix.",
 }
 
 @ARTICLE{Morris:AM16,
@@ -12327,19 +12366,20 @@
                   of the affinity dimension of a self-affine set and of the
                   continuity of the singular-value pressure for invertible
                   matrices, both of which had been previously established by
-                  D.-J.~Feng and P.~Shmerkin using multiplicative ergodic
-                  theory and the subadditive variational principle. Unlike
-                  the previous proof, our lower bound yields algorithms to
-                  rigorously compute the pressure, singular value pressure
-                  and affinity dimension of a finite set of matrices to
-                  within an a priori prescribed accuracy in finitely many
-                  computational steps. We additionally deduce a related
-                  inequality for the singular value pressure for measures on
-                  the set of $2 \times 2$ real matrices, give a precise
-                  characterisation of the discontinuities of the singular
-                  value pressure function for two-dimensional matrices, and
-                  prove a general theorem relating the zero-temperature limit
-                  of the matrix pressure to the joint spectral radius.",
+                  Feng and Shmerkin~[\mrref{3248481}, \zblref{1317.37035}]
+                  using multiplicative ergodic theory and the subadditive
+                  variational principle. Unlike the previous proof, our lower
+                  bound yields algorithms to rigorously compute the pressure,
+                  singular value pressure and affinity dimension of a finite
+                  set of matrices to within an a priori prescribed accuracy
+                  in finitely many computational steps. We additionally
+                  deduce a related inequality for the singular value pressure
+                  for measures on the set of $2 \times 2$ real matrices, give
+                  a precise characterisation of the discontinuities of the
+                  singular value pressure function for two-dimensional
+                  matrices, and prove a general theorem relating the
+                  zero-temperature limit of the matrix pressure to the joint
+                  spectral radius.",
 }
 
 @ARTICLE{Morris:LAA17,
@@ -12371,17 +12411,17 @@
                   of all pairs of $2\times 2$ real matrices, the lower
                   spectral radius is discontinuous on a set of positive
                   (eight-dimensional) Lebesgue measure, and related this
-                  result to an earlier conjecture of Bochi and Fayad. In this
-                  article we investigate the continuity of the lower spectral
-                  radius in a simplified context in which one of the two
-                  matrices is assumed to be of rank one. We show in
-                  particular that the set of discontinuities of the lower
-                  spectral radius on the set of pairs of $2\times 2$ real
-                  matrices has positive seven-dimensional Lebesgue measure,
-                  and that among the pairs of matrices studied, the
-                  finiteness property for the lower spectral radius is true
-                  on a set of full Lebesgue measure but false on a residual
-                  set.",
+                  result to an earlier conjecture of Bochi and Fayad
+                  [\mrref{2267781}, \zblref{1130.37027}]. In this article we
+                  investigate the continuity of the lower spectral radius in
+                  a simplified context in which one of the two matrices is
+                  assumed to be of rank one. We show in particular that the
+                  set of discontinuities of the lower spectral radius on the
+                  set of pairs of $2\times 2$ real matrices has positive
+                  seven-dimensional Lebesgue measure, and that among the
+                  pairs of matrices studied, the finiteness property for the
+                  lower spectral radius is true on a set of full Lebesgue
+                  measure but false on a residual set.",
 }
 
 @ARTICLE{Morris:EDTS17-2,
@@ -12503,14 +12543,12 @@
                   operator on a Hilbert space and estimating that eigenvalue
                   via approximations to the Fredholm determinant of the
                   operator. In this respect our method is closely related to
-                  the work of Z.-Q.~Bai (On the cycle expansion for the
-                  Lyapunov exponent of a product of random ma trices.
-                  J.~Phys. A 40, 29 (2007), 8315–8328) and M.~Pollicott
-                  (Maximal Lyapunov exponents for random matrix products.
-                  Invent. Math. 181, 1 (2010), 209–226) on computing the top
-                  Lyapunov exponent of a random matrix product. For pairs of
-                  positive matrices of low dimension our method yields
-                  substantial improvements over existing methods.",
+                  the work of Bai~[\mrref{2371235}, \zblref{1127.82027}] and
+                  Pollicott~[\mrref{2651384}, \zblref{1196.37032}] on
+                  computing the top Lyapunov exponent of a random matrix
+                  product. For pairs of positive matrices of low dimension
+                  our method yields substantial improvements over existing
+                  methods.",
 }
 
 @ARTICLE{Morris:SCL22,
@@ -12694,24 +12732,24 @@
  annote        = "The joint spectral radius of a finite set of real $d\times
                   d$ matrices is defined to be the maximum possible
                   exponential rate of growth of products of matrices drawn
-                  from that set. In previous work with K.\,G.~Hare and
-                  J.~Theys we showed that for a certain one-parameter family
-                  of pairs of matrices, this maximum possible rate of growth
-                  is attained along Sturmian sequences with a certain
-                  characteristic ratio which depends continuously upon the
-                  parameter. In this paper we answer some open questions from
-                  that paper by showing that the dependence of the ratio
-                  function upon the parameter takes the form of a Devil's
-                  staircase. We show in particular that this Devil's
-                  staircase attains every rational value strictly between 0
-                  and 1 on some interval, and attains irrational values only
-                  in a set of Hausdorff dimension zero. This result
-                  generalises to include certain one-parameter families
-                  considered by other authors. We also give explicit formulas
-                  for the preimages of both rational and irrational numbers
-                  under the ratio function, thereby establishing a large
-                  family of pairs of matrices for which the joint spectral
-                  radius may be calculated exactly.",
+                  from that set. In previous work with Hare and
+                  Theys~\cite{HMST:AdvMath11} we showed that for a certain
+                  one-parameter family of pairs of matrices, this maximum
+                  possible rate of growth is attained along Sturmian
+                  sequences with a certain characteristic ratio which depends
+                  continuously upon the parameter. In this paper we answer
+                  some open questions from that paper by showing that the
+                  dependence of the ratio function upon the parameter takes
+                  the form of a Devil's staircase. We show in particular that
+                  this Devil's staircase attains every rational value
+                  strictly between 0 and 1 on some interval, and attains
+                  irrational values only in a set of Hausdorff dimension
+                  zero. This result generalises to include certain
+                  one-parameter families considered by other authors. We also
+                  give explicit formulas for the preimages of both rational
+                  and irrational numbers under the ratio function, thereby
+                  establishing a large family of pairs of matrices for which
+                  the joint spectral radius may be calculated exactly.",
 }
 
 @ARTICLE{Muller:APM97,
@@ -12995,20 +13033,20 @@
                   the product are taken in arbitrary order from an infinite
                   sequence of matrices $\{A_i\}$. In the case of stochastic
                   matrices, such general products have been considered by
-                  Seneta~\cite{Seneta06}. \par In two main
-                  theorems, the authors give sufficient conditions for such a
-                  product to be bounded and to be convergent to zero,
-                  respectively. These conditions use the matrix
-                  submultiplicative norm $\mu$ and are based on the
-                  convergence of $\sum_i [\max(\mu(A_i),1)-1]$ and divergence
-                  of $\sum_i [1-\min(\mu(A_i),1)]$, respectively. \par The
-                  proofs are based on classical theorems related with the
-                  products of positive numbers. The results obtained are used
-                  to deduce a condition for weak ergodicity of inhomogeneous
-                  Markov chain. Also the ergodicity coefficient based on the
-                  matrix norm is compared with other ergodicity coefficients
-                  considered, for example, in a paper by \emph{A. Rhodius}
-                  [Linear Algebra Appl. 194, 71--83 (1993)].",
+                  Seneta~\cite{Seneta06}. \par In two main theorems, the
+                  authors give sufficient conditions for such a product to be
+                  bounded and to be convergent to zero, respectively. These
+                  conditions use the matrix submultiplicative norm $\mu$ and
+                  are based on the convergence of $\sum_i
+                  [\max(\mu(A_i),1)-1]$ and divergence of $\sum_i
+                  [1-\min(\mu(A_i),1)]$, respectively. \par The proofs are
+                  based on classical theorems related with the products of
+                  positive numbers. The results obtained are used to deduce a
+                  condition for weak ergodicity of inhomogeneous Markov
+                  chain. Also the ergodicity coefficient based on the matrix
+                  norm is compared with other ergodicity coefficients
+                  considered, for example, in a paper by
+                  Rhodius~[\mrref{1243820}, \zblref{0792.15009}].",
 }
 
 @ARTICLE{OgurMart:LAA13,
@@ -13482,10 +13520,10 @@
                   approximation that unifies several earlier results and is
                   independent of the number of matrices. Additionally, we
                   present a comparison between our approximation scheme and a
-                  recent technique due to Blondel and Nesterov, based on
-                  lifting of matrices. Theoretical results and numerical
-                  investigations show that our approach yields tighter
-                  approximations.",
+                  recent technique due to Blondel and
+                  Nesterov~\cite{BN:SIAMJMA05}, based on lifting of matrices.
+                  Theoretical results and numerical investigations show that
+                  our approach yields tighter approximations.",
 }
 
 @ARTICLE{ParJdb:LAA08,
@@ -13589,8 +13627,8 @@
                   was proposed by Lur~\cite{Lur:LAA06-1}. This paper gives a
                   short proof of it by generalizing a result about the
                   relationship between the maximum circuit geometric mean and
-                  Hadamard powers of a matrix, which was proved by Friedland
-                  [Linear Algebra Appl. 74, 173--178 (1986)].",
+                  Hadamard powers of a matrix, which was proved by
+                  Friedland~[\mrref{822144}, \zblref{0588.15015}].",
 }
 
 @ARTICLE{Pep:LAA11,
@@ -13647,12 +13685,11 @@
                   $F:\mathbb{R}_{+}^{n}\to\mathbb{R}$ satisfying
                   \[r(F(A_1,A_2,\ldots,A_n))\le
                   F(r(A_1),r(A_2),\ldots,r(A_n))\] for all non-negative
-                  matrices $A_1,A_2,\ldots,A_n$ were characterized by
-                  \emph{L.~Elsner, D.~Hershkowitz} and \emph{A.~Pincus}
-                  [Linear Algebra Appl. 129, 103--130 (1990)]. The author
-                  generalizes this result to the setting of infinite
-                  non-negative matrices that define compact operators on a
-                  Banach sequence space.",
+                  matrices $A_1,A_2,\ldots,A_n$ were characterized by Elsner,
+                  Hershkowitz and Pinkus~[\mrref{1053055},
+                  \zblref{0699.15006}]. The author generalizes this result to
+                  the setting of infinite non-negative matrices that define
+                  compact operators on a Banach sequence space.",
 }
 
 @ARTICLE{Peperko:LAA12,
@@ -13680,21 +13717,21 @@
                   product and the spectral radius, respectively. It is a
                   known fact that the spectral radius of the Hadamard product
                   of two non-negative matrices is submultiplicative.
-                  \emph{K.\,M.\,R.~Audenaert} [Linear Algebra Appl. 432, No.
-                  1, 366--368 (2010)] proved a conjecture of \emph{X.~Zhan}
-                  [Advanced Workshop on Trends and Developments in Linear
-                  Algebra, ICTP, Trieste (2009)] by establishing that
-                  \[\rho(A\circ B)\le\rho^{1/2}((A\circ A)(B\circ
-                  B))\le\rho(AB).\] \emph{R.\,A.~Horn} and \emph{F.~Zhang}
-                  [Electron. J. Linear Algebra 20, 90--94 (2010)] showed that
+                  Audenaert~[\mrref{2566485}, \zblref{1205.15034}] proved a
+                  conjecture of \emph{X.~Zhan} [Unsolved matrix problems,
+                  Talk given at Advanced Workshop on Trends and Developments
+                  in Linear Algebra, ICTP, Trieste, Italy, July 6--10, 2009]
+                  by establishing that \[\rho(A\circ B)\le\rho^{1/2}((A\circ
+                  A)(B\circ B))\le\rho(AB).\] Horn and
+                  Zhang~[\mrref{2596447}, \zblref{1191.15015}] showed that
                   \[\rho(A\circ B)\le\rho^{1/2}(AB\circ BA)\le\rho(AB).\]
-                  \emph{Z.~Huang} [Linear Algebra Appl. 434, No. 2, 457--462
-                  (2011)] proved that $\rho(A_1\circ\cdots\circ A_m)\le
-                  \rho(A_1 \cdots A_m)$.\par In the paper the author extends
-                  the results above to the setting of the generalized and the
-                  joint spectral radius of bounded sets of non-negative
-                  matrices that define bounded operators on Banach sequence
-                  spaces. He also proves the inequalities \[\rho(A\circ
+                  Huang~[\mrref{2741231}, \zblref{1209.15015}] proved that
+                  $\rho(A_1\circ\cdots\circ A_m)\le \rho(A_1 \cdots
+                  A_m)$.\par In the paper the author extends the results
+                  above to the setting of the generalized and the joint
+                  spectral radius of bounded sets of non-negative matrices
+                  that define bounded operators on Banach sequence spaces. He
+                  also proves the inequalities \[\rho(A\circ
                   B)\le\rho^{1/2}((A\circ A)(B\circ B))\le \rho(AB\circ
                   AB)^{1/4} \rho(BA\circ BA)^{1/4}\le \rho(AB)\] and
                   \[\rho(A\circ B)\le\rho^{1/2}(AB\circ BA)\le \rho(AB\circ
@@ -13813,8 +13850,9 @@
                   be expressed in terms of products of finite lengths, and is
                   therefore algorithmically checkable.\par We then compare
                   our condition with a second one, inspired by a lifting
-                  procedure introduced by Kozyakin, and prove that our
-                  condition is at least as powerful as this second one.",
+                  procedure introduced by Kozyakin~\cite{Koz:LAA14}, and
+                  prove that our condition is at least as powerful as this
+                  second one.",
 }
 
 @ARTICLE{Plichko:CM95,
@@ -14009,7 +14047,7 @@
                   $n\to\infty$ are studied. A geometric approach to this
                   problem is put forward. It is shown that
                   \[C_1n^{\lambda_1}\leqslant b_{m,d}(n)\leqslant
-                  C_2n^{\lambda_2},\] for sufficiently large $n$ , where
+                  C_2n^{\lambda_2},\] for sufficiently large $n$, where
                   $C_1$ and $C_2$ are positive constants depending on $m$ and
                   $d$, and
                   $\lambda_1=\varliminf\limits_{n\to\infty}\dfrac{\log
@@ -14093,9 +14131,9 @@
                   and on the general structure of matrices that have no
                   positive powers. In this paper we derive a criterion for
                   the existence of a positive element in a given matrix
-                  semigroup (Proposition 1). As a corollary we prove the
-                  polynomial solvability of this problem for semigroups
-                  generated by finite families of matrices (Theorem 1).",
+                  semigroup. As a corollary we prove the polynomial
+                  solvability of this problem for semigroups generated by
+                  finite families of matrices.",
 }
 
 @ARTICLE{Prot:MS11,
@@ -14450,7 +14488,7 @@
                   unlike the situation with linear ODE, the maximal growth of
                   trajectories of linear systems may be arbitrarily slow. For
                   systems generated by a finite set of matrices, this
-                  phenomenon is proved to be impossible in dimension , while
+                  phenomenon is proved to be impossible in dimension, while
                   in all bigger dimensions the sublinear growth may occur.
                   The corresponding examples are provided and several open
                   problems are formulated.",
@@ -14480,7 +14518,7 @@
                   a Lyapunov norm in $\mathbb{R}^{d}$ with the following
                   property: for every invariant linear subspace
                   $L\subset\mathbb{R}^{d}$ of the system, the restriction of
-                  the norm on L provides a tight upper bound for the growth
+                  the norm on $L$ provides a tight upper bound for the growth
                   of trajectories on $L$. For this, we introduce the concept
                   of the spectral normal form of a family of matrices.
                   Properties of the comprehensive Lyapunov norms are analysed
@@ -14520,6 +14558,30 @@
                   Lyapunov exponent of random matrix products, to the lower
                   spectral radius of nonnegative matrices, and to convex
                   trigonometry are considered.",
+}
+
+@ARTICLE{ProtGug:PJAA15,
+ author        = "Protasov, Vladimir {\relax{}Yu}. and Guglielmi, Nicola",
+ authauthor    = "Protasov, Vladimir and Guglielmi, Nicola",
+ title         = "Matrix approach to the global and local regularity of
+                  wavelets",
+ journal       = "Poincare J. Anal. Appl.",
+ fjournal      = "Poincare Journal of Analysis and Applications",
+ year          = "2015",
+ number        = "2",
+ pages         = "77--92",
+ issn          = "2349-6789,2349-6797",
+ mrclass       = "42C40",
+ mrnumber      = "3439943",
+ mrreviewer    = "Yaroslav\ Shitov",
+ zblnumber     = "1351.65107",
+ annote        = " We apply recent methods of computing the joint spectral
+                  characteristics of matrices to find precise values of the
+                  H{\"o}lder exponents of Daubechies wavelets of order
+                  $N\leq20$. The local regularity of these wavelets is also
+                  analyzed. In particular, we find the points of the worst
+                  local regularity. In all cases they are rational, but not
+                  always dyadic.",
 }
 
 @INPROCEEDINGS{ProtJun:ECC13,
@@ -14751,21 +14813,21 @@
  zblreviewer   = "F. H. Vasilescu (Villeneuve d'Ascq)",
  doi           = "10.1090/S0002-9939-00-05622-7",
  url           = "https://www.ams.org/journals/proc/2000-128-08/S0002-9939-00-05622-7/",
- annote        = "\emph{R.\,M.~Guralnick} has shown [Linear Multilinear
-                  Algebra 9, 133--148 (1980)] that a multiplicative semigroup
-                  of matrices $\mathcal{S}$ over any field is
-                  triangularizable over an extension field if $ST-TS$ is
-                  nilpotent for all $S,T\in\mathcal{S}$. Starting from this
-                  result (which is re-proved in the paper for the simpler
-                  case of the complex field), the authors investigate the
-                  possible analogues in the infinite-dimensional case. Using
-                  a recent result of Turovskii~\cite{Turovskii:JFA99}, the
-                  authors show that if $\mathcal{S}$ is a semigroup of
-                  compact operators in a Hilbert space such that $ST-TS$ is
-                  quasinilpotent for all $S,T\in\mathcal{S}$, then
-                  $\mathcal{S}$ is triangularizable. In the case of arbitrary
-                  Banach spaces, the authors show that any strongly compact
-                  group of operators having quasinilpotent.",
+ annote        = "Guralnick has shown [\mrref{590368}, \zblref{0443.15006}]
+                  that a multiplicative semigroup of matrices $\mathcal{S}$
+                  over any field is triangularizable over an extension field
+                  if $ST-TS$ is nilpotent for all $S,T\in\mathcal{S}$.
+                  Starting from this result (which is re-proved in the paper
+                  for the simpler case of the complex field), the authors
+                  investigate the possible analogues in the
+                  infinite-dimensional case. Using a recent result of
+                  Turovskii~\cite{Turovskii:JFA99}, the authors show that if
+                  $\mathcal{S}$ is a semigroup of compact operators in a
+                  Hilbert space such that $ST-TS$ is quasinilpotent for all
+                  $S,T\in\mathcal{S}$, then $\mathcal{S}$ is
+                  triangularizable. In the case of arbitrary Banach spaces,
+                  the authors show that any strongly compact group of
+                  operators having quasinilpotent.",
 }
 
 @MASTERSTHESIS{Reber:PhD19,
@@ -15335,7 +15397,7 @@
  doi           = "10.1007/BF02312855",
  url           = "https://link.springer.com/article/10.1007/BF02312855",
  annote        = "Properties of invariant bodies of a family of linear
-                  operators $A_1 ,\ldots,A_k :\mathbb{R}^n\to\mathbb{R}^n$
+                  operators $A_1,\ldots,A_k :\mathbb{R}^n\to\mathbb{R}^n$
                   have been studied in the paper of
                   Protasov~\cite{Prot:FPM96:e}, which also contains an
                   algorithm that calculates the joint spectral radius of
@@ -15434,16 +15496,16 @@
  pages         = "66--68",
  url           = "https://www.yumpu.com/en/document/read/5014803",
  annote        = "We consider the result of great impact by Fritz John in his
-                  work on Convex Geometry. John showed in 1948 that the
-                  boundary of any convex region centrally symmetric with
-                  respect to a point in $\mathbf{R}^n$ lies between two
-                  concentric homothetic ellipsoids of ratio $1/\sqrt{n}$.
-                  This result has become very important for Geometric
-                  Algorithms. The purpose of this talk is to discuss its
-                  matrix-theoretic version and its new application to
-                  Discrete Dynamics. The content is mainly taken from papers:
-                  Ando and Shih~\cite{AndoShih:SIAM:98}, and
-                  Shih~\cite{Shih:LAA99}.",
+                  work on Convex Geometry. John~\cite{JohnF:48} showed in
+                  1948 that the boundary of any convex region centrally
+                  symmetric with respect to a point in $\mathbf{R}^n$ lies
+                  between two concentric homothetic ellipsoids of ratio
+                  $1/\sqrt{n}$. This result has become very important for
+                  Geometric Algorithms. The purpose of this talk is to
+                  discuss its matrix-theoretic version and its new
+                  application to Discrete Dynamics. The content is mainly
+                  taken from papers: Ando and Shih~\cite{AndoShih:SIAM:98}
+                  and Shih~\cite{Shih:LAA99}.",
 }
 
 @ARTICLE{Shih:LAA99,
@@ -15715,32 +15777,32 @@
                   developed by him.\par The present paper continues the
                   research on the connection between invariant subspace
                   theory and the joint spectral radius technique.\par
-                  W.~Wojty{\'n}ski [Stud. Math. 49, 263--273 (1977)] showed
-                  that locally finite Lie algebras of compact operators have
-                  invariant subspaces. The question remained open for general
-                  Lie algebras of Volterra operators. This question is
-                  answered in the affirmative here.\par The authors use
-                  semigroups of principle operators (operators whose spectral
-                  radius coincides with their essential spectral radius). It
-                  is shown that if one such semigroup contains the group
-                  $\left\{e^{tT}, t\in\mathbb{R}\right\}$ for some nonzero
-                  Volterra operator $T$, then it has a hyperinvariant
-                  subspace. This gives the existence of hyperinvariant
-                  subspaces for Lie algebras of Volterra operators.\par The
-                  paper contains many accompanying results which are of
-                  independent interest. In particular, it is proved that the
-                  joint spectral radius is a subharmonic function: let $D$ be
-                  a domain on the complex plane $\mathbb{C}$ and $\lambda\in
-                  D\to M(\lambda)$ be a map into the set of bounded subsets
-                  of a Banach algebra $A$. The map $\lambda\to M(\lambda)$ is
-                  said \emph{to be analytic} if there exists a family $F$ of
-                  analytic function $f: D\to A$ such that
-                  $M(\lambda)=\{f(\lambda): f \in F\}$ for all $\lambda\in
-                  D$. The family $F$ is called \emph{an analytic family for
-                  the map} $\lambda\to M(\lambda)$. We say that $F$ is
-                  continuous at a point $\lambda_0 \in D$ if $\sup\{\|f
-                  (\lambda)- f(\lambda_0)\| : f \in F\}\to 0$ under
-                  $\lambda\to 0$, $\lambda\in D$. Also, $F$ is
+                  W.~Wojty{\'n}ski~[\mrref{430806}, \zblref{0346.46050}]
+                  showed that locally finite Lie algebras of compact
+                  operators have invariant subspaces. The question remained
+                  open for general Lie algebras of Volterra operators. This
+                  question is answered in the affirmative here.\par The
+                  authors use semigroups of principle operators (operators
+                  whose spectral radius coincides with their essential
+                  spectral radius). It is shown that if one such semigroup
+                  contains the group $\left\{e^{tT}, t\in\mathbb{R}\right\}$
+                  for some nonzero Volterra operator $T$, then it has a
+                  hyperinvariant subspace. This gives the existence of
+                  hyperinvariant subspaces for Lie algebras of Volterra
+                  operators.\par The paper contains many accompanying results
+                  which are of independent interest. In particular, it is
+                  proved that the joint spectral radius is a subharmonic
+                  function: let $D$ be a domain on the complex plane
+                  $\mathbb{C}$ and $\lambda\in D\to M(\lambda)$ be a map into
+                  the set of bounded subsets of a Banach algebra $A$. The map
+                  $\lambda\to M(\lambda)$ is said \emph{to be analytic} if
+                  there exists a family $F$ of analytic function $f: D\to A$
+                  such that $M(\lambda)=\{f(\lambda): f \in F\}$ for all
+                  $\lambda\in D$. The family $F$ is called \emph{an analytic
+                  family for the map} $\lambda\to M(\lambda)$. We say that
+                  $F$ is continuous at a point $\lambda_0 \in D$ if
+                  $\sup\{\|f (\lambda)- f(\lambda_0)\| : f \in F\}\to 0$
+                  under $\lambda\to 0$, $\lambda\in D$. Also, $F$ is
                   \emph{continuous} on $D$ if it is continuous at every point
                   of $D$. Sometimes it is written $F(\lambda)$ instead of
                   $M(\lambda)$.\par \textbf{Theorem 3.5.} \emph{Let
@@ -16437,9 +16499,9 @@
  doi           = "10.1006/jfan.1998.3368",
  url           = "https://www.sciencedirect.com/science/article/pii/S0022123698933687",
  annote        = "The article is devoted to the solution of the Volterra
-                  semigroup problem. This problem was raised by E. Nordgren,
-                  H. Radjavi and P. Rosenthal [Indiana Univ. Math. J. 33,
-                  271--275 (1984)] and has the following form: does every
+                  semigroup problem. This problem was raised by Nordgren,
+                  Radjavi, and Rosenthal~[\mrref{733900},
+                  \zblref{0579.47041}] and has the following form: does every
                   (multiplicative) semigroup of compact quasinilpotent
                   operators on an infinite dimensional Banach space have a
                   nontrivial invariant subspace?\par The problem is solved
@@ -16477,8 +16539,8 @@
                   spectral radius of the image of $M$ in the Calkin algebra.
                   Most of the results of the paper contain conditions on
                   $\rho(M)$ and/or $\rho_{e}(M)$. The authors gave answers to
-                  questions 4 and 5 posed by \emph{W.~Wojtynski} [Stud. Math.
-                  59, 263--273 (1977)].",
+                  questions 4 and 5 posed by Wojtynski~[\mrref{430806},
+                  \zblref{0346.46050}].",
 }
 
 @ARTICLE{TurShul:FAP12,
@@ -16503,8 +16565,9 @@
                   precompact family $M$ of operators on a Banach space $X$ is
                   equal to the maximum of two numbers: the joint spectral
                   radius $\rho_{e}(M)$ of the image of $M$ in the Calkin
-                  algebra and the Berger--Wang radius $r(M)$ defined by the
-                  formula \[r(M)=\underset{n\rightarrow\infty}{\limsup}\left(
+                  algebra and the Berger--Wang radius~\cite{BerWang:LAA92}
+                  $r(M)$ defined by the formula
+                  \[r(M)=\underset{n\rightarrow\infty}{\limsup}\left(
                   \sup\left\{ \rho(a):a\in M^{n}\right\} ^{1/n}\right).\]
                   Some more general Banach-algebraic results of this kind are
                   also proved. The proofs are based on the study of special
@@ -16571,25 +16634,25 @@
                   approximate it. These methods have different advantages,
                   depending on the application considered, the type of
                   matrices considered, the desired accuracy or running time,
-                  etc. The goal of this toolbox is to provide the practitioner
-                  with the best available methods, and propose an easy tool
-                  for the researcher to compare the different methods.\par
-                  The JSR Toolbox is a MATLAB toolbox that provides a large
-                  set of methods for the approximation of the joint spectral
-                  radius, but also includes several helper functions, for
-                  example for comparison or analysis purposes, and several
-                  demonstration functions. One important feature is that the
-                  toolbox offers a ``default'' algorithm that computes bounds
-                  on the joint spectral radius by combining several
-                  approaches presented in this article. This may be useful if
-                  one does not know what algorithm is more suitable. The
-                  behavior of this algorithm may also be parameterized as
-                  needed, for instance by setting a maximal computation time
-                  or by fine-tuning a particular step in an algorithm. The
-                  main steps of the default algorithm are the following:
-                  \par$\bullet$ Try to transform the problem into a set of
-                  smaller independent problems. This is possible when the
-                  matrices in the set $\Sigma$ are simultaneously
+                  etc. The goal of this toolbox is to provide the
+                  practitioner with the best available methods, and propose
+                  an easy tool for the researcher to compare the different
+                  methods.\par The JSR Toolbox is a MATLAB toolbox that
+                  provides a large set of methods for the approximation of
+                  the joint spectral radius, but also includes several helper
+                  functions, for example for comparison or analysis purposes,
+                  and several demonstration functions. One important feature
+                  is that the toolbox offers a ``default'' algorithm that
+                  computes bounds on the joint spectral radius by combining
+                  several approaches presented in this article. This may be
+                  useful if one does not know what algorithm is more
+                  suitable. The behavior of this algorithm may also be
+                  parameterized as needed, for instance by setting a maximal
+                  computation time or by fine-tuning a particular step in an
+                  algorithm. The main steps of the default algorithm are the
+                  following: \par$\bullet$ Try to transform the problem into
+                  a set of smaller independent problems. This is possible
+                  when the matrices in the set $\Sigma$ are simultaneously
                   blocktriangularizable.\par$\bullet$ If the matrices are
                   nonnegative, start with the pruning algorithm in order to
                   get some bounds $[\beta^-, \beta^+]$ on the joint spectral
@@ -16597,14 +16660,15 @@
                   positive orthant as cone, and the ellipsoidal norm
                   approximation using $[\beta^-, \beta^+]$ as initial
                   bounds.\par$\bullet$ If some matrices have negative
-                  entries, start with a variant of Gripenberg's algorithm in
-                  order to get some initial bounds and a candidate product.
-                  This variant may rescale the matrices during the
-                  computation in order to avoid overflows. After this first
-                  step, compute the ellipsoidal norm approximation and, if
-                  needed, try to certify optimality or to find a better
-                  candidate product using a balanced complex polytope method
-                  or a conitope method, which is a lifted polytope method.",
+                  entries, start with a variant of Gripenberg's
+                  algorithm~\cite{Grip:LAA96} in order to get some initial
+                  bounds and a candidate product. This variant may rescale
+                  the matrices during the computation in order to avoid
+                  overflows. After this first step, compute the ellipsoidal
+                  norm approximation and, if needed, try to certify
+                  optimality or to find a better candidate product using a
+                  balanced complex polytope method or a conitope method,
+                  which is a lifted polytope method.",
 }
 
 @INPROCEEDINGS{VHJ:ACM14,
@@ -17367,7 +17431,7 @@
                   $t\in\mathbb{N}$ there is an $A(t)\in\mathcal{M}$ with
                   $x(t+1)=A(t)x(t)$. The sets of products of length $t$ are
                   defined as: $\mathcal{S}_t =\{A(t-1)A(t-2)\cdots
-                  A(0):A(s)\in\mathcal{M}, s=0,1,\ldots ,t-1\}$ and the
+                  A(0):A(s)\in\mathcal{M}, s=0,1,\ldots,t-1\}$ and the
                   semigroup given by $\mathcal{S}=
                   \bigcup_{t=0}^{\infty}\mathcal{S}_t$.\par Let $\rho(A)$
                   denote the spectral radius of $A$ and let $\|\cdot\|$ be
@@ -17618,8 +17682,8 @@
  url           = "https://www.college-de-france.fr/media/jean-christophe-yoccoz/UPL27219_SL_2_R__cocycles.pdf",
  annote        = "There have been many deep results about cocycle maps in
                   recent years, especially in the quasiperiodic case with the
-                  achievements of \emph{H.~Eliasson}, \emph{J.~Bourgain} and
-                  \emph{R.~Krikorian} amongst others. The questions that we
+                  achievements of H.~Eliasson, J.~Bourgain and
+                  R.~Krikorian amongst others. The questions that we
                   address here are much more elementary: most of the time, we
                   will be interested in locally constant cocycles with values
                   in $\textit{SL}(2,\mathbf{R})$ over a transitive subshift
@@ -17741,4 +17805,28 @@
                   hyperbolic systems, and establish the Berger--Wang
                   formula~\cite{BerWang:LAA92} for general dynamical
                   systems.",
+}
+
+@MISC{Prot:ArXiv25,
+ author        = "Protasov, Vladimir {\relax{}Yu}.",
+ authauthor    = "Protasov, Vladimir",
+ title         = "Perron matrix semigroups",
+ howpublished  = "ArXiv.org e-Print archive",
+ year          = "2025",
+ month         = feb,
+ eprinttype    = "arXiv",
+ eprint        = "2502.10571",
+ doi           = "10.48550/arXiv.2502.10571",
+ annote        = "We consider multiplicative semigroups of real~$d\times d$
+                  matrices. A semigroup is called Perron if each of its
+                  matrices has a Perron eigenvalue, i.e., an eigenvalue equal
+                  to the spectral radius. By the Krein-Rutman theorem, a
+                  matrix leaving some cone invariant possesses a Perron
+                  eigenvalue. Therefore, if all matrices of a
+                  semigroup~$\mathcal{S}$ share a common invariant cone,
+                  then~$\mathcal{S}$ is Perron. Our main result asserts that
+                  the converse is true, provided that some mild assumptions
+                  are satisfied. Those assumptions cannot be relaxed. This
+                  gives conditions for an arbitrary set of matrices to
+                  possess a common invariant cone.",
 }
