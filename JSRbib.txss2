@@ -1,7 +1,7 @@
 {
     "InternalPDFViewer": {
         "Embedded": false,
-        "File": "JSRbib.pdf"
+        "File": "JSRbib-lua.pdf"
     },
     "Session": {
         "Bookmarks": [
@@ -10,12 +10,12 @@
         "FileVersion": 1,
         "Files": [
             {
-                "Col": 70,
+                "Col": 15,
                 "EditorGroup": 0,
                 "FileName": "JSRbib.tex",
                 "FirstLine": 191,
                 "FoldedLines": "",
-                "Line": 194
+                "Line": 192
             },
             {
                 "Col": 0,
@@ -24,8 +24,17 @@
                 "FirstLine": 0,
                 "FoldedLines": "",
                 "Line": 0
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "JSRbib-lua.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 18
             }
         ],
-        "MasterFile": ""
+        "MasterFile": "",
+        "VerticalSplit": true
     }
 }
