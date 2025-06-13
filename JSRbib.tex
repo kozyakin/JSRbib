@@ -5,7 +5,7 @@
 \ifdefined\HCode\relax
 \else
 % The following command has been added to prevent hyperlinks
-% from spanning 2 pages plus support for the PDF/A-2b standard
+% from spanning 2 pages plus support for the PDF/A-4f standard
 \DocumentMetadata{testphase=new-or-1,pdfstandard={UA-2,A-4f},lang=en}
 \fi
 \RequirePackage{fix-cm}
@@ -217,14 +217,16 @@ Some math tools that have proven useful when exploring joint/generalized spectra
 
 \ifdefined\HCode%
 \newcommand{\BibAnnote}[1]{%
+{\par~\par%
 \setlength{\parskip}{0pt}%
 \setlength{\parindent}{1.5em}%
-\par\medskip #1\par\medskip}%
+#1\par\medskip}}%
 \else%
 \newcommand{\BibAnnote}[1]{%
+{\par\medskip%
 \setlength{\parskip}{0pt}%
 \setlength{\parindent}{1.5em}%
-\par\medskip{\small #1\par}\medskip}%
+{\small #1\par}\medskip}}%
 %\vskip\itemsep{\small #1\par}\vskip\itemsep}%
 \fi%
 
