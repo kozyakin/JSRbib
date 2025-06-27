@@ -6,24 +6,16 @@
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "JSRbib.tex",
+        "CurrentFile": "JSRbib-lua.tex",
         "FileVersion": 1,
         "Files": [
             {
-                "Col": 15,
-                "EditorGroup": 0,
-                "FileName": "JSRbib.tex",
-                "FirstLine": 191,
-                "FoldedLines": "",
-                "Line": 192
-            },
-            {
                 "Col": 0,
                 "EditorGroup": 0,
-                "FileName": "JSR+matprod.bib",
-                "FirstLine": 0,
+                "FileName": "JSRbib.tex",
+                "FirstLine": 184,
                 "FoldedLines": "",
-                "Line": 0
+                "Line": 189
             },
             {
                 "Col": 0,
@@ -32,6 +24,14 @@
                 "FirstLine": 0,
                 "FoldedLines": "",
                 "Line": 18
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "JSR+matprod.bib",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 0
             }
         ],
         "MasterFile": "",
