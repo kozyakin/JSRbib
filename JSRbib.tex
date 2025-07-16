@@ -21,21 +21,21 @@
 \makeatletter
 %%%%%%%%%%%%% natbib.cfg
 \AtBeginDocument{%
-\@ifpackageloaded{authorindex}{%
-\ifNAT@numbers
-\let\org@@citex\NAT@citexnum
-\else
-\let\org@@citex\NAT@citex
-\fi
-\def\@citex[#1][#2]#3{%
-\typeout{indexing: [#1][#2]{#3}}%
-\org@@citex[#1][#2]{#3}%
-\@aicitey{#3}}%
-\renewcommand\NAT@wrout[5]{%
-\if@filesw{%
-\let\protect\noexpand\let~\relax
-\immediate\write\@auxout{\string\aibibcite{#5}{#1}}%
-\immediate\write\@auxout{\string\bibcite{#5}{{#1}{#2}{{#3}}{{#4}}}}}%
+  \@ifpackageloaded{authorindex}{%
+    \ifNAT@numbers
+    \let\org@@citex\NAT@citexnum
+    \else
+    \let\org@@citex\NAT@citex
+    \fi
+    \def\@citex[#1][#2]#3{%
+      \typeout{indexing: [#1][#2]{#3}}%
+      \org@@citex[#1][#2]{#3}%
+    \@aicitey{#3}}%
+    \renewcommand\NAT@wrout[5]{%
+      \if@filesw{%
+        \let\protect\noexpand\let~\relax
+        \immediate\write\@auxout{\string\aibibcite{#5}{#1}}%
+      \immediate\write\@auxout{\string\bibcite{#5}{{#1}{#2}{{#3}}{{#4}}}}}%
 \fi}}{}}
 \def\NAT@def@citea{\def\@citea{\NAT@separator}}% removed \NAT@space
 \bibpunct{[}{]}{, }{n}{}{,}
@@ -47,13 +47,15 @@
 
 \usepackage{hyperref}
 \hypersetup{
-pdftitle={An annotated bibliography on the convergence of matrix products and the theory of joint/generalized spectral radius},
-pdfsubject={Bibliography on joint/generalized spectral radius theory and related issues},
-pdfauthor={Victor Kozyakin},
-pdfkeywords={joint spectral radius, generalized spectral radius},
-linkbordercolor=[rgb]{0.5, 1, 1},
-urlbordercolor=[rgb]{0.5, 1, 1},
-citebordercolor=[rgb]{0.5, 1, 0.5},
+  pdftitle={An annotated bibliography on the convergence of matrix
+  products and the theory of joint/generalized spectral radius},
+  pdfsubject={Bibliography on joint/generalized spectral radius
+  theory and related issues},
+  pdfauthor={Victor Kozyakin},
+  pdfkeywords={joint spectral radius, generalized spectral radius},
+  linkbordercolor=[rgb]{0.5, 1, 1},
+  urlbordercolor=[rgb]{0.5, 1, 1},
+  citebordercolor=[rgb]{0.5, 1, 0.5},
 hypertexnames=false}
 
 %\usepackage{mVersion}
@@ -65,175 +67,358 @@ hypertexnames=false}
 %---------------------------------------------
 
 \begin{document}
-\title{\bf An annotated bibliography\\ on the convergence of matrix products and\\ the theory of joint/generalized spectral radius}
+\title{\bf An annotated bibliography\\ on the convergence of matrix
+  products and\\ the theory of joint/generalized spectral radius}
 
-\author{Victor Kozyakin\thanks{Higher School of Modern Mathematics, Moscow 
-Institute of Physics and Technology, 1 Klimentovskiy per., 115184 Moscow, 
-Russia. Email: \texttt{koziakin.vs@mipt.ru}}}
+\author{Victor Kozyakin\thanks{Higher School of Modern Mathematics, Moscow
+    Institute of Physics and Technology, 1 Klimentovskiy per., 115184 Moscow,
+    Russia. Email: \texttt{koziakin.vs@mipt.ru}}}
 
 \date{\today}
 
 \maketitle
 
-%\begin{abstract}
-%The proposed text is an attempt to systematize as much as possible the information available in publications on the convergence of infinite matrix products and the rate of their growth/decrease when the number of factors tends to infinity.
-%\end{abstract}
-%
-%\section*{Introduction}
-The proposed text is an attempt to provide a (perpetually updated) list of publications on the convergence of infinite matrix products and the rate of their growth/decrease when the number of factors tends to infinity.
+% \begin{abstract} The proposed text is an attempt to systematize as
+% much as possible the information available in publications on the
+% convergence of infinite matrix products and the rate of their
+% growth/decrease when the number of factors tends to infinity.
+% \end{abstract} \section*{Introduction}
+The proposed text is an attempt to provide a (perpetually updated) list
+of publications on the convergence of infinite matrix products and the
+rate of their growth/decrease when the number of factors tends to
+infinity.
 
-Of course, the papers mentioned below mainly reflect my personal interests. I may miss some papers that other people consider ``very important'', or I may not know some of them, and I may also include links to papers that are of interest only to me.
+Of course, the papers mentioned below mainly reflect my personal
+interests. I may miss some papers that other people consider ``very
+important'', or I may not know some of them, and I may also include
+links to papers that are of interest only to me.
 
-The annotations to the works mentioned come from the abstracts of the publications themselves, and from the MathSciNet and zbMATH databases. Sometimes the annotations are slightly edited to combine all available sources.
+The annotations to the works mentioned come from the abstracts of the
+publications themselves, and from the MathSciNet and zbMATH databases.
+Sometimes the annotations are slightly edited to combine all available
+sources.
 
 The works mentioned in this text cover the following topics.
 
 \subsection*{Joint/generalized spectral radius. Common concept}
 \begin{itemize}
-\item Joint/generalized spectral radius theory in itself: \cite{AhmPar:CDC12, 
-BKPW:LAA08, Blondel:LAA08, Bochi15, Breuillard2022, Cicone:ArXiv15, 
-CMS:LAA21, CMMS:EJP23, Els:LAA95, Jungers:09, Jungers:LNCS13, Moeller15, 
-MolReif:LAA14, MorSid:JEMS13, OgurMart:LAA14, Prot:FPM96:e, Prot:IZV97:e, 
-Prot:FU98, RotaStr:IM60, ShulTur:JFA00, KisShulTur:20, KisShulTur:JMS22, 
-ShulTur:ArXiv08, Strang03, Theys:PhD05, XuXiao:AJIFAC11};
-\item properties of and bounds for joint/generalized spectral radius: \cite{Alpin:MZ10, Breuillard2022, CJ:IJAMCS06, CJN:AISC15, Gil:UJMA19, GugProt:MC23, GS:MCRF20, HStr:LASP92, Koz:DEDS10, Koz:LAA10, Maesumi:TIC95, Maesumi:LAA96, MorSid:JEMS13, Morris:ADVM10, Peperko:LAA12, Wirth:MTNS04, Wirth:LAA05, XuAci:IEEETAC20, Zhou:AMC06};
-\item Berger--Wang formula for the joint spectral radius: \cite{BF:AIF21, Breuillard2022, Koz:LAA14, Morris:JFA12, Oregon-Reyes:JEPM20};
-\item lower spectral radius or joint spectral subradius: \cite{BochiMor:PLMS15, CJ:IJAMCS06, CJ:IJAMCS07, Czornik:LAA05, DekKui:JEMS11, GugMai:ArXiv24, Jungers:LAA12, Morris:LAA17, MP:DCDCA18};
-\item minimax joint spectral radius: \cite{Koz:DCDSB19};
-\item etc. \cite{GugZen:LAA12, Koz:LAA09, Oreg-Reyes:MastThes18, Pascoe:IJM21}.
+  \item Joint/generalized spectral radius theory in itself: \cite{AhmPar:CDC12,
+          BKPW:LAA08, Blondel:LAA08, Bochi15, Breuillard2022, Cicone:ArXiv15,
+          CMS:LAA21, CMMS:EJP23, Els:LAA95, Jungers:09, Jungers:LNCS13,
+          Moeller15, MolReif:LAA14, MorSid:JEMS13, OgurMart:LAA14, Prot:FPM96:e,
+          Prot:IZV97:e, Prot:FU98, RotaStr:IM60, ShulTur:JFA00, KisShulTur:20,
+          KisShulTur:JMS22, ShulTur:ArXiv08, Strang03, Theys:PhD05,
+          XuXiao:AJIFAC11};
+  \item properties of and bounds for joint/generalized spectral radius:
+        \cite{Alpin:MZ10, Breuillard2022, CJ:IJAMCS06, CJN:AISC15, Gil:UJMA19,
+          GugProt:MC23, GS:MCRF20, HStr:LASP92, Koz:DEDS10, Koz:LAA10,
+          Maesumi:TIC95, Maesumi:LAA96, MorSid:JEMS13, Morris:ADVM10,
+          Peperko:LAA12, Wirth:MTNS04, Wirth:LAA05, XuAci:IEEETAC20, Zhou:AMC06};
+  \item Berger--Wang formula for the joint spectral radius: \cite{BF:AIF21,
+          Breuillard2022, Koz:LAA14, Morris:JFA12, Oregon-Reyes:JEPM20};
+  \item lower spectral radius or joint spectral subradius:
+        \cite{BochiMor:PLMS15, CJ:IJAMCS06, CJ:IJAMCS07, Czornik:LAA05,
+          DekKui:JEMS11, GugMai:ArXiv24, Jungers:LAA12, Morris:LAA17,
+          MP:DCDCA18};
+  \item minimax joint spectral radius: \cite{Koz:DCDSB19};
+  \item etc. \cite{GugZen:LAA12, Koz:LAA09, Oreg-Reyes:MastThes18,
+          Pascoe:IJM21}.
 \end{itemize}
 
 \subsection*{Finiteness conjecture}
 
-In this section we have included publications dealing with one of the most discussed problems of the joint/generalized spectral radius theory, which has significantly influenced almost all aspects of this theory.
+In this section we have included publications dealing with one of the
+most discussed problems of the joint/generalized spectral radius
+theory, which has significantly influenced almost all aspects of this
+theory.
 \begin{itemize}
-\item Lagarias--Wang finiteness conjecture/property, general facts: \cite{BTV:MTNS02, Charina:ACHA13, DHX:PAMS13, GugZen:LAA12, JenPoll:ETDS17, Koz:LAA16, Koz:WSDV16, LagWang:LAA95, Morris:LAA10};
-\item normed finiteness property: \cite{LiShih:LAA08};
-\item counterexamples to the finiteness conjecture: \cite{BochiMor:PLMS15, BM:JAMS02, BTV:SIAMJMA03, CJ:IJAMCS07, HMST:AdvMath11, JenPoll:ETDS17, JP:SIAMJMA09, Koz:CDC05:e, Koz:WIAS05, Koz:INFOPROC06:e};
-\item classes of matrices for which the finiteness conjecture holds: \cite{AhmJun14, AhmJng:NAHS16, BN:SIAMJMAA09, Charina:ACHA13, CGSZ:LAA10, CiconePhD11, Dai:ArXiv11, Dai:LAA13, DHLX:LAA12, DHX:ArXiv13-1, DHX:PAMS13, DK:INFOPROC11:e, Gurv:LAA95, GWZ:SIAMJMA05, JB:LAA08, JM:LAA13, Koz:LAA16, KZW:ArXiv25, LagWang:LAA95, LiuXiao:LNCS12, Mejstrik:DRNA22, Morris:LAA10, Morris:ArXiv11, PanScl:Nonlin21, PW:LAA08, WangWen:CIS13}.
+  \item Lagarias--Wang finiteness conjecture/property, general facts:
+        \cite{BTV:MTNS02, Charina:ACHA13, DHX:PAMS13, GugZen:LAA12,
+          JenPoll:ETDS17, Koz:LAA16, Koz:WSDV16, LagWang:LAA95, Morris:LAA10};
+  \item normed finiteness property: \cite{LiShih:LAA08};
+  \item counterexamples to the finiteness conjecture: \cite{BochiMor:PLMS15,
+          BM:JAMS02, BTV:SIAMJMA03, CJ:IJAMCS07, HMST:AdvMath11, JenPoll:ETDS17,
+          JP:SIAMJMA09, Koz:CDC05:e, Koz:WIAS05, Koz:INFOPROC06:e};
+  \item classes of matrices for which the finiteness conjecture holds:
+        \cite{AhmJun14, AhmJng:NAHS16, BN:SIAMJMAA09, Charina:ACHA13,
+          CGSZ:LAA10, CiconePhD11, Dai:ArXiv11, Dai:LAA13, DHLX:LAA12,
+          DHX:ArXiv13-1, DHX:PAMS13, DK:INFOPROC11:e, Gurv:LAA95, GWZ:SIAMJMA05,
+          JB:LAA08, JM:LAA13, Koz:LAA16, KZW:ArXiv25, LagWang:LAA95,
+          LiuXiao:LNCS12, Mejstrik:DRNA22, Morris:LAA10, Morris:ArXiv11,
+          PanScl:Nonlin21, PW:LAA08, WangWen:CIS13}.
 \end{itemize}
 
 \subsection*{Applications}
-The number of papers in which the theory of convergence of infinite matrix products is applied to other problems has grown very rapidly in recent years. Therefore, I am forced to limit the relevant reference list to those publications which mainly reflect my personal interests.
+The number of papers in which the theory of convergence of infinite
+matrix products is applied to other problems has grown very rapidly in
+recent years. Therefore, I am forced to limit the relevant reference
+list to those publications which mainly reflect my personal interests.
 \begin{itemize}
-\item Computational mathematics, wavelets: \cite{BZh:SAIMJMAA00, CCS:AT04, DaubLag:SIAMMAN91, DaubLag:SIAMMAN92, Dumas:LAA13, GugProt:SIAMJMAA16, HStr:LASP92, Jia:ACM95, JLZ:JFAA01, KasBh:2000, Maesumi:TIC95, Maesumi:CMA00, ProtGug:PJAA15};
-\item asynchronous/parallel methods of computation: \cite{Baudet:JASSCM78, BEN:ETNA94, BertTsi:89, ChM:LAA69, HC:JGO19, FroSpi01, FromSzyld:JCAM00, LubMit:JACM86, Miellow:CRACP74, Miellow:CRACP75, Robert70, SBKK:LAA98, Szyld:TU98};
-\item control theory, automata, consensus, asynchronous data exchange systems: \cite{AKKK:92:e, AKKKP:88, Bar:CDC05, BGP:ICALP17, BGP:IC20, BokPar:ArXiv13, CHJ:SCL17, CHJ:SIAMJCO15, CzorJurg:Automatica08, CzorNaw:CCA07, CzorNiez:JFI15, Dumas:LAA13, Klep:AIT85:e, KKKK:DAN84:e, KKKK:AiT83:7:e, KKKK:AiT84:3:e, KKKK:AiT84:8:e, KKKK:MCS84, Koz:AiT90:10:e, Koz:AiT90:8:e, Koz:DAN90:311:e, Koz:AiT91:e, Koz:DAN91:e, Koz:BCRI03-13, KozPok:DAN92:e, Koz:ICDEA04, PGBR:IJC11, Shang:FM17, SBKK:CDC97, Wirth:SIAMJCO98, Wirth:MNTS02, Wirth:TR09, Wirth:IFACWC05};
-\item entropy games, matrix multiplication games: \cite{ACDDHK:STACS15, AGM:ArXiv24, AGM:MTNS24, AGMM:ArXiv25, GS:MCRF20};
-\item switched and iterated function systems: \cite{AGGM:Automatica22, AGMG2024, AhmJun14, AhmJng:NAHS16, AhmPar:CDC05, AhmJun:CDC13, AKKK:92:e, AKKK:MCM90, ASJ:IEEECSL17, BNT:LNSC04, BV:JGA12, CDHMS:ArXiv25, CGM:JDE15, CGP:NAHS18, CGSP:NAHS21, Cong:SCL16, CMS:Cham25-101, CUH:ECC2020, CzorNiez:MMAR13, Dai:JDE11, Dai:LAA12, Dai:JFI14, DHX:ArXiv11-2, DJM:SCL20, DRD:IEEETAC18, ForValt:IEEETAC12, GCM:CDC13, GLP:FCM15, GS:CDC17, GugProt:AIP16, HLHX:JMAA11, HSZ:IEEETAC09, JJ:ArXiv25, JP:CDC10, Jungers:IFAC24, JunMas:SIAMJCO17, KlamCzorNiez:BPASTS13, Koz:INFOPROC16:e, LJP:HSCC16, LPG:SIAM20, MonMarg:AJIFAC11, PEDJ:Autom16, PhilJung:ECC15, Prot:AJIFAC19, OgurJung:CDC14, OgurMart:LAA13, OgurMart:CDC13, OgurMart:ECC13, OPJ:SCL16, Reber:PhD19, ReberWebb:Nonlin20, SafKhan:IEEETAC17, Sheipak:MZ98, ShenHu:SIAMJCO12, SWMWK:SIAMREV07, Tuna:AJIFAC08, TW:CDC12, WangYu:14, WangJu:IEEECSL21, WRDV:CDC14, WRDV:IEEETAC16, ZhangXu:ArXiv20};
-\item linear inclusions: \cite{ABMW:MTNS12, AJPR:IFACSRCD12, Bar:AIT88-3:e, Bar:AIT88-2:e, Bar:AIT88-5:e, Bar:ACC95, BarVin:LAA11, CheMam:BASRM04, DaiOp:AIT01:e, DHHX:JFI17, GurSam:CDC05, Gurv:LAA95, VEB:LAA00, Wirth:IJRNC98};
-\item trajectories of switching systems with maximum growth rate: \cite{ACDDHK:STACS15, AGM:ArXiv24, AGMM:ArXiv25, BCH:SF16, GCM:CDC13, CGM:JDE15, GS:CDC17, HSZ:IEEETAC09, Koz:CDC05:e, Koz:Automatica22, Koz:WIAS05, Koz:INFOPROC06:e, LJP:HSCC16, MonMarg:AJIFAC11, Morris:SIAMJCO24-2, ShenHu:SIAMJCO12, WuHe:SIAMJCO20};
-\item marginal stability/instability, slow growth of trajectories: \cite{CMS:SCL12, Morris:SCL22, Morris:SIAMJCO24-2, MorVar:DS23, Sun:IEEETAC08, PhilJung:ICHS15, PJ:NAHS15, Prot:SCL16, Varney21, VarMor:LAA25};
-\item matrix and operator cocycles: \cite{BD:StochDyn21, DHX:ArXiv13-1, Morris:JFA12};
-\item probability: \cite{ADFP:93, AltPar:CDC19, AltPar:SIAMJCO20, DHH:ArXiv14, KKV:CESA98, KM:ArXiv25, Li:IEEETAC11, Sert:Thesis16, Sert:CRMASP17};
-\item combinatorics: \cite{BJ:CANT10, JPB:TCM09, MOS:GTS99, MOS:IEEETIT01, MOS:LAA07, Prot:SM00};
-\item mathematical economics, arbitrage: \cite{CrossKPP:MECA12, CrossKoz:DCDSB13, KozCalPok:ArXiv10};
-\item etc. \cite{BCK:AIP16, JPB:LNCS08, KZW:ArXiv25, NP:SIAMJMAA20, Oreg-Reyes:GGD18, TO:ArXiv09, VladRub:JCA01}.
+  \item Computational mathematics, wavelets: \cite{BZh:SAIMJMAA00, CCS:AT04,
+          DaubLag:SIAMMAN91, DaubLag:SIAMMAN92, Dumas:LAA13, GugProt:SIAMJMAA16,
+          HStr:LASP92, Jia:ACM95, JLZ:JFAA01, KasBh:2000, Maesumi:TIC95,
+          Maesumi:CMA00, ProtGug:PJAA15};
+  \item asynchronous/parallel methods of computation: \cite{Baudet:JASSCM78,
+          BEN:ETNA94, BertTsi:89, ChM:LAA69, HC:JGO19, FroSpi01,
+          FromSzyld:JCAM00, LubMit:JACM86, Miellow:CRACP74, Miellow:CRACP75,
+          Robert70, SBKK:LAA98, Szyld:TU98};
+  \item control theory, automata, consensus, asynchronous data exchange
+        systems: \cite{AKKK:92:e, AKKKP:88, Bar:CDC05, BGP:ICALP17, BGP:IC20,
+          BokPar:ArXiv13, CHJ:SCL17, CHJ:SIAMJCO15, CzorJurg:Automatica08,
+          CzorNaw:CCA07, CzorNiez:JFI15, Dumas:LAA13, Klep:AIT85:e, KKKK:DAN84:e,
+          KKKK:AiT83:7:e, KKKK:AiT84:3:e, KKKK:AiT84:8:e, KKKK:MCS84,
+          Koz:AiT90:10:e, Koz:AiT90:8:e, Koz:DAN90:311:e, Koz:AiT91:e,
+          Koz:DAN91:e, Koz:BCRI03-13, KozPok:DAN92:e, Koz:ICDEA04, PGBR:IJC11,
+          Shang:FM17, SBKK:CDC97, Wirth:SIAMJCO98, Wirth:MNTS02, Wirth:TR09,
+          Wirth:IFACWC05};
+  \item entropy games, matrix multiplication games: \cite{ACDDHK:STACS15,
+          AGM:ArXiv24, AGM:MTNS24, AGMM:ArXiv25, GS:MCRF20};
+  \item switched and iterated function systems: \cite{AGGM:Automatica22,
+          AGMG2024, AhmJun14, AhmJng:NAHS16, AhmPar:CDC05, AhmJun:CDC13,
+          AKKK:92:e, AKKK:MCM90, ASJ:IEEECSL17, BNT:LNSC04, BV:JGA12,
+          CDHMS:ArXiv25, CGM:JDE15, CGP:NAHS18, CGSP:NAHS21, Cong:SCL16,
+          CMS:Cham25-101, CUH:ECC2020, CzorNiez:MMAR13, Dai:JDE11, Dai:LAA12,
+          Dai:JFI14, DHX:ArXiv11-2, DJM:SCL20, DRD:IEEETAC18, ForValt:IEEETAC12,
+          GCM:CDC13, GLP:FCM15, GS:CDC17, GugProt:AIP16, HLHX:JMAA11,
+          HSZ:IEEETAC09, JJ:ArXiv25, JP:CDC10, Jungers:IFAC24, JunMas:SIAMJCO17,
+          KlamCzorNiez:BPASTS13, Koz:INFOPROC16:e, LJP:HSCC16, LPG:SIAM20,
+          MonMarg:AJIFAC11, PEDJ:Autom16, PhilJung:ECC15, Prot:AJIFAC19,
+          OgurJung:CDC14, OgurMart:LAA13, OgurMart:CDC13, OgurMart:ECC13,
+          OPJ:SCL16, Reber:PhD19, ReberWebb:Nonlin20, SafKhan:IEEETAC17,
+          Sheipak:MZ98, ShenHu:SIAMJCO12, SWMWK:SIAMREV07, Tuna:AJIFAC08,
+          TW:CDC12, WangYu:14, WangJu:IEEECSL21, WRDV:CDC14, WRDV:IEEETAC16,
+          ZhangXu:ArXiv20};
+  \item linear inclusions: \cite{ABMW:MTNS12, AJPR:IFACSRCD12, Bar:AIT88-3:e,
+          Bar:AIT88-2:e, Bar:AIT88-5:e, Bar:ACC95, BarVin:LAA11, CheMam:BASRM04,
+          DaiOp:AIT01:e, DHHX:JFI17, GurSam:CDC05, Gurv:LAA95, VEB:LAA00,
+          Wirth:IJRNC98};
+  \item trajectories of switching systems with maximum growth rate:
+        \cite{ACDDHK:STACS15, AGM:ArXiv24, AGMM:ArXiv25, BCH:SF16, GCM:CDC13,
+          CGM:JDE15, GS:CDC17, HSZ:IEEETAC09, Koz:CDC05:e, Koz:Automatica22,
+          Koz:WIAS05, Koz:INFOPROC06:e, LJP:HSCC16, MonMarg:AJIFAC11,
+          Morris:SIAMJCO24-2, ShenHu:SIAMJCO12, WuHe:SIAMJCO20};
+  \item marginal stability/instability, slow growth of trajectories:
+        \cite{CMS:SCL12, Morris:SCL22, Morris:SIAMJCO24-2, MorVar:DS23,
+          Sun:IEEETAC08, PhilJung:ICHS15, PJ:NAHS15, Prot:SCL16, Varney21,
+          VarMor:LAA25};
+  \item matrix and operator cocycles: \cite{BD:StochDyn21, DHX:ArXiv13-1,
+          Morris:JFA12};
+  \item probability: \cite{ADFP:93, AltPar:CDC19, AltPar:SIAMJCO20,
+          DHH:ArXiv14, KKV:CESA98, KM:ArXiv25, Li:IEEETAC11, Sert:Thesis16,
+          Sert:CRMASP17};
+  \item combinatorics: \cite{BJ:CANT10, JPB:TCM09, MOS:GTS99, MOS:IEEETIT01,
+          MOS:LAA07, Prot:SM00};
+  \item mathematical economics, arbitrage: \cite{CrossKPP:MECA12,
+          CrossKoz:DCDSB13, KozCalPok:ArXiv10};
+  \item etc. \cite{BCK:AIP16, DGT:ArXiv25, JPB:LNCS08, KZW:ArXiv25,
+          NP:SIAMJMAA20, Oreg-Reyes:GGD18, TO:ArXiv09, VladRub:JCA01}.
 \end{itemize}
 
 \subsection*{Alternative characterizations and definitions}
 \begin{itemize}
-\item $p$-radius: \cite{BhaBha:SM95, JP:CDC10, JunProt:SIAMJSC11, Morris:SIAMJMAA22, OgurJung:CDC14, OgurMart:LAA14, OPJ:SCL16, Prot:LAA08, Prot:CDC05-2, Muller:APM97, Morris:AM16};
-\item joint spectral radius in max-algebras: \cite{Bapat:LAA98, BGT:IEEETAC00, DGM:LIPICS17, Gaubert:IEEETAC95, GMW:LAA17, GurMas:LAA11, Lur:LAA05, Lur:LAA06-1, LurYang:LAA09, MulPep:LAA13, Pep:LAA08, Pep:LAA11};
-\item trace characterizations: \cite{ChenZhou:LAA00, Xu:EJLA10}.
+  \item $p$-radius: \cite{BhaBha:SM95, JP:CDC10, JunProt:SIAMJSC11,
+          Morris:SIAMJMAA22, OgurJung:CDC14, OgurMart:LAA14, OPJ:SCL16,
+          Prot:LAA08, Prot:CDC05-2, Muller:APM97, Morris:AM16};
+  \item joint spectral radius in max-algebras: \cite{Bapat:LAA98,
+          BGT:IEEETAC00, DGM:LIPICS17, Gaubert:IEEETAC95, GMW:LAA17,
+          GurMas:LAA11, Lur:LAA05, Lur:LAA06-1, LurYang:LAA09, MulPep:LAA13,
+          Pep:LAA08, Pep:LAA11};
+  \item trace characterizations: \cite{ChenZhou:LAA00, Xu:EJLA10}.
 \end{itemize}
 
 \subsection*{Convergence and rate of growth of infinite matrix products}
-This section contains publications in which the problem of convergence of infinite matrix products is considered as a special case of the general theory.
+This section contains publications in which the problem of convergence
+of infinite matrix products is considered as a special case of the
+general theory.
 
 \begin{itemize}
-\item paracontractivity and convergence of matrix products: \cite{BeynEls96, BE:EJLA97, NeuSch:ArXiv98, VEB:LAA00, Mojskerc:LAA14, WangCheng:LMA16};
-\item spectrum maximizing matrix products:  \cite{BochiLas:SAIMJMAA24, CGSZ:LAA10, JSRpack, GugProt:SIAMJMAA16, GugZen:LAA08, Koz:SAIMJMAA25, Laskawiec:LAA25, Vladimirov:ArXiv24};
-\item stability of dynamical systems: \cite{Ahmadi08, AhmPar:CDC05, Bar:CDC05, BrayTong:TCS79, BrayTong:TCS80, GugZen:LNM14, Koz:AiT90:10:e, AKKK:92:e, ShihWP:LAA97, SBKK:CDC97, Shih:LAA99, KasBh:2000, BTV:MTNS02};
-\item etc. \cite{AndoShih:SIAM:98, BerWang:LAA92, BEN:ETNA94, CiconePhD11, Cohen:MPCPS79, DaubLag:LAA92, DaubLag:LAA01, EF:LAA97, FLS:ETDS19, GugZen:LAA01, GurRod:SIAMJMAA97, GugZen:LAA03, Hajnal:MPCPS76, Hartfiel02, Holtz:EJLA00, HR:APM12, Koz:DDNS18, Koz:ArXiv20, Mate:PAMS98, Mate:FM99, NSch:LAA99, PJ:LAA13, Shen:LAA00, ShihPang:AJIFAC08, SU:SIAMJMAA94, Thomas:Arxiv18, Thomas:ArXiv22, Vlad:ArXiv16}.
+  \item paracontractivity and convergence of matrix products: \cite{BeynEls96,
+          BE:EJLA97, NeuSch:ArXiv98, VEB:LAA00, Mojskerc:LAA14, WangCheng:LMA16};
+  \item spectrum maximizing matrix products: \cite{BochiLas:SAIMJMAA24,
+          CGSZ:LAA10, JSRpack, GugProt:SIAMJMAA16, GugZen:LAA08, Koz:SAIMJMAA25,
+          Laskawiec:LAA25, Vladimirov:ArXiv24};
+  \item stability of dynamical systems: \cite{Ahmadi08, AhmPar:CDC05,
+          Bar:CDC05, BrayTong:TCS79, BrayTong:TCS80, GugZen:LNM14,
+          Koz:AiT90:10:e, AKKK:92:e, ShihWP:LAA97, SBKK:CDC97, Shih:LAA99,
+          KasBh:2000, BTV:MTNS02};
+  \item etc. \cite{AndoShih:SIAM:98, BerWang:LAA92, BEN:ETNA94, CiconePhD11,
+          Cohen:MPCPS79, DaubLag:LAA92, DaubLag:LAA01, EF:LAA97, FLS:ETDS19,
+          GugZen:LAA01, GurRod:SIAMJMAA97, GugZen:LAA03, Hajnal:MPCPS76,
+          Hartfiel02, Holtz:EJLA00, HR:APM12, Koz:DDNS18, Koz:ArXiv20,
+          Mate:PAMS98, Mate:FM99, NSch:LAA99, PJ:LAA13, Shen:LAA00,
+          ShihPang:AJIFAC08, SU:SIAMJMAA94, Thomas:Arxiv18, Thomas:ArXiv22,
+          Vlad:ArXiv16}.
 \end{itemize}
 
 \subsection*{Semigroups of matrices and the theory of Banach algebras}
-Joint/generalized spectral radius from the point of view of the general theory of matrix semigroups and the theory of Banach algebras.
+Joint/generalized spectral radius from the point of view of the general
+theory of matrix semigroups and the theory of Banach algebras.
 
 \begin{itemize}
-\item Joint spectrum and key facts: \cite{Bell:LAA05, BerWang:LAA92,
-BreSert:LMS21, EE:PAMS04, GurRod:SIAMJMAA97, Lur:LAA06-2, RS:PAMS95,
-Sert:Thesis16, Sert:CRMASP17};
-\item invariant spaces, simultaneous triangularization and reducibility of multiplicative semigroups: \cite{Drnov:97, Drnovsek:SM97, Drn:IEOT01, GPRSTT:P10, Guinand:PAMS82, HNRRR:HJM91, LMMR:JOT98, OmRadj:LAA97, Prot:FPM96:e, Radj:IUMJ90, RRS:PAMS00, Szep:AMH86};
-\item multiplicativity and submultiplicativity of the spectral radius: \cite{LR:CJM95, OmRadj:LAA97, ProtVoy:LAA17};
-\item joint/generalized spectral radius of operators in Banach spaces/algebras: \cite{BD:StochDyn21, BF:AIF21, Bogdanovic:ArXiv23, BP:LMA23, BP:ArXiv24v2, EE:PAMS04, LS:LAA02, KisShulTur:20, Morris:JFA12, Muller:APM97, Pep:LMA11, Peperko:LAA12, RS:PAMS95, ShulTur:ArXiv12, ShulTur:JFA00, ShulTur:SM02, Turovskii:JFA99, TurShul:FAP00, TurShul:FAP12}
-\item etc. \cite{Javaheri:JMAA13, Prot:ArXiv25, ManSim:TCS78}.
+  \item Joint spectrum and key facts: \cite{Bell:LAA05, BerWang:LAA92,
+          BreSert:LMS21, EE:PAMS04, GurRod:SIAMJMAA97, Lur:LAA06-2, RS:PAMS95,
+          Sert:Thesis16, Sert:CRMASP17};
+  \item invariant spaces, simultaneous triangularization and reducibility of
+        multiplicative semigroups: \cite{Drnov:97, Drnovsek:SM97, Drn:IEOT01,
+          GPRSTT:P10, Guinand:PAMS82, HNRRR:HJM91, LMMR:JOT98, OmRadj:LAA97,
+          Prot:FPM96:e, Radj:IUMJ90, RRS:PAMS00, Szep:AMH86};
+  \item multiplicativity and submultiplicativity of the spectral radius:
+        \cite{LR:CJM95, OmRadj:LAA97, ProtVoy:LAA17};
+  \item joint/generalized spectral radius of operators in Banach
+        spaces/algebras: \cite{BD:StochDyn21, BF:AIF21, Bogdanovic:ArXiv23,
+          BP:LMA23, BP:ArXiv24v2, EE:PAMS04, LS:LAA02, KisShulTur:20,
+          Morris:JFA12, Muller:APM97, Pep:LMA11, Peperko:LAA12, RS:PAMS95,
+          ShulTur:ArXiv12, ShulTur:JFA00, ShulTur:SM02, Turovskii:JFA99,
+          TurShul:FAP00, TurShul:FAP12}
+  \item etc. \cite{Javaheri:JMAA13, Prot:ArXiv25, ManSim:TCS78}.
 \end{itemize}
 
 \subsection*{Complexity, decidability and primitivity}
 \begin{itemize}
-\item Complexity and NP-hardness of problems related to the calculation of the joint/generalized spectral radius: \cite{AhmJun14, AhmJng:NAHS16, AltPar:CDC19, AltPar:SIAMJCO20, BGT:IEEETAC00, BJ:CANT10, BJP:IEEETIT06, BN:SIAMJMAA09, BT:Autom00, ChangPhD12, CB:NA13, CHJ:SIAMJCO15, HMS:MPCPS13, Jungers:09, PJ:CDC13, Theys:PhD05, TB:MCSS97-4, TB:MCSS97-1, Toker:AJIFAC97};
-\item decidability of the boundedness/convergence problem for infinite matrix products: \cite{AKKK:92:e, BBKPT:TCS01, BC:TCS03, BT:SCL00, CiconePhD11, Cicone:ArXiv15, JPB:LAA08, Koz:AiT90:6:e, Koz:AiT03:9:e, Koz:ArXiv13, VlasJung:SCL14};
-\item mortality problem: \cite{BBKPT:TCS01, BT:IPL97, BB:TCS02, Saouter:inria96};
-\item primitivity of families of matrices, \v{C}ern\'{y} conjecture: \cite{BJO:AJIFAC15, CosJun:LNCS18, CosJun:IJFCS20, ProtVoyn:LAA12, Jungers:LAA12}.
+  \item Complexity and NP-hardness of problems related to the calculation of
+        the joint/generalized spectral radius: \cite{AhmJun14, AhmJng:NAHS16,
+          AltPar:CDC19, AltPar:SIAMJCO20, BGT:IEEETAC00, BJ:CANT10,
+          BJP:IEEETIT06, BN:SIAMJMAA09, BT:Autom00, ChangPhD12, CB:NA13,
+          CHJ:SIAMJCO15, HMS:MPCPS13, Jungers:09, PJ:CDC13, Theys:PhD05,
+          TB:MCSS97-4, TB:MCSS97-1, Toker:AJIFAC97};
+  \item decidability of the boundedness/convergence problem for infinite matrix
+        products: \cite{AKKK:92:e, BBKPT:TCS01, BC:TCS03, BT:SCL00,
+          CiconePhD11, Cicone:ArXiv15, JPB:LAA08, Koz:AiT90:6:e, Koz:AiT03:9:e,
+          Koz:ArXiv13, VlasJung:SCL14};
+  \item mortality problem: \cite{BBKPT:TCS01, BT:IPL97, BB:TCS02,
+          Saouter:inria96};
+  \item primitivity of families of matrices, \v{C}ern\'{y} conjecture:
+        \cite{BJO:AJIFAC15, CosJun:LNCS18, CosJun:IJFCS20, ProtVoyn:LAA12,
+          Jungers:LAA12}.
 \end{itemize}
 
 \subsection*{Algorithms}
-This section describes some of the algorithms used to compute the 
+This section describes some of the algorithms used to compute the
 joint/generalized spectral radius and related problems.
 \begin{itemize}
-\item Theoretical approach: \cite{AJPR:HCSS11, AJPR:SIAMJCO14, BN03, BN:SIAMJMA05, BNT:LNSC04, BNT:LAA05, GS:CDC17, GS:MCRF20, GugProt:MC23, JP:CDC10, JunProt:SIAMJSC11, Maesumi:LNPAM00, Maesumi:CDC05, Maesumi:LAA08, Maesumi:AT98, Moeller15, NesPro:SIAMJMAA13, OPJ:SCL16, ParJdb:LNCS07, ParJdb:LAA08, Prot:CDC05-1, ProtCvet:MP20, ProtJun:ECC13, Prot:SIAMJCO22};
-\item more or less practical realizations: \cite{CB:IFACWC11, CB:NA13, Grip:LAA96, GugProt:FCM13, GugMai:ArXiv24, GugZen:CDC05, GugZen:LAA08, JGC:SIAMJMAA14, Koz:DAN09:e, Koz:ArXiv10-1, Koz:DCDSB10, Koz:JDEA11, Li:IEEETAC11, Mejstrik:ACMTMS20, Mejstrik:19, Mejstrik:DRNA22, MejReif:ArXiv23, Prot:MP15, Vagnoni08, JSRToolbox, JSRpack, VHJ:ACM14, WangMM:ACC21, ZhangXu:ArXiv20};
+  \item Theoretical approach: \cite{AJPR:HCSS11, AJPR:SIAMJCO14, BN03,
+          BN:SIAMJMA05, BNT:LNSC04, BNT:LAA05, GS:CDC17, GS:MCRF20, GugProt:MC23,
+          JP:CDC10, JunProt:SIAMJSC11, Maesumi:LNPAM00, Maesumi:CDC05,
+          Maesumi:LAA08, Maesumi:AT98, Moeller15, NesPro:SIAMJMAA13, OPJ:SCL16,
+          ParJdb:LNCS07, ParJdb:LAA08, Prot:CDC05-1, ProtCvet:MP20,
+          ProtJun:ECC13, Prot:SIAMJCO22};
+  \item more or less practical realizations: \cite{CB:IFACWC11, CB:NA13,
+          Grip:LAA96, GugProt:FCM13, GugMai:ArXiv24, GugZen:CDC05, GugZen:LAA08,
+          JGC:SIAMJMAA14, Koz:DAN09:e, Koz:ArXiv10-1, Koz:DCDSB10, Koz:JDEA11,
+          Li:IEEETAC11, Mejstrik:ACMTMS20, Mejstrik:19, Mejstrik:DRNA22,
+          MejReif:ArXiv23, Prot:MP15, Vagnoni08, JSRToolbox, JSRpack, VHJ:ACM14,
+          WangMM:ACC21, ZhangXu:ArXiv20};
 \end{itemize}
 
 \subsection*{Special classes of matrices or laws of composing matrix products}
 \begin{itemize}
-\item Low-dimensional or rank-one matrices: \cite{ABY:CMH10, ASU:I11, AKKK:92:e, AvilaRob:JMD09, BB:TCS02, CGSZ:LAA10, Dai:ArXiv11, DHLX:LAA12, FayKri:N08, Klep:AIT85:e, JM:LAA13, LiuXiao:LNCS12, LuiOli:AMC14, Morris:ArXiv11, Moss:ACM10, Saouter:inria96, Yoc:MDSA04};
-\item non-negative matrices and matrices sharing invariant cone: \cite{Alpin:MZ10, Bui:LAA22, BZ:AMPA18, CACJ:DLT19, CACJ:FI21, GhaAna:TCS05, GSM:IEEETAC07, JPB:LAA08, Jungers:LAA12, NesPro:SIAMJMAA13, PJB:SIAMJMAA10, Prot:RMS10, ProtCvet:MP20, ProtVoyn:LAA12, Thomas:ArXiv10, RSS:LAA10};
-\item rational/integer/sign/binary matrices: \cite{BC:TCS03, BCH:SF16, BT:SCL00, BT:IPL97, BB:TCS02, CGSZ:LAA10, CiconePhD11, JB:LAA08, JPB:LAA08, PanScl:Nonlin21, TB:MCSS97-1};
-\item asynchronous systems/computations: \cite{AKKK:92:e, AKKK:MCM90, ADFP:93, AKKKP:88, ChM:LAA69, FroSpi01, FromSzyld:JCAM00, Klep:AIT85:e, Koz:AiT90:10:e, Koz:AiT90:8:e, Koz:DAN90:311:e, Koz:AiT91:e, LubMit:JACM86, SBKK:LAA98};
-\item Markov chains of matrices, constrained matrix products, constrained switching systems: \cite{ASJ:IEEECSL17, Dai:LAA12, DHH:ArXiv14, DRD:IEEETAC18, GhaAna:TCS05, Koz:LAA14, Koz:LAA14-2, MOS:LAA07, PEDJ:Autom16, PhilJung:ICHS15, XuAci:IEEETAC20, ZhangXu:ArXiv20, ZSD:CCC21};
-\item mixtures of matrices, matrices with independent column/row uncertainty, product families of matrices: \cite{ACDDHK:STACS15, AGM:ArXiv24, AGMM:ArXiv25, AKKK:92:e, BN:SIAMJMAA09, KKKK:AiT83:7:e, KKKK:AiT84:3:e, KKKK:AiT84:8:e, KKKK:DAN84:e, Koz:BCRI03-13, Koz:LAA16, Koz:WSDV16, Koz:LMA17, Koz:DCDSB19, Koz:INFOPROC16:e, NesPro:SIAMJMAA13};
-\item matrix cocycles: \cite{ABY:CMH10, Yoc:MDSA04}.
+  \item Low-dimensional or rank-one matrices: \cite{ABY:CMH10, ASU:I11,
+          AKKK:92:e, AvilaRob:JMD09, BB:TCS02, CGSZ:LAA10, Dai:ArXiv11,
+          DHLX:LAA12, FayKri:N08, Klep:AIT85:e, JM:LAA13, LiuXiao:LNCS12,
+          LuiOli:AMC14, Morris:ArXiv11, Moss:ACM10, Saouter:inria96, Yoc:MDSA04};
+  \item non-negative matrices and matrices sharing invariant cone:
+        \cite{Alpin:MZ10, Bui:LAA22, BZ:AMPA18, CACJ:DLT19, CACJ:FI21,
+          GhaAna:TCS05, GSM:IEEETAC07, JPB:LAA08, Jungers:LAA12,
+          NesPro:SIAMJMAA13, PJB:SIAMJMAA10, Prot:RMS10, ProtCvet:MP20,
+          ProtVoyn:LAA12, Thomas:ArXiv10, RSS:LAA10};
+  \item rational/integer/sign/binary matrices: \cite{BC:TCS03, BCH:SF16,
+          BT:SCL00, BT:IPL97, BB:TCS02, CGSZ:LAA10, CiconePhD11, JB:LAA08,
+          JPB:LAA08, PanScl:Nonlin21, TB:MCSS97-1};
+  \item asynchronous systems/computations: \cite{AKKK:92:e, AKKK:MCM90,
+          ADFP:93, AKKKP:88, ChM:LAA69, FroSpi01, FromSzyld:JCAM00, Klep:AIT85:e,
+          Koz:AiT90:10:e, Koz:AiT90:8:e, Koz:DAN90:311:e, Koz:AiT91:e,
+          LubMit:JACM86, SBKK:LAA98};
+  \item Markov chains of matrices, constrained matrix products, constrained
+        switching systems: \cite{ASJ:IEEECSL17, Dai:LAA12, DHH:ArXiv14,
+          DRD:IEEETAC18, GhaAna:TCS05, Koz:LAA14, Koz:LAA14-2, MOS:LAA07,
+          PEDJ:Autom16, PhilJung:ICHS15, XuAci:IEEETAC20, ZhangXu:ArXiv20,
+          ZSD:CCC21};
+  \item mixtures of matrices, matrices with independent column/row uncertainty,
+        product families of matrices: \cite{ACDDHK:STACS15, AGM:ArXiv24,
+          AGMM:ArXiv25, AKKK:92:e, BN:SIAMJMAA09, KKKK:AiT83:7:e, KKKK:AiT84:3:e,
+          KKKK:AiT84:8:e, KKKK:DAN84:e, Koz:BCRI03-13, Koz:LAA16, Koz:WSDV16,
+          Koz:LMA17, Koz:DCDSB19, Koz:INFOPROC16:e, NesPro:SIAMJMAA13};
+  \item matrix cocycles: \cite{ABY:CMH10, Yoc:MDSA04}.
 \end{itemize}
 
 \subsection*{Measure theoretic/ergodic methods}
 \begin{itemize}
-\item measure theoretic/ergodic methods in the theory of joint/generalized spectral radius: \cite{AltPar:CDC19, AltPar:SIAMJCO20, BochiRams:JMD16, BG:JEP19, BM:JAMS02, Dai:N11, Dai:JDE11, Dai:LAA12, Dai:JFI14, DHX:SIAMJCO08, DHX:CDC08, DHX:ArXiv11-1, DHX:ERA11, DHX:AUT11, DHX:PAMS13, DHX:IEEETAC15, Gomes:2017, KM:ArXiv25, Moh:JSP22, Morris:ADVM10, Morris:JFA12, Morris:PLMS13, Morris:EDTS17, Morris:EDTS17-2, NSch:LAA99, OgurMart:LAA14, ZCL:DCDSA18};
+  \item measure theoretic/ergodic methods in the theory of joint/generalized
+        spectral radius: \cite{AltPar:CDC19, AltPar:SIAMJCO20, BochiRams:JMD16,
+          BG:JEP19, BM:JAMS02, Dai:N11, Dai:JDE11, Dai:LAA12, Dai:JFI14,
+          DHX:SIAMJCO08, DHX:CDC08, DHX:ArXiv11-1, DHX:ERA11, DHX:AUT11,
+          DHX:PAMS13, DHX:IEEETAC15, Gomes:2017, KM:ArXiv25, Moh:JSP22,
+          Morris:ADVM10, Morris:JFA12, Morris:PLMS13, Morris:EDTS17,
+          Morris:EDTS17-2, NSch:LAA99, OgurMart:LAA14, ZCL:DCDSA18};
 \end{itemize}
 
 \subsection*{Products of random stochastic matrices}
 \begin{itemize}
-\item convergence of products of random stochastic matrices (this is a special area of mathematics with its own methods, it is mentioned only superficially below): \cite{AT:JMAA77, BXMS:IEEETSP13, Cohn:IJMMS, CMS:LAA21, CMMS:EJP23, DHH:ArXiv14, DHX:AUT11, OgurMart:LAA13, Leiz:LAA92, LimaRah:JPA94, Prot:MS11, Thomas:ArXiv11, Thomas:ArXiv13, Wolf:PAMS};
+  \item convergence of products of random stochastic matrices (this is a
+        special area of mathematics with its own methods, it is mentioned only
+        superficially below): \cite{AT:JMAA77, BXMS:IEEETSP13, Cohn:IJMMS,
+          CMS:LAA21, CMMS:EJP23, DHH:ArXiv14, DHX:AUT11, OgurMart:LAA13,
+          Leiz:LAA92, LimaRah:JPA94, Prot:MS11, Thomas:ArXiv11, Thomas:ArXiv13,
+          Wolf:PAMS};
 \end{itemize}
 
 \subsection*{Mathematical tools and methods}
-Some math tools that have proven useful when exploring joint/generalized spectral radius.
+Some math tools that have proven useful when exploring
+joint/generalized spectral radius.
 
 \begin{itemize}
-\item Auerbach lemma/basis: \cite{Auerbach:1930, Day:TAMS47, Mandal:2018, Ostrovskii:CMB11, Plichko:CM95, Taylor:BAMS47, WebWoj:CCM17};
-\item Fritz John ellipsoid theorem: \cite{ShihHsu:JNCA11, JohnF:48, JohnF:2014, Howard97, Shih:TM99};
-\item extremal norms: \cite{ABMW:MTNS12, AhmJng:NAHS16, Bar:ACC95, Bar:CDC05, BG:JEP19, BJP:IEEETIT06, CB:IFACWC11, CGSZ:LAA10, CMS:MRB22, Dai:JMAA11, DHX:PAMS13, EppWirth:LAA24, EppWirth:MTNS24, EppWirth:ArXiv25, Gomes:2017, GugProt:FCM13, GugZen:JMAA15, GugZen:SIAMJMAA09, GWZ:SIAMJMA05, JP:SIAMJMA09, Koz:CDC05:e, Koz:DCDSB10, Koz:WIAS05, LiuXiao:LNCS12, Maesumi:CDC05, Maesumi:LAA08, MasWir:LAA14, MejProt:Cacolo23, Moeller15, PW:LAA08, PWB:CDC05, Prot:LAA08, Vagnoni08, Wirth:CDC05, Wirth:LAA02, Wirth:MNTS02};
-\item Barabanov norms: \cite{Bar:AIT88-2:e, Bar:AIT88-3:e, Bar:AIT88-5:e, CMS:MRB22, CMS:Cham25-67, Dai:JMAA11, GugZen:JMAA15, Koz:Automatica22, Morris:LAA10, Morris:SIAMJMAA12, Morris:SIAMJCO24, Mus:SM23:e, Mus:MN25:e, Prot:SIAMJCO22, ProtMus:ArXiv25, TeiMarg:Autom12, Wirth:CDC05};
-\item antinorms: \cite{GugProt:FCM13, GugZen:JMAA15, GugZen:LAA20, GLP:FCM15, Prot:LMA21};
-\item polytope norms: \cite{GWZ:SIAMJMA05, GugZen:SIAMJMAA09, GugZen:JCA07};
-\item K\"{o}nig lemma/chains: \cite{Konig:ALSS27, Mate:PAMS98, Mate:FM99, Shen:LAA00, Shih:LAA01, Jachymski:TAMS09};
-\item invariant cones: \cite{Seneta06};
-\item lifting approach, lifted polytope methods: \cite{BN03, JGC:SIAMJMAA14, Koz:LAA14, ParJdb:LAA08, JSRToolbox, XuAci:IEEETAC20};
-\item max version of the Perron--Frobenius theorem: \cite{Bapat:LAA98};
-\item sum-of-squares (SOS) approach/programming: \cite{Ahmadi08, AhmJun:CDC13, AhmJun14, AJPR:SIAMJCO14, AJPR:HCSS11, AhmPar:CDC05, DRD:IEEETAC18, LJP:HSCC16, LPG:SIAM20, ParJdb:LNCS07, ParJdb:LAA08, WangMM:ACC21, ZhangXu:ArXiv20};
-\item transients, quasi--controllability, overshooting measure:
-\cite{KKP:IFAC94, KKP:CESA98, KozPok:CADSEM96-005, PW:LAA08, PWB:CDC05};
-\item etc. \cite{Bochi:LAA03, Gelf:MatSb41:e, Rota03}.
+  \item Auerbach lemma/basis: \cite{Auerbach:1930, Day:TAMS47, Mandal:2018,
+          Ostrovskii:CMB11, Plichko:CM95, Taylor:BAMS47, WebWoj:CCM17};
+  \item Fritz John ellipsoid theorem: \cite{ShihHsu:JNCA11, JohnF:48,
+          JohnF:2014, Howard97, Shih:TM99};
+  \item extremal norms: \cite{ABMW:MTNS12, AhmJng:NAHS16, Bar:ACC95, Bar:CDC05,
+          BG:JEP19, BJP:IEEETIT06, CB:IFACWC11, CGSZ:LAA10, CMS:MRB22,
+          Dai:JMAA11, DHX:PAMS13, EppWirth:LAA24, EppWirth:MTNS24,
+          EppWirth:ArXiv25, Gomes:2017, GugProt:FCM13, GugZen:JMAA15,
+          GugZen:SIAMJMAA09, GWZ:SIAMJMA05, JP:SIAMJMA09, Koz:CDC05:e,
+          Koz:DCDSB10, Koz:WIAS05, LiuXiao:LNCS12, Maesumi:CDC05, Maesumi:LAA08,
+          MasWir:LAA14, MejProt:Cacolo23, Moeller15, PW:LAA08, PWB:CDC05,
+          Prot:LAA08, Vagnoni08, Wirth:CDC05, Wirth:LAA02, Wirth:MNTS02};
+  \item Barabanov norms: \cite{Bar:AIT88-2:e, Bar:AIT88-3:e, Bar:AIT88-5:e,
+          CMS:MRB22, CMS:Cham25-67, Dai:JMAA11, GugZen:JMAA15, Koz:Automatica22,
+          Morris:LAA10, Morris:SIAMJMAA12, Morris:SIAMJCO24, Mus:SM23:e,
+          Mus:MN25:e, Prot:SIAMJCO22, ProtMus:ArXiv25, TeiMarg:Autom12,
+          Wirth:CDC05};
+  \item antinorms: \cite{GugProt:FCM13, GugZen:JMAA15, GugZen:LAA20, GLP:FCM15,
+          Prot:LMA21};
+  \item polytope norms: \cite{GWZ:SIAMJMA05, GugZen:SIAMJMAA09, GugZen:JCA07};
+  \item K\"{o}nig lemma/chains: \cite{Konig:ALSS27, Mate:PAMS98, Mate:FM99,
+          Shen:LAA00, Shih:LAA01, Jachymski:TAMS09};
+  \item invariant cones: \cite{Seneta06};
+  \item lifting approach, lifted polytope methods: \cite{BN03, JGC:SIAMJMAA14,
+          Koz:LAA14, ParJdb:LAA08, JSRToolbox, XuAci:IEEETAC20};
+  \item max version of the Perron--Frobenius theorem: \cite{Bapat:LAA98};
+  \item sum-of-squares (SOS) approach/programming: \cite{Ahmadi08,
+          AhmJun:CDC13, AhmJun14, AJPR:SIAMJCO14, AJPR:HCSS11, AhmPar:CDC05,
+          DRD:IEEETAC18, LJP:HSCC16, LPG:SIAM20, ParJdb:LNCS07, ParJdb:LAA08,
+          WangMM:ACC21, ZhangXu:ArXiv20};
+  \item transients, quasi--controllability, overshooting measure:
+        \cite{KKP:IFAC94, KKP:CESA98, KozPok:CADSEM96-005, PW:LAA08,
+          PWB:CDC05};
+  \item etc. \cite{Bochi:LAA03, Gelf:MatSb41:e, Rota03}.
 \end{itemize}
 
-%\nocite{*}
+% \nocite{*}
 
-\ifdefined\HCode%
-\newcommand{\BibAnnote}[1]{%
-{\par~\par%
-\setlength{\parskip}{0pt}%
-\setlength{\parindent}{1.5em}%
-#1\par\medskip}}%
-\else%
-\newcommand{\BibAnnote}[1]{%
-{\par\medskip%
-\setlength{\parskip}{0pt}%
-\setlength{\parindent}{1.5em}%
-{\small #1\par}\medskip}}%
-%\vskip\itemsep{\small #1\par}\vskip\itemsep}%
-\fi%
+\ifdefined\HCode
+  \newcommand{\BibAnnote}[1]{
+    {\par~\par
+        \setlength{\parskip}{0pt}
+        \setlength{\parindent}{1.5em}
+        #1\par\medskip}}
+\else
+  \newcommand{\BibAnnote}[1]{
+    {\par\medskip
+        \setlength{\parskip}{0pt}
+        \setlength{\parindent}{1.5em}
+        {\small #1\par}\medskip}}
+  % \vskip\itemsep{\small #1\par}\vskip\itemsep}%
+\fi
 
 \bibliographystyle{amsplain-ey}
 \bibliography{JSR+matprod}
@@ -241,7 +426,7 @@ Some math tools that have proven useful when exploring joint/generalized spectra
 \pagebreak[4]
 \section*{Author Index}\nopagebreak[4]
 \begin{multicols}{3}
-\printauthorindex
+  \printauthorindex
 \end{multicols}
-%\printindex
+% \printindex
 \end{document}
