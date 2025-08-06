@@ -37,15 +37,15 @@ del /S /Q /F *.bbl >nul 2>&1
 del /S /Q /F *.blg >nul 2>&1
 del /S /Q /F %~n1.html >nul 2>&1
 del /S /Q /F %~n1.css >nul 2>&1
-echo make4ht.exe -s -m draft %infile%
+echo make4ht.exe -ls -m draft %infile%
 echo.
-make4ht.exe -s -m draft %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
+make4ht.exe -ls -m draft %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
 echo Creating %~n1.bbl file
 echo.
 for %%f in (*.aux) do (bibtexu.exe -H -l ru -o ru %%~nf)
 echo.
-make4ht.exe -s %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
+make4ht.exe -ls %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
 echo %green%2. Purifying %~n1.css%reset%
 call purify-css.cmd %~n1.css %~n1.html
