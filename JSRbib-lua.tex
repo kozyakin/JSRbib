@@ -32,7 +32,7 @@
 %
 \usepackage[default,varnothing,newcmbb]{fontsetup}%
 \setmathfont{NewCMMath-Book}[StylisticSet=1,CharacterVariant=1]%
-\let\boldsymbol\symbf
+\renewcommand{\boldsymbol}[1]{\symbf{#1}}%
 %\usepackage[numbers,sort]{natbib}
 \usepackage[numbers,sort&compress]{natbib}
 \let\cite=\citep
