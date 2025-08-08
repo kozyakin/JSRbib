@@ -56,11 +56,11 @@ del /S /Q /F %~n1.css >nul 2>&1
 echo.
 echo %green%4. "Cleaning" %~n1.html%reset%
 echo.
-echo %blue%...powershell search/replace pass...%reset%
-powershell.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
-echo.
-echo %blue%...tidy-html5 pass...%reset%
+echo %blue%tidy-html5 pass...%reset%
 call tidy-html5.cmd %~n1.html 
+echo.
+echo %blue%powershell search/replace pass...%reset%
+powershell.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
 echo.
 set choice=
 set /p "choice=%yellow%To keep working files of make4ht press any key and then ENTER: %reset%"
