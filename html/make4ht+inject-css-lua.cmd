@@ -37,9 +37,9 @@ del /S /Q /F *.bbl >nul 2>&1
 del /S /Q /F *.blg >nul 2>&1
 del /S /Q /F %~n1.html >nul 2>&1
 del /S /Q /F %~n1.css >nul 2>&1
-echo make4ht.exe -ls -m draft %infile%
+echo make4ht.exe -lsm draft %infile%
 echo.
-make4ht.exe -ls -m draft %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
+make4ht.exe -lsm draft %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
 echo Creating %~n1.bbl file
 echo.
@@ -51,44 +51,10 @@ echo %green%2. Purifying %~n1.css%reset%
 call purify-css.cmd %~n1.css %~n1.html
 echo.
 echo %green%3. Injecting css-file %~n1.css in %~n1.html%reset%
-echo.
-set choice=
-set /p "choice=%yellow%To inject css-file press ENTER; to skip injecting press any key and then ENTER: %reset%"
-if /i not "%choice%"=="" GOTO clean
-echo.
-echo %yellow%Select engine for injecting:%reset%
-CHOICE /T 5 /D t /C tljp /M "%yellow%    [T]exLua (%red%default after 5 sec delay%yellow%), [L]ua, [J]avaScript, or [P]erl%reset% "
-If %ERRORLEVEL% EQU 4 goto sub_perl
-If %ERRORLEVEL% EQU 3 goto sub_js
-If %ERRORLEVEL% EQU 2 goto sub_lua
-If %ERRORLEVEL% EQU 1 goto sub_texlua
-
-:sub_texlua
 texlua inject-css.lua %~n1.css %~n1.html
 del /S /Q /F %~n1.css >nul 2>&1
-GOTO clean
-
-:sub_lua
-lua inject-css.lua %~n1.css %~n1.html
-del /S /Q /F %~n1.css >nul 2>&1
-GOTO clean
-
-:sub_js
-node inject-css.js %~n1.css %~n1.html
-del /S /Q /F %~n1.css >nul 2>&1
-GOTO clean
-
-:sub_perl
-perl inject-css.pl %~n1.css %~n1.html
-del /S /Q /F %~n1.css >nul 2>&1
-
-:clean
 echo.
 echo %green%4. "Cleaning" %~n1.html%reset%
-echo.
-set choice=
-set /p "choice=%yellow%To start cleaning %~n1.html file press ENTER: %reset%"
-
 echo.
 echo %blue%...tidy first pass...%reset%
 call tidy-html5.cmd %~n1.html
@@ -98,7 +64,6 @@ powershell.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (G
 echo.
 echo %blue%...tidy second pass...%reset%
 call tidy-html5.cmd --show-info no %~n1.html 
-
 echo.
 set choice=
 set /p "choice=%yellow%To keep working files of make4ht press any key and then ENTER: %reset%"
