@@ -6,6 +6,8 @@
 
 * **TexLive** или **MikTex** (или любая другая система **TeX**)
 * **Perl**, доступный для всех пользователей (т.е. добавленный в системный **PATH**)
+* **HTML tidy** (программа чистки HTML кода), доступная для всех пользователей (т.е. установленная и добавленная в системный **PATH**); может быть загружена с сайта [HTML Tidy](https://www.html-tidy.org/) или [htacg/tidy-html5](https://github.com/htacg/tidy-html5)
+* **Node.js** (среда выполнения **JavaScript**) с дополнительно установлеными модулями **purifycss** и **cleancss**
 
 Для добавления новых записей в **JSRbib.pdf** необходимо:
 
@@ -65,10 +67,12 @@ pdflatex --enable-write18 JSRbib.tex
 
 This is a set of files to create **JSRbib.pdf** and **JSRbib.html** containing *An annotated bibliography on convergence of matrix products and the theory of joint/generalized spectral radius*
 
-## Prerequisites and updating
+## Prerequisites and Preparation
 
-* **TexLive** or **MikTex** (or other **TeX** system)
-* **Perl** globally accessible (e.g., added to system **PATH**)
+* **TexLive** or **MikTex** (or any other **TeX** system)
+* **Perl**, available to all users (i.e. added to the system **PATH**)
+* **HTML tidy** (HTML cleaner), available to all users (i.e. installed and added to the system **PATH**); can be downloaded from [HTML Tidy](https://www.html-tidy.org/) or [htacg/tidy-html5](https://github.com/htacg/tidy-html5)
+* **Node.js** (JavaScript runtime) with the **purifycss** and **cleancss** modules additionally installed
 
 To add new record to the **JSRbib.pdf** it is needed
 
