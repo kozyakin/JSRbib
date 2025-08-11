@@ -32,11 +32,7 @@ set "infile=%~f1"
 set "infile=%infile:\=/%"
 echo %green%1. Creation of %~n1.html%reset%
 echo.
-del /S /Q /F *.aux >nul 2>&1
-del /S /Q /F *.bbl >nul 2>&1
-del /S /Q /F *.blg >nul 2>&1
-del /S /Q /F %~n1.html >nul 2>&1
-del /S /Q /F %~n1.css >nul 2>&1
+for %%f in (*.aux *.bbl *.blg %~n1.html %~n1.css) do (del /S /Q /F %%f >nul 2>&1)
 echo make4ht.exe -sm draft %infile%
 echo.
 make4ht.exe -sm draft %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
@@ -66,17 +62,11 @@ set choice=
 set /p "choice=%yellow%To keep working files of make4ht press any key and then ENTER: %reset%"
 if /i not "%choice%"=="" GOTO exit
 echo.
-xcopy /Y *.html  %TEMP%\%~n1\ 
-xcopy /Y *.svg  %TEMP%\%~n1\ 
-xcopy /Y *.css  %TEMP%\%~n1\ 
+for %%f in (*.html *.svg *.css) do (xcopy /Y %%f %TEMP%\%~n1\)
 make4ht.exe -m clean -a info %1
 xcopy /Y %TEMP%\%~n1\  .\ 
-rd /S /Q  %TEMP%\%~n1 
-del /S /Q /F *.aux >nul 2>&1
-del /S /Q /F *.bbl >nul 2>&1
-del /S /Q /F *.blg >nul 2>&1
-del /S /Q /F *.out >nul 2>&1
-del /S /Q /F *.toc >nul 2>&1
+rd /S /Q  %TEMP%\%~n1
+for %%f in (*.aux *.bbl *.blg *.out *.toc) do (del /S /Q /F %%f >nul 2>&1)
 pause
 :exit
 exit
