@@ -28,7 +28,7 @@ echo.
 :: the make4ht and htlatex programs. Therefore, in the next two lines, the 
 :: input file %1 name is converted to a full path with a forward slash (/) as 
 :: a directory separator.
-set "infile=%~f1"
+set "infile=%~dpn1.tex"
 set "infile=%infile:\=/%"
 echo %green%1. Creation of %~n1.html%reset%
 echo.
