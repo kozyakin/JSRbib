@@ -75,4 +75,4 @@ echo --- > %~n1-github.html
 echo layout: content >> %~n1-github.html
 echo --- >> %~n1-github.html
 type %~n1.html >> %~n1-github.html
-exit 
+exit
