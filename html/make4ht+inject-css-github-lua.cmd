@@ -70,4 +70,9 @@ rd /S /Q  %TEMP%\%~n1
 for %%f in (*.aux *.bbl *.blg *.out *.toc) do (del /S /Q /F %%f >nul 2>&1)
 pause
 :exit
-exit
+copy /Y %~n1.html %~n1-github.html
+echo --- > %~n1-github.html
+echo layout: content >> %~n1-github.html
+echo --- >> %~n1-github.html
+type %~n1.html >> %~n1-github.html
+exit 
