@@ -1,21 +1,23 @@
 % !TeX spellcheck = en_US
 % !Mode:: "TeX:Soft"
 %
-%-------------------------------------------------------------------
-% The WinEdt Pragma Comments below cause lualatex + bibtexu commands
-% to be executed when PDFTeXify is invoked.
+%----------------------------------------------------------------------
+% The WinEdt Pragma (Magic) Comments below cause lualatex + bibtexu
+% commands to be executed when PDFTeXify is invoked.
 %--
 % !PDFTeXify engine = lualatex
 % !BIB Exe = bibtexu
 % !BIB Opt = -H -l ru -o ru
-%-------------------------------------------------------------------
-% The TexStudio Pragma Comments to execute lualatex + bibtexu commands
-% 1. bibtexu should be specified as user command
-% 2. Precompile of bibliography before building tex should be set in
-% Build/Build parameters.
+%----------------------------------------------------------------------
+% The TeXstudio Pragma (Magic) Comments to execute lualatex command
+% 1. bibtexu should be specified as user "BIB program" command
+% 2. The Build&View (F5) and Compile (F6) commands should be
+%    configured to call latexmk and lualatex, respectively.
 %--
-% !TeX program = lualatex
-% !TeX TXS-program:bibliography = txs:///bibtexu
+% ! = bibtexu
+% !TeX TXS-program:quick = txs:///latexmk -pdf- -lualatex | txs:///view
+% !TeX TXS-program:compile = txs:///lualatex
+%----------------------------------------------------------------------
 %\UseRawInputEncoding
 \ifdefined\HCode\relax
 \else
