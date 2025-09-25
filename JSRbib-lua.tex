@@ -25,15 +25,13 @@
 % from spanning 2 pages plus support for the PDF/A-4f standard
 \DocumentMetadata{testphase=new-or-1,pdfstandard={UA-2,A-4f},lang=en}
 \fi
+\RequirePackage{fix-cm}
 \documentclass[a4paper,fleqn]{article}
 %
 \usepackage{amsmath,amssymb}
 \usepackage[mathscr]{eucal}
 \usepackage{a4wide}
 %
-\usepackage[default,varnothing,newcmbb]{fontsetup}%
-\setmathfont{NewCMMath-Book}[StylisticSet=1,CharacterVariant=1]%
-\setmathfont[version=bold]{NewCMMath-Bold}%
 %\usepackage[numbers,sort]{natbib}
 \usepackage[numbers,sort&compress]{natbib}
 \let\cite=\citep
