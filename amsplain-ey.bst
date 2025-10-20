@@ -223,7 +223,7 @@ FUNCTION {contains}
   { search.start search.end < }
   {
     find.string search.start find.length substring$ find.pattern =
-      { 
+      {
         #1 'done :=
         search.end 'search.start :=%% stop searching
       }
@@ -613,7 +613,7 @@ FUNCTION {format.doi.eprint.output}
           }
         if$
        }
-    if$  
+    if$
   }
   if$
 }
@@ -1526,9 +1526,9 @@ FUNCTION {begin.bib}
     write$ newline$
   "\begin{thebibliography}{"  longest.label  * "}" *
     write$ newline$
-  "\def\mrref#1{\href{https://www.ams.org/mathscinet-getitem?mr=#1}{MR~#1}}"
+  "\def\mrref#1{\href{https://www.ams.org/mathscinet-getitem?mr=#1}{\texttt{MR~#1}}}"
     write$ newline$
-  "\def\zblref#1{\href{https://zbmath.org/?q=an:#1}{Zbl~#1}}"
+  "\def\zblref#1{\href{https://zbmath.org/?q=an:#1}{\texttt{Zbl~#1}}}"
     write$ newline$
   "\expandafter\ifx\csname url\endcsname\relax"
   write$ newline$
