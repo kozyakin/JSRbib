@@ -2,12 +2,11 @@
 % !Mode:: "TeX:Soft"
 %
 %\UseRawInputEncoding
-\ifdefined\HCode\relax
-\else
 % The following command has been added to prevent hyperlinks
 % from spanning 2 pages plus support for the PDF/A-4f standard
-\DocumentMetadata{testphase=new-or-1,pdfstandard={UA-2,A-4f},lang=en}
-\fi
+%\DocumentMetadata{testphase=new-or-1,pdfstandard={UA-2,A-4f},lang=en}
+\RequirePackage{pdfmanagement}
+\SetKeys[document/metadata]{pdfstandard=a-3b,lang=en}
 \RequirePackage{fix-cm}
 \documentclass[a4paper,fleqn]{article}
 %
@@ -47,11 +46,11 @@
 
 \usepackage{hyperref}
 \hypersetup{
-%  pdftitle={An annotated bibliography on the convergence of matrix
-%  products and the theory of joint/generalized spectral radius},
+  pdftitle={An annotated bibliography on the convergence of matrix
+  products and the theory of joint/generalized spectral radius},
   pdfsubject={Bibliography on joint/generalized spectral radius
   theory and related issues},
-%  pdfauthor={Victor Kozyakin},
+  pdfauthor={Victor Kozyakin},
   pdfkeywords={infinite matrix products, joint spectral radius, generalized spectral radius},
   pdfcopyright={Copyright (C) 2025 by Victor Kozyakin. All rights reserved.},
   linkbordercolor=[rgb]{0.5, 1, 1},
