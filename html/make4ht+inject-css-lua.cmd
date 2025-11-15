@@ -44,7 +44,7 @@ echo.
 make4ht.exe -ls %infile% "myconfig,charset=utf-8" " -cunihtf -utf8"
 echo.
 echo %green%2. Purifying %~n1.css%reset%
-call purify-css.cmd %~n1.css %~n1.html
+start /wait /b cmd /c purify-css.cmd %~n1.css %~n1.html
 echo.
 echo %green%3. Injecting css-file %~n1.css in %~n1.html%reset%
 texlua inject-css.lua %~n1.css %~n1.html
@@ -53,7 +53,7 @@ echo.
 echo %green%4. "Cleaning" %~n1.html%reset%
 echo.
 echo %blue%tidy-html5 pass...%reset%
-call tidy-html5.cmd %~n1.html 
+start /wait /b cmd /c tidy-html5.cmd %~n1.html 
 echo.
 echo %blue%powershell search/replace pass...%reset%
 powershell.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content -Raw %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
