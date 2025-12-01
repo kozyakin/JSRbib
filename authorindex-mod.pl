@@ -2,7 +2,7 @@
 # This file is part of the authorindex package for LaTeX + BibTeX.
 # Version: 10. August 2008
 #
-# This file was modified by V.Kozyakin on 2013.10.28
+# This file was last modified by V.Kozyakin on 2025-12-01 13:48:24 +0300
 # to allow creating \cite{...} references to authors' bibliography
 # instead of page references (useful when creating bibliography surveys).
 # To use one need to run "authorindex-mod.pl -c ..."
@@ -355,7 +355,7 @@ while($author=&readtosep()){
     @{$Aut2Pag{$printname}}{@{$Lab2Bib{$Lab}}}="" if exists $Lab2Bib{$Lab};
     @{$Aut2Bib{$printname}}{@{$Lab2Bib{$Lab}}}="" if exists $Lab2Bib{$Lab};
     if (exists $Aut2Cite{$printname}){
-        @{$Aut2Cite{$printname}} = join(',', @{$Aut2Cite{$printname}},$Lab) if (exists $opt{'c'}) and $LabOrEmpty;
+        @{$Aut2Cite{$printname}} = join(', ', @{$Aut2Cite{$printname}},$Lab) if (exists $opt{'c'}) and $LabOrEmpty;
     }else{
 	push @{$Aut2Cite{$printname}},$Lab if (exists $opt{'c'}) and $LabOrEmpty;
     }
