@@ -18,12 +18,12 @@
                 "Line": 189
             },
             {
-                "Col": 0,
+                "Col": 30,
                 "EditorGroup": 0,
                 "FileName": "JSRbib-lua.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 18
+                "Line": 7
             },
             {
                 "Col": 0,
@@ -35,6 +35,6 @@
             }
         ],
         "MasterFile": "",
-        "VerticalSplit": true
+        "VerticalSplit": false
     }
 }
