@@ -653,7 +653,7 @@
  annote        = "The \emph{Lyapunov exponent} corresponding to a set of
                   square matrices $\mathcal{A} = \{A_1, \dots, A_n \}$ and a
                   probability distribution $p$ over $\{1, \dots, n\}$ is
-                  $\lambda(\mathcal{A}, p) \coloneqq\lim_{k \to \infty} \frac{1}{k}
+                  $\lambda(\mathcal{A}, p) :=\lim_{k \to \infty} \frac{1}{k}
                   \,\mathbb{E} \log \lVert{A_{\sigma_k} \cdots
                   A_{\sigma_2}A_{\sigma_1}}\rVert$, where $\sigma_i$ are
                   i.i.d. according to $p$. This quantity is of fundamental
@@ -706,7 +706,7 @@
  annote        = "The \emph{Lyapunov exponent} corresponding to a set of
                   square matrices $\mathcal{A} = \{A_1, \dots, A_n \}$ and a
                   probability distribution $p$ over $\{1, \dots, n\}$ is
-                  $\lambda(\mathcal{A}, p) \coloneqq\lim_{k \to \infty} \frac{1}{k}
+                  $\lambda(\mathcal{A}, p) :=\lim_{k \to \infty} \frac{1}{k}
                   \,\mathbb{E} \log \lVert{A_{\sigma_k} \cdots
                   A_{\sigma_2}A_{\sigma_1}}\rVert$, where $\sigma_i$ are
                   i.i.d. according to $p$. This quantity is of fundamental
@@ -2744,7 +2744,7 @@
                   function $[0,\infty) \to [0,1]$ and where $\sum_{i=1}^N
                   u_i=1$ Lebesgue almost everywhere.\par If the uniform
                   exponential rate $\Lambda(A)$ defined by \[
-                  \Lambda(\mathsf{A})\coloneqq\lim_{t \to \infty} \frac{1}{t}
+                  \Lambda(\mathsf{A}):=\lim_{t \to \infty} \frac{1}{t}
                   \sup_{x(0)\neq 0}\log
                   \left(\frac{\|x(t)\|}{\|x(0)\|}\right) \] where the
                   supremum is over all nonzero trajectories $x$ of the linear
@@ -5409,7 +5409,7 @@
                   spectrum of each matrix
                   $\boldsymbol{S}_{\!{\sigma(n_{\ell})}}$ is uniformly
                   sub-peripheral and \[
-                  {\rho}(\boldsymbol{S})\coloneqq \sup_{n\ge1}\sup_{i_1,\ldots,i_n\in
+                  {\rho}(\boldsymbol{S}):=\sup_{n\ge1}\sup_{i_1,\ldots,i_n\in
                   K} \sqrt[n]{\rho(S_{i_1}\cdots
                   S_{i_n})}=\lim_{\ell\to+\infty}
                   \sqrt[\uproot{3}n_{\ell}]{\rho(\boldsymbol{S}_{\!{\sigma(n_{\ell})}})},
@@ -6445,11 +6445,11 @@
  doi           = "10.48550/arXiv.2512.07340",
  annote        = "Let $\mathrm{GL}(2,\mathbb{R})$ denote the general linear
                   group of $2\times 2$ matrices over $\mathbb{R}$. Let us
-                  denote \[ \mathbf{G}\coloneqq \{X\in \mathrm{GL}(2,\mathbb{R}) :
+                  denote \[ \mathbf{G}:=\{X\in \mathrm{GL}(2,\mathbb{R}) :
                   \det X >0\}. \] For each $X\in\mathbf{G}$, let $\rho(X)$
                   denote its spectral radius. Given
                   $\mathbb{A}=(A,B)\in\mathbf{G}^2$, let \[
-                  \hat{\rho}(\mathbb{A})\coloneqq \limsup_{n\to\infty}
+                  \hat{\rho}(\mathbb{A}):=\limsup_{n\to\infty}
                   \left(\max\{\rho(X_1\cdots X_n):X_1,\cdots,X_n\in \{A,B\}
                   \}\right)^{1/n} \in (0,+\infty), \] called the {\bf joint
                   spectral radius} of $\mathbb{A}$. If the limit superior
@@ -6470,16 +6470,16 @@
                   above is a balanced pair defined below.\par Let
                   $I\in\mathbf{G}$ denote the identity matrix and let
                   $\mathrm{SL}(2,\mathbb{R})=\{X\in\mathbf{G}:\det X=1\}$.
-                  Define \[ \mathbf{A}\coloneqq \{A\in \mathrm{SL}(2,\mathbb{R}) :
+                  Define \[ \mathbf{A}:=\{A\in \mathrm{SL}(2,\mathbb{R}) :
                   \mathop{\mathrm{tr}} A\ge
                   2\}\setminus\{I\}=\mathbf{H}\cup\mathbf{P}, \] where
                   $\mathbf{H}=\{A\in \mathbf{A}: \mathop{\mathrm{tr}} A>2\}$
                   and $\mathbf{P}=\{A\in \mathbf{A}: \mathop{\mathrm{tr}}
-                  A=2\}$. Define \[ H_{s,u}^\lambda\coloneqq\begin{pmatrix} s & u
+                  A=2\}$. Define \[ H_{s,u}^\lambda:=\begin{pmatrix} s & u
                   \\ 1 & 1 \end{pmatrix} \begin{pmatrix} \lambda & 0 \\ 0 &
                   \lambda^{-1} \end{pmatrix} \begin{pmatrix} s & u \\ 1 & 1
                   \end{pmatrix}^{-1}\in\mathbf{H} \qquad\text{for}\quad
-                  \lambda>1, u<0<s, \] and \[ P_x\coloneqq\begin{pmatrix} 1 & 0 \\
+                  \lambda>1, u<0<s, \] and \[ P_x:=\begin{pmatrix} 1 & 0 \\
                   x & 1 \end{pmatrix}\in\mathbf{P} \qquad\text{for}\quad x>0.
                   \] Let $A^t$ denote the transpose of a matrix $A$.\par
                   \textbf{Definition.} $\{A,B\}\subset \mathbf{A}$ is called
@@ -7921,7 +7921,7 @@
                   this issue by giving the first completely explicit
                   description of a counterexample to the Lagarias--Wang
                   finiteness conjecture. Namely, for the set \[
-                  \mathsf{A}_{\alpha_*}\coloneqq 
+                  \mathsf{A}_{\alpha_*}:=
                   \left\{\left(\begin{array}{cc}1&1\\0&1\end{array}\right),
                   \alpha_*\left(\begin{array}{cc}1&0\\1&1\end{array}\right)\right\}
                   \] we give an explicit value of \[\alpha_* \simeq
@@ -11256,7 +11256,7 @@
                   matrices and for each $k\geq1$ let $\mathcal{F}_{k}$ denote
                   the set of all products $A_{1}\cdots A_{k}$ of length $k$
                   with each $A_{i}\in\mathcal{F}$. The joint spectral radius
-                  of $\mathcal{F}$ is defined as $\rho(\mathcal{F})\coloneqq 
+                  of $\mathcal{F}$ is defined as $\rho(\mathcal{F}):=
                   \inf_{\left\|~\right\|}\max_{A\in\mathcal{F}}\left\|A\right\|$
                   where the infimum is taken over all sub-multiplicative
                   matrix norms. The authors are interested in methods of
@@ -12367,7 +12367,7 @@
                   spectral radius to verify the convergence or smoothness of
                   subdivision algorithms. The joint spectral radius of two
                   matrices $A_1,A_2 \in\mathbb{R}^{d\times d}$ is
-                  \[\text{jsr}(A_1,A_2 )\coloneqq \lim_{n\to\infty} \max\{\|T_1
+                  \[\text{jsr}(A_1,A_2 ):=\lim_{n\to\infty} \max\{\|T_1
                   T_2\cdots T_n\|^{1/n}~ |~ T_i = A_1\text{ or }A_2\}\] and
                   it measures the growth (or decrease) rate of products of
                   matrices taken from a set.\par In the Introduction of this
@@ -12395,7 +12395,7 @@
                   $L,P$ of order $2$. It is proved that $\text{jsr}(L,R)=
                   \max\left(\rho(L),\sqrt{\rho(L,R)}\right)$ where $\rho(A)$
                   is the spectral radius of the matrix $A$:
-                  $\rho(A)\coloneqq \max\{|\lambda|: \lambda\text{ is an eigenvalue
+                  $\rho(A):=\max\{|\lambda|: \lambda\text{ is an eigenvalue
                   of }A\}$.\par Moreover, the technique of the proof of this
                   result is used by the author to generalize the computation
                   of the spectral radius the similar matrices with certain
@@ -12664,7 +12664,7 @@
                   bounded.\par Given $\mathbf{A}$ a bounded nonempty set of
                   $d\times d$ complex matrices. The joint spectral radius of
                   $\mathbf{A}$ introduced by Rota and Strang is
-                  \[\varrho(\mathbf{A}) \coloneqq 
+                  \[\varrho(\mathbf{A}) :=
                   \lim_{n\to\infty}\sup\{\|A_n,\ldots A_1\|^{1/n}:
                   A_i\in\mathbf{A}\}\] where $\|\cdot\|$ denotes any norm on
                   $\mathbb{C}^d$. Berger--Wang formula asserts that
@@ -12676,7 +12676,7 @@
                   for any positive real number $r$
                   \[\varrho(\mathbf{A})-\max_{1\le k\le n}
                   \varrho_k^-(\mathbf{A})=O\left(\frac 1{n^r}\right)\] where
-                  \[\varrho_n^-(\mathbf{A}) \coloneqq\sup\{\rho(A_n\cdots
+                  \[\varrho_n^-(\mathbf{A}) :=\sup\{\rho(A_n\cdots
                   A_1)^{1/n}: A_i\in\mathbf{A}\}.\] A more general result is
                   obtained when $\mathbf{A}$ is nonempty compact. The proof
                   rests on a structure theorem for continuous matrix cocycles
@@ -12774,9 +12774,9 @@
                   main theorem is also given:\par \textbf{Theorem 4.1.}
                   \emph{There exists a nonempty open set $\mathcal{V} \subset
                   \mathcal{O}_2(\mathbb{R}^2)$ such that the sets
-                  \begin{gather*}\mathcal{V}_1\coloneqq \left\{(A_1,A_2)
+                  \begin{gather*}\mathcal{V}_1:=\left\{(A_1,A_2)
                   \in\mathcal{V}\colon \{A_1,A_2\}\text{ has a unique
-                  Barabanov norm}\right\},\\\mathcal{V}_2\coloneqq \left\{(A_1,A_2)
+                  Barabanov norm}\right\},\\\mathcal{V}_2:=\left\{(A_1,A_2)
                   \in\mathcal{V}\colon \{A_1,A_2\}\text{ does not have a
                   unique Barabanov norm}\right\}\end{gather*} are both dense
                   in $\mathcal{V}$.}\par This is in contrast to a previous
@@ -13248,22 +13248,22 @@
  eprint        = "2301.05152",
  doi           = "10.1080/14689367.2023.2210518",
  url           = "https://www.tandfonline.com/doi/abs/10.1080/14689367.2023.2210518",
- annote        = "Define $\Sigma_N\coloneqq \{1,\ldots,N\}^{\mathbb{Z}}$ and equip
+ annote        = "Define $\Sigma_N:=\{1,\ldots,N\}^{\mathbb{Z}}$ and equip
                   this set with the infinite product topology, with respect
                   to which it is a compact metrisable topological space.
                   Define $T \colon \Sigma_N \to \Sigma_N$ to be the shift
-                  transformation $T[(x_n)_{n \in \mathbb{Z}}]\coloneqq (x_{n+1})_{n
+                  transformation $T[(x_n)_{n \in \mathbb{Z}}]:=(x_{n+1})_{n
                   \in \mathbb{Z}}$, which is a homeomorphism. If a continuous
                   function $A \colon \Sigma_N \to
                   \mathop{\mathrm{GL}}_d(\mathbb{R})$ is specified, one may
                   be interested in the growth of the sequence $(a_n)$ defined
-                  by \[a_n\coloneqq\sup_{x \in \Sigma_N} \left\|A(T^{n-1}x)\cdots
+                  by \[a_n:=\sup_{x \in \Sigma_N} \left\|A(T^{n-1}x)\cdots
                   A(T x)A(x)\right\|.\] We give a proof of the following
                   theorem and demonstrate that its conclusions do not hold
                   for Lipschitz continuous cocycles over the full shift on
                   two symbols:\par \textbf{Theorem.} \emph{Let $A\colon
                   \Sigma_N \to {\mathrm{GL}}_2(\mathbb{R})$ be locally
-                  constant and define $\mathsf{A}\coloneqq \{A(x) \colon x \in
+                  constant and define $\mathsf{A}:=\{A(x) \colon x \in
                   \Sigma_N\}$. Suppose that \[\lim_{n \to \infty} \sup_{x \in
                   \Sigma_N} \left\|A(T^{n-1}x)\cdots
                   A(x)\right\|^{\frac{1}{n}}=1.\] Then one of the following
@@ -18041,14 +18041,14 @@
                   \bigcup_{t=0}^{\infty}\mathcal{S}_t$.\par Let $\rho(A)$
                   denote the spectral radius of $A$ and let $\|\cdot\|$ be
                   some operator norm on $ \mathbb{K}^{n\times n}$. Define for
-                  $t\in\mathbb{N}$, $\bar{\rho}_t(\mathcal{M})\coloneqq 
+                  $t\in\mathbb{N}$, $\bar{\rho}_t(\mathcal{M}):=
                   \sup\{r(S_t)^{1/t} : S_t \in\mathcal{S}_t\}$ and
-                  $\hat{\rho}_t(\mathcal{M})\coloneqq\sup\{\|S_t\|^{1/t} :S_t
+                  $\hat{\rho}_t(\mathcal{M}):=\sup\{\|S_t\|^{1/t} :S_t
                   \in\mathcal{S}_t\}$ Then the joint spectral radius and the
                   generalized spectral radius are respectively defined as
-                  $\bar{\rho}(\mathcal{M})\coloneqq \lim_{t\rightarrow\infty}
+                  $\bar{\rho}(\mathcal{M}):=\lim_{t\rightarrow\infty}
                   \sup\bar{\rho}_t(\mathcal{M})$ and
-                  $\hat{\rho}(\mathcal{M})\coloneqq \lim_{t\rightarrow
+                  $\hat{\rho}(\mathcal{M}):=\lim_{t\rightarrow
                   \infty}\hat{\rho}_t(\mathcal{M})$. It is well known that
                   $\bar{\rho}(\mathcal{M})=\hat{\rho}(\mathcal{M})$.
                   $\mathcal{M}$ is called irreducible, if only the trivial
