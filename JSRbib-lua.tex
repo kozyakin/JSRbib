@@ -31,6 +31,7 @@
 \usepackage[default,varnothing,newcmbb]{fontsetup}%
 \setmathfont{NewCMMath-Book}[StylisticSet=1,CharacterVariant=1]%
 \setmathfont[version=bold]{NewCMMath-Bold}%
+
 %\usepackage[numbers,sort]{natbib}
 \usepackage[numbers,sort&compress]{natbib}
 \let\cite=\citep
@@ -58,6 +59,9 @@
 %%%%%%%%%%%%%
 \makeatother
 %
+\usepackage{mathtools}%              Must be after all math font declarations
+\usepackage{lualatex-math}%          Must be after all math font declarations
+
 \usepackage{multicol}
 \usepackage[small,firstabbrev]{authorindex}
 
