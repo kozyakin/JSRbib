@@ -56,7 +56,14 @@ echo %blue%tidy-html5 pass...%reset%
 start /wait /b cmd /c tidy-html5.cmd %~n1.html 
 echo.
 echo %blue%powershell search/replace pass...%reset%
-powershell.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content -Raw %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
+where /q pwsh
+if %errorlevel% equ 0 (
+    pwsh.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content -Raw %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
+    pwsh.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content -Raw %~n1.html | ForEach-Object {$_ -replace '</a> <span','</a><span'})"
+) else (
+    powershell.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content -Raw %~n1.html | ForEach-Object {$_ -replace '>,&nbsp;<','>, <'})"
+    powershell.exe -ExecutionPolicy Bypass -Command "Set-Content %~n1.html -Value (Get-Content -Raw %~n1.html | ForEach-Object {$_ -replace '</a> <span','</a><span'})"
+)
 echo.
 set choice=
 set /p "choice=%yellow%To keep working files of make4ht press any key and then ENTER: %reset%"
