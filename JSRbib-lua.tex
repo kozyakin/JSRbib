@@ -25,14 +25,15 @@
 \SetKeys[document/metadata]{pdfstandard=a-3b}
 \documentclass[a4paper,fleqn]{article}
 %
+\usepackage{lmodern}
 \usepackage{mathtools}
 \mathtoolsset{centercolon}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
 \usepackage[mathscr]{eucal}
 \usepackage{a4wide}
-\usepackage[default,varnothing,newcmbb]{fontsetup}%
-\setmathfont{NewCMMath-Book}[StylisticSet=1,CharacterVariant=1]%
-\setmathfont[version=bold]{NewCMMath-Bold}%
+\usepackage{unicode-math}
+\usepackage{lualatex-math}
+
 
 %\usepackage[numbers,sort]{natbib}
 \usepackage[numbers,sort&compress]{natbib}
@@ -61,8 +62,6 @@
 %%%%%%%%%%%%%
 \makeatother
 %
-\usepackage{lualatex-math}%          Must be after all math font declarations
-
 \usepackage{multicol}
 \usepackage[small,firstabbrev]{authorindex}
 
