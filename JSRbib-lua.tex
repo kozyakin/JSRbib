@@ -25,13 +25,14 @@
 \SetKeys[document/metadata]{pdfstandard=a-3b}
 \documentclass[a4paper,fleqn]{article}
 %
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
 \usepackage{mathtools}
 \mathtoolsset{centercolon}
 \usepackage{amsmath,amssymb}
 \usepackage[mathscr]{eucal}
 \usepackage{a4wide}
+\usepackage{unicode-math}
+\let\boldsymbol\symbfit% command \boldsymbol is not defined in luatex for
+% its default font lmodern
 \usepackage{lualatex-math}
 
 %\usepackage[numbers,sort]{natbib}
@@ -238,8 +239,8 @@ list to those publications which mainly reflect my personal interests.
     MOS:LAA07, Prot:SM00};
   \item mathematical economics, arbitrage: \cite{CrossKPP:MECA12,
     CrossKoz:DCDSB13, KozCalPok:ArXiv10};
-  \item etc. \cite{BCK:AIP16, DGT:ArXiv25, JPB:LNCS08, KZW:AM26,
-    NP:SIAMJMAA20, Oreg-Reyes:GGD18, TO:ArXiv09, VladRub:JCA01}.
+  \item etc. \cite{ABMW:DCDSB14, BCK:AIP16, DGT:ArXiv25, JPB:LNCS08,
+    KZW:AM26, NP:SIAMJMAA20, Oreg-Reyes:GGD18, TO:ArXiv09, VladRub:JCA01}.
 \end{itemize}
 
 \subsection*{Alternative characterizations and definitions}
