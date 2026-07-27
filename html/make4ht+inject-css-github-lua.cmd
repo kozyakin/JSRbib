@@ -35,13 +35,13 @@ echo.
 for %%f in (*.aux *.bbl *.blg %~n1.html %~n1.css) do (del /S /Q /F %%f >nul 2>&1)
 echo make4ht.exe -lsm draft %infile%
 echo.
-make4ht.exe -lsm draft %infile% "myconfig-github,charset=utf-8" " -cunihtf -utf8"
+make4ht.exe -lsu -m draft -c myconfig %infile% "" " -cunihtf -utf8"
 echo.
 echo Creating %~n1.bbl file
 echo.
 for %%f in (*.aux) do (bibtexu.exe -H -l ru -o ru %%~nf)
 echo.
-make4ht.exe -ls %infile% "myconfig-github,charset=utf-8" " -cunihtf -utf8"
+make4ht.exe -lsu -c myconfig %infile% "" " -cunihtf -utf8"
 echo.
 echo %green%2. Purifying %~n1.css%reset%
 start /wait /b cmd /c purify-css.cmd %~n1.css %~n1.html
