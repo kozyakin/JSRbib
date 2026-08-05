@@ -177,9 +177,9 @@ make4ht+inject_css_pl+cleaning.cmd
 
 ## Remark
 
-The procedures from points 5, 6 can be performed by running one of the following cmd-files (the **Perl** compiler must be installed in the system and in the **PATH** variable, as well as the **Node. js** (Node) platform for working with the JavaScript language):
+The procedures from points 5, 6 can be performed by running one of the following cmd-files depending on whether your tex file is intended for compilation using PDFLaTex or LuaLaTeX (the **Perl** compiler must be installed in the system and in the **PATH** variable, as well as the **Node. js** (Node) platform for working with the JavaScript language):
 
 ```latex
-make4ht+inject_css_js+cleaning.cmd
-make4ht+inject_css_pl+cleaning.cmd
+make4ht+inject-css.cmd
+make4ht+inject-css-lua.cmd
 ```

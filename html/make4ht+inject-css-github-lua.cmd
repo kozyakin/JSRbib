@@ -73,7 +73,7 @@ for %%f in (*.html *.svg *.css) do (xcopy /Y %%f %TEMP%\%~n1\)
 make4ht.exe -m clean -a info %1
 xcopy /Y %TEMP%\%~n1\  .\ 
 rd /S /Q  %TEMP%\%~n1 
-for %%f in (*.aux *.bbl *.blg *.out *.toc) do (del /S /Q /F %%f >nul 2>&1)
+for %%f in (*.ain *.aux *.bbl *.blg *.out *.toc) do (del /S /Q /F %%f >nul 2>&1)
 pause
 :exit
 copy /Y %~n1.html %~n1-github.html
