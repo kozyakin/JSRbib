@@ -30,9 +30,9 @@
 \usepackage{amsmath,amssymb}
 \usepackage[mathscr]{eucal}
 \usepackage{a4wide}
-\usepackage{unicode-math}
-\let\boldsymbol\symbfit% \boldsymbol is undefined in luatex for lmodern font
-\usepackage{lualatex-math}
+\usepackage{lum-lmodern}
+\let\boldsymbol\symbfit% command \boldsymbol is not defined in luatex for
+                       % the font Latin Modern (lmodern)
 
 %\usepackage[numbers,sort]{natbib}
 \usepackage[numbers,sort&compress]{natbib}
